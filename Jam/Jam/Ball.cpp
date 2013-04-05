@@ -28,7 +28,7 @@ void Ball::setMass(float mass)
 
 void Ball::update()
 {
-
+	
 }
 
 void Ball::render(Display& display)

@@ -16,6 +16,7 @@ Cat::~Cat()
 void Cat::setPosition(const sf::Vector2f& position)
 {
 	mPosition = position;
+	mTempSprite.setPosition(mPosition);
 }
 
 void Cat::setMass(float mass)

@@ -22,7 +22,7 @@ void StateManager::update()
 		return;
 
 	//remove dead states
-	auto pred = [](std::shared_ptr<State> state) {return state->isAlive();};
+	auto pred = [](std::shared_ptr<State> state) {return !state->isAlive();};
 	mStateStack.erase(
 		std::remove_if(mStateStack.begin(), mStateStack.end(), pred),
 		mStateStack.end());

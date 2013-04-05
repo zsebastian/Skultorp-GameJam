@@ -6,10 +6,10 @@
 class State: public sf::NonCopyable
 {
 public:
-	virtual ~State();
-	void render();
-	void update();
-	bool isAlive();
+	virtual ~State() {};
+	virtual void render() = 0;
+	virtual void update() = 0;
+	virtual bool isAlive() = 0;
 private:
 	
 };

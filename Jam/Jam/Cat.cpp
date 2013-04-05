@@ -6,8 +6,8 @@ Cat::Cat(const sf::Vector2f& position, float mass)
 	,mGravityVector(0.f, 0.f)
 	,mPosition(position)
 {
-	mTempTexture.loadFromFile("data/cat.png");
-	mTempSprite.setTexture(mTempTexture);
+	mTempShape.setRadius(20.f);
+	mTempShape.setFillColor(sf::Color::Red);
 
 	setPosition(position);
 }
@@ -20,7 +20,6 @@ Cat::~Cat()
 void Cat::setPosition(const sf::Vector2f& position)
 {
 	mPosition = position;
-	mTempSprite.setPosition(mPosition);
 }
 
 void Cat::setMass(float mass)
@@ -36,8 +35,8 @@ void Cat::update()
 
 void Cat::render(Display& display)
 {
-	mTempSprite.setPosition(mPosition);
-	display.render(mTempSprite);
+	mTempShape.setPosition(mPosition);
+	display.render(mTempShape);
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)

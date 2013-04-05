@@ -14,11 +14,9 @@ public:
 	void setCurrentAnimation(std::string animation);
 	sf::Sprite getSprite();
 
-	bool getEndOfAnimation()const;
-
 private:
 
-	bool mEndOfAnimation;
+	void init();
 
 	// textures
 	sf::Texture mTexture;

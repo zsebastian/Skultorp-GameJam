@@ -1,8 +1,7 @@
 #include "AnimationManager.h"
-
+#include "tinyxml2.h"
 
 AnimationManager::AnimationManager(std::string texture):
-	mEndOfAnimation(false),
 	mCurrentAnimation("idle"),
 	mTextureBox(0, 0, 512, 512),
 	mElapsed(0.f),
@@ -16,6 +15,7 @@ AnimationManager::AnimationManager(std::string texture):
 	mSprite.setTextureRect(mTextureBox);
 	mSprite.setOrigin(mSprite.getLocalBounds().width / 2, mSprite.getLocalBounds().height / 2);
 	
+	init();
 }
 
 
@@ -53,4 +53,9 @@ void AnimationManager::setTextBox()
 {
 	mTextureBox.left = mCurrentFrame * 512;
 	mTextureBox.top = mAnimations[mCurrentAnimation].mRowOfSprite * 512;
+}
+
+void AnimationManager::init()
+{
+
 }

@@ -37,12 +37,12 @@ void Ball::onCollision(std::shared_ptr<Entity> entityy)
 
 }
 
-sf::Vector2f Ball::getPosition()
+sf::Vector2f Ball::getPosition() const
 {
 	return mPosition;
 }
 
-float Ball::getMass()
+float Ball::getMass() const
 {
 	return mMass;
 }

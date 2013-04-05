@@ -3,7 +3,7 @@
 
 int main()
 {
-	Display display(sf::VideoMode(200, 200), "SFML works!");
+	Display display(sf::VideoMode(1024, 768), "SFML works!");
 
     while (display.isOpen())
     {

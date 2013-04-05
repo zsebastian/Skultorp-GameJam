@@ -3,7 +3,7 @@
 
 Display::Display(sf::VideoMode videoMode, const std::string& windowText)
 	:mWindow(videoMode, windowText)
-	,EventHandler([&](sf::Event ev){ if (ev.type == sf::Event::Closed) mWindow.close();})
+	,EventHandler(sf::Event::Closed, [&](sf::Event ev){mWindow.close();})
 {
 
 }

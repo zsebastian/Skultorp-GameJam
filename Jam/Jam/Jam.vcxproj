@@ -85,6 +85,7 @@
     <ClCompile Include="Display.cpp" />
     <ClCompile Include="EventHandler.cpp" />
     <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="GravityField.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Cat.cpp" />
     <ClCompile Include="EntityManager.cpp" />
@@ -98,6 +99,7 @@
     <ClInclude Include="Display.h" />
     <ClInclude Include="EventHandler.h" />
     <ClInclude Include="EventManager.h" />
+    <ClInclude Include="GravityField.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateManager.h" />
   </ItemGroup>

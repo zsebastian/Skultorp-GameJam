@@ -12,7 +12,7 @@ class Ball;
 class GravityField
 {
 public:
-	GravityField(float gravityForce);
+	GravityField(float gravityForce = 1.f);
 	void addObject(std::shared_ptr<Ball>);
 	void addObject(std::shared_ptr<Cat>);
 

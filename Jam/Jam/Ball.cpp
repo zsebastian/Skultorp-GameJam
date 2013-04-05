@@ -4,7 +4,8 @@
 Ball::Ball()
 	:mMass(0.f)
 {
-
+	mTempCircle.setRadius(50.f);
+	mTempCircle.setFillColor(sf::Color::Green);
 }
 
 Ball::~Ball()
@@ -15,6 +16,7 @@ Ball::~Ball()
 void Ball::setPosition(const sf::Vector2f& position)
 {
 	mPosition = position;
+	mTempCircle.setPosition(mPosition);
 }
 
 void Ball::setMass(float mass)
@@ -29,7 +31,7 @@ void Ball::update()
 
 void Ball::render(Display& display)
 {
-
+	display.render(mTempCircle);
 }
 
 void Ball::onCollision(std::shared_ptr<Entity> entityy)

@@ -3,6 +3,8 @@
 
 #include "Entity.h"
 
+#include <SFML/Graphics/CircleShape.hpp>
+
 class Ball : public Entity
 {
 public:
@@ -20,6 +22,8 @@ public:
 private:
 	sf::Vector2f mPosition;
 	float mMass;
+
+	sf::CircleShape mTempCircle;
 };
 
 #endif

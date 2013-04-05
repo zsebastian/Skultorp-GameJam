@@ -12,8 +12,10 @@ EntityManager::~EntityManager(){}
 void EntityManager::update()
 {
 	//Update entities
-	for(EntityVec::iterator i = mEntities.begin(); i != mEntities.end(); i++)
-		(*i)->update();
+	for(auto entity : mEntities)
+		entity->update();
+
+	mGravityField.update();
 
 	//Check for collisions
 	for(EntityVec::size_type i = 0; i < mEntities.size(); i++)
@@ -31,11 +33,12 @@ void EntityManager::update()
 void EntityManager::render(Display& display)
 {
 	//Render entities
-	for(EntityVec::iterator i = mEntities.begin(); i != mEntities.end(); i++)
-		(*i)->render(display);
+	for(auto entity : mEntities)
+		entity->render(display);
 }
 
 void EntityManager::pushEntity(std::shared_ptr<Entity> entity)
 {
 	mEntities.push_back(entity);
+	mGravityField.addObject(entity);
 }

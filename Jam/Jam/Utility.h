@@ -5,7 +5,6 @@
 #include <SFML\System\Vector2.hpp>
 #include <sstream>
 
-
 namespace Util
 {
 	template <class T, typename predT>
@@ -42,7 +41,7 @@ namespace Util
 		std::istringstream ss(str);
 		T ret;
 
-		return (ss >> ret) ? ret : throw "invalid string";
+		return (ss >> ret) ? ret : throw "fromString: invalid string";
 	};
 
 	template <typename T>
@@ -50,7 +49,7 @@ namespace Util
 	{
 		std::ostringstream ss("");
 		
-		return (ss << value) ? ss.str() : throw "invalid string";
+		return (ss << value) ? ss.str() : throw "toString: invalid value";
 	};
 };
 

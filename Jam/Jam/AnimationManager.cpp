@@ -57,5 +57,30 @@ void AnimationManager::setTextBox()
 
 void AnimationManager::init()
 {
+	tinyxml2::XMLDocument doc;
+	doc.LoadFile("animations.xml");
 
+	tinyxml2::XMLElement* root = doc.FirstChildElement("body");
+	root = root->FirstChildElement("Animation");
+
+	while(root)
+	{
+		int rowOfSprite = 0;
+		int numberOfFrames = 0;
+		bool looping = true;
+		std::string next = "none";
+
+		tinyxml2::XMLAttribute* atri = root->FirstAttribute;
+
+		while(atri)
+		{
+			std::string value = atri->Name();
+			if(value == "rowOfSprite")
+			{
+				//rowOfSprite = static_cast<int>(atri->Value());
+			}
+		}
+
+		root = root->NextSiblingElement();
+	}
 }

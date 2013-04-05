@@ -30,7 +30,7 @@ void AnimationManager::setCurrentAnimation(std::string animation)
 	mCurrentFrame = 0;
 }
 
-sf::Sprite AnimationManager::getSprite()
+sf::Sprite AnimationManager::getSprite(sf::Vector2f& position)
 {
 	for(mElapsed += mFrameClock.restart().asMilliseconds(); mElapsed > mUpdateRate; mElapsed -= mUpdateRate)
 	{
@@ -46,6 +46,7 @@ sf::Sprite AnimationManager::getSprite()
 	}
 
 	setTextBox();
+	mSprite.setPosition(position);
 
 	return mSprite;
 }
@@ -69,7 +70,11 @@ void AnimationManager::init()
 		int rowOfSprite = Util::fromString<int>(root->Attribute("rowOfSprite"));
 		int numberOfFrames = Util::fromString<int>(root->Attribute("numberOfFrames"));
 		bool looping = Util::fromString<bool>(root->Attribute("looping"));
-		std::string next = "";
+		std::string next = root->Attribute("next");
+
+		std::string name = root->Attribute("name");
+
+		mAnimations.insert(std::make_pair(name, Animation(rowOfSprite, numberOfFrames, looping, next)));
 
 		root = root->NextSiblingElement();
 	}

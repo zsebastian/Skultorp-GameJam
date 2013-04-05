@@ -55,36 +55,7 @@ void AnimationManager::setTextBox()
 	mTextureBox.top = mAnimations[mCurrentAnimation].mRowOfSprite * 512;
 }
 
-/*void AnimationManager::init()
+void AnimationManager::init()
 {
-	tinyxml2::XMLDocument doc;
-	doc.LoadFile("animations.xml");
 
-<<<<<<< HEAD
-}*/
-=======
-	tinyxml2::XMLElement* root = doc.FirstChildElement("body");
-	root = root->FirstChildElement("Animation");
-
-	while(root)
-	{
-		int rowOfSprite = 0;
-		int numberOfFrames = 0;
-		bool looping = true;
-		std::string next = "none";
-
-		tinyxml2::XMLAttribute* atri = root->FirstAttribute;
-
-		while(atri)
-		{
-			std::string value = atri->Name();
-			if(value == "rowOfSprite")
-			{
-				//rowOfSprite = static_cast<int>(atri->Value());
-			}
-		}
-
-		root = root->NextSiblingElement();
-	}
 }
->>>>>>> ffae2469f07da3e6ddab2475e9aa53c4bbec1b2c

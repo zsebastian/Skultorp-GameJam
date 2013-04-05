@@ -1,12 +1,14 @@
 #include "Cat.h"
 #include "Display.h"
 
-Cat::Cat()
-	:mMass(0.f)
+Cat::Cat(const sf::Vector2f& position, float mass)
+	:mMass(mass)
 	,mGravityVector(0.f, 0.f)
 {
 	mTempTexture.loadFromFile("data/cat.png");
 	mTempSprite.setTexture(mTempTexture);
+
+	setPosition(position);
 }
 
 Cat::~Cat()

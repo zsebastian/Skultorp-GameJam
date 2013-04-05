@@ -5,7 +5,6 @@
 #include <SFML\System\Vector2.hpp>
 #include <sstream>
 
-
 namespace Util
 {
 	template <class T, typename predT>

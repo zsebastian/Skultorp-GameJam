@@ -7,9 +7,9 @@ class State: public sf::NonCopyable
 {
 public:
 	virtual ~State();
-	void render();
-	void update();
-	bool isAlive();
+	void render(){};
+	void update(){};
+	bool isAlive(){return true;};
 private:
 	
 };

@@ -7,10 +7,7 @@ EntityManager::EntityManager()
 
 }
 
-EntityManager::~EntityManager()
-{
-	while(mEntities.
-}
+EntityManager::~EntityManager(){}
 
 void EntityManager::update()
 {

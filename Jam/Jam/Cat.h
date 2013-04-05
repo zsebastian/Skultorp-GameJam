@@ -12,7 +12,7 @@ public:
 	virtual void setPosition(const sf::Vector2f& position);
 	virtual void setMass(float mass);
 	virtual void update();
-	virtual void render();
+	virtual void render(Display& display);
 	virtual void onCollision(std::shared_ptr<Entity> entity);
 
 	virtual sf::Vector2f getPosition();

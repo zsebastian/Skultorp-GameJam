@@ -23,8 +23,15 @@ void StateManager::update()
 		return;
 
 	//remove dead states
+<<<<<<< HEAD
 	auto pred = [](std::shared_ptr<State> state) {return state->isAlive();};
 	Util::eraseIf(mStateStack, pred);
+=======
+	auto pred = [](std::shared_ptr<State> state) {return !state->isAlive();};
+	mStateStack.erase(
+		std::remove_if(mStateStack.begin(), mStateStack.end(), pred),
+		mStateStack.end());
+>>>>>>> 5a632a71645147d3fa6577815451299287602d92
 
 	//update state using a defined timestep
 	for (msElapsed += clock.restart().asMilliseconds(); msElapsed > msUpdateRate; msElapsed -= msUpdateRate)

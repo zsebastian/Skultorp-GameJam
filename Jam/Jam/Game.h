@@ -4,9 +4,10 @@
 #include "State.h"
 #include "EntityManager.h"
 
-class Game : State
+class Game : public State
 {
 public:
+	Game();
 	virtual void render(Display&);
 	virtual void update();
 	virtual bool isAlive();

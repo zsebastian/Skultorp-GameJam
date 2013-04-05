@@ -2,6 +2,8 @@
 #define CAT_H
 
 #include "Entity.h"
+#include <SFML/Graphics/Texture.hpp>
+#include <SFML/Graphics/Sprite.hpp>
 
 class Cat : public Entity
 {
@@ -14,12 +16,17 @@ public:
 	virtual void update();
 	virtual void render(Display& display);
 	virtual void onCollision(std::shared_ptr<Entity> entity);
+	void setGravityVector(const sf::Vector2f& gravityVector);
 
-	virtual sf::Vector2f getPosition();
-	virtual float getMass();
+	virtual sf::Vector2f getPosition() const;
+	virtual float getMass() const;
 private:
 	sf::Vector2f mPosition;
+	sf::Vector2f mGravityVector;
 	float mMass;
+
+	sf::Texture mTempTexture;
+	sf::Sprite mTempSprite;
 };
 
 #endif

@@ -16,8 +16,8 @@ public:
 	virtual void render(Display& display) = 0;
 	virtual void onCollision(std::shared_ptr<Entity> entity) = 0;
 
-	virtual sf::Vector2f getPosition() = 0;
-	virtual float getMass() = 0;
+	virtual sf::Vector2f getPosition() const = 0;
+	virtual float getMass() const = 0;
 };
 
 #endif

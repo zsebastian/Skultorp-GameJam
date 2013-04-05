@@ -4,8 +4,12 @@
 
 int main()
 {
+<<<<<<< HEAD
 	Display display(sf::VideoMode(800, 600), "YarnCat");
 	StateManager stateManager;
+=======
+	Display display(sf::VideoMode(1024, 768), "SFML works!");
+>>>>>>> 21bf75a87a1a5c34c0cbe6e2c3ca17d426a05ce8
 
     while (display.isOpen())
     {

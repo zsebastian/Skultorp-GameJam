@@ -1,15 +1,19 @@
 #include <SFML/Graphics.hpp>
 #include "Display.h"
+#include "StateManager.h"
 
 int main()
 {
-	Display display(sf::VideoMode(200, 200), "SFML works!");
+	Display display(sf::VideoMode(800, 600), "YarnCat");
+	StateManager stateManager;
 
     while (display.isOpen())
     {
 		display.pollEvents();
-		display.clear();
+		stateManager.update();
 
+		display.clear();
+		stateManager.render(display);
         display.flip();
     }
 

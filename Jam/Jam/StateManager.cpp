@@ -33,3 +33,10 @@ void StateManager::update()
 		mStateStack.back()->update();
 	}
 }
+
+void StateManager::render(Display& display)
+{
+	if (!mStateStack.empty())
+		mStateStack.back()->render(display);
+
+}

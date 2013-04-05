@@ -3,6 +3,7 @@
 
 #include <memory>
 #include <vector>
+#include <SFML\System\Vector2.hpp>
 
 class Entity;
 class Cat;
@@ -24,6 +25,10 @@ private:
 	std::vector<std::shared_ptr<Ball>> mBalls;
 	std::shared_ptr<Cat> mCat;
 	float mGravityForce;
+
+	float distance(sf::Vector2f, sf::Vector2f);
+	sf::Vector2f normalize(sf::Vector2f);
+	float length(sf::Vector2f);
 };
 
 #endif

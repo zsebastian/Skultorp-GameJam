@@ -12,20 +12,33 @@ EventManager* EventManager::getInstance()
 	return &mThisIsAnInstanceFucker;
 }
 
+/*	This calls every function associated with the type of ev
+ */
 void EventManager::newEvent(sf::Event& ev)
 {
-	for (auto eventHandler: mEventHandlers)
+	if (mEventHandlers.count(ev.type) != 0)
 	{
-		eventHandler.second(ev);
+		for (auto eventHandler: mEventHandlers.at(ev.type))
+		{
+			eventHandler.second(ev);
+		}
 	}
 }
 
-void EventManager::registerEventHandler(EventHandler* handler, std::function<void (sf::Event&)> function)
+/*	This function adds an eventhandler which responds to a specific type of event.
+ */
+void EventManager::registerEventHandler(EventHandler* handler, sf::Event::EventType eventType, std::function<void (sf::Event&)> function)
 {
-	assert(mEventHandlers.count(handler) == 0);
-	mEventHandlers[handler] = function;
+	assert(mEventHandlers[eventType].count(handler) == 0);
+	mEventHandlers[eventType][handler] = function;
 }
+
+/*	This function deletes every function associated with a specific EventHandler-pointer.
+ */
 void EventManager::unregisterEventHandler(EventHandler* handler)
 {
-	mEventHandlers.erase(handler);
+	for (auto evType: mEventHandlers)
+	{
+		evType.second.erase(handler);
+	}
 }

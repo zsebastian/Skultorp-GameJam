@@ -8,7 +8,8 @@
 class Ball : public Entity
 {
 public:
-	Ball(const sf::Vector2f&);
+	Ball(const sf::Vector2f& position = sf::Vector2f(), float mass = 0.f);
+
 	virtual ~Ball();
 
 	virtual void setPosition(const sf::Vector2f& position);

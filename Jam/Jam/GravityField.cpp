@@ -6,8 +6,9 @@
 #include "Cat.h"
 #include "Utility.h"
 
-GravityField::GravityField(float gravityForce)
+GravityField::GravityField(float gravityForce, float terminalVelocity)
 	:mGravityForce(gravityForce)
+	,mTerminalVelocity(terminalVelocity)
 {
 
 }
@@ -22,7 +23,6 @@ void GravityField::addObject(std::shared_ptr<Entity> entity)
 	else if (ball)
 		mBalls.push_back(ball);
 }
-
 
 void GravityField::removeObject(std::shared_ptr<Entity> entity)
 {
@@ -48,9 +48,14 @@ void GravityField::update()
 
 	for (auto ball: mBalls)
 	{
-		//F = G(m1*m2)/r^2
+		//F = G(m1*m2/r^2)
 		float r = Util::distance(ball->getPosition(), mCat->getPosition());
-		float F = ((mGravityForce) * ball->getMass() * mCat->getMass()) / (r * r);
+		float m1 = ball->getMass();
+		float m2 =  mCat->getMass();
+		float F = ((mGravityForce) * (( m1 * m2) / (r * r)));
+		if (F > mTerminalVelocity)
+			F = mTerminalVelocity;
+
 		sf::Vector2f gravVector = F * Util::normalize(ball->getPosition() - mCat->getPosition());
 		sumGravVector += gravVector;
 	}

@@ -15,7 +15,7 @@ AnimationManager::AnimationManager(std::string texture):
 	mSprite.setTextureRect(mTextureBox);
 	mSprite.setOrigin(mSprite.getLocalBounds().width / 2, mSprite.getLocalBounds().height / 2);
 	
-	init();
+	//init();
 }
 
 
@@ -57,9 +57,8 @@ void AnimationManager::setTextBox()
 
 void AnimationManager::init()
 {
-	tinyxml2::XMLDocument doc;
-	doc.LoadFile("animations.xml");
 
+<<<<<<< HEAD
 	tinyxml2::XMLElement* root = doc.FirstChildElement("body");
 	root = root->FirstChildElement("Animation");
 
@@ -84,3 +83,6 @@ void AnimationManager::init()
 		root = root->NextSiblingElement();
 	}
 }
+=======
+}
+>>>>>>> 15cdf73c3a7f815b8f9e0634d1a01cd8acaa8452

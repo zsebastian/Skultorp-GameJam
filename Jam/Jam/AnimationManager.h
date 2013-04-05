@@ -35,8 +35,8 @@ private:
 
 	struct Animation
 	{
-		Animation(	int rowOfSprite, 
-					int numberOfFrames,
+		Animation(	int rowOfSprite = 0, 
+					int numberOfFrames = 0,
 					bool looping = true,
 					std::string next = "none")
 		{

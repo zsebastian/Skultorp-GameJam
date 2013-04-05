@@ -4,10 +4,11 @@
 
 Game::Game()
 {
-	entities.pushEntity(std::make_shared<Cat>(sf::Vector2f(500.f, 500.f)));
-	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(10.f, 400.f)));
-	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(100.f, 100.f)));
-	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(300.f, 0.f)));
+	entities.pushEntity(std::make_shared<Cat>(sf::Vector2f(500.f, 500.f), 10.f));
+	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(100.f, 100.f), 100.f));
+	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(700.f, 100.f), 200.f));
+	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(100.f, 500.f), 100.f));
+	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(700.f, 500.f), 10.f));
 }
 
 void Game::render(Display& display)

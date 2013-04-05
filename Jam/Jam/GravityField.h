@@ -13,7 +13,7 @@ class GravityField
 {
 public:
 
-	GravityField(float gravityForce = 1.f);
+	GravityField(float gravityForce = 100.f, float terminalVelocity = 2.f);
 
 	void addObject(std::shared_ptr<Entity>);
 	void removeObject(std::shared_ptr<Entity>);
@@ -24,6 +24,7 @@ private:
 	std::vector<std::shared_ptr<Ball>> mBalls;
 	std::shared_ptr<Cat> mCat;
 	float mGravityForce;
+	float mTerminalVelocity;
 
 };
 

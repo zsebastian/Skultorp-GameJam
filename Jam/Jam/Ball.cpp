@@ -1,11 +1,13 @@
 #include "Ball.h"
 #include "Display.h"
 
-Ball::Ball()
-	:mMass(0.f)
+Ball::Ball(const sf::Vector2f& position, float mass)
+	:mMass(mass)
 {
 	mTempCircle.setRadius(50.f);
 	mTempCircle.setFillColor(sf::Color::Green);
+
+	setPosition(position);
 }
 
 Ball::~Ball()
@@ -26,7 +28,7 @@ void Ball::setMass(float mass)
 
 void Ball::update()
 {
-
+	
 }
 
 void Ball::render(Display& display)

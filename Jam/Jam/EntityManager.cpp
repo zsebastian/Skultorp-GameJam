@@ -11,11 +11,12 @@ EntityManager::~EntityManager(){}
 
 void EntityManager::update()
 {
+	//Update gravity
+	mGravityField.update();
+
 	//Update entities
 	for(auto entity : mEntities)
 		entity->update();
-
-	mGravityField.update();
 
 	//Check for collisions
 	for(EntityVec::size_type i = 0; i < mEntities.size(); i++)

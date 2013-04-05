@@ -2,13 +2,12 @@
 #define CAT_H
 
 #include "Entity.h"
-#include <SFML/Graphics/Texture.hpp>
-#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/CircleShape.hpp>
 
 class Cat : public Entity
 {
 public:
-	Cat();
+	Cat(const sf::Vector2f& position = sf::Vector2f(), float mass = 0.f);
 	virtual ~Cat();
 
 	virtual void setPosition(const sf::Vector2f& position);
@@ -25,8 +24,7 @@ private:
 	sf::Vector2f mGravityVector;
 	float mMass;
 
-	sf::Texture mTempTexture;
-	sf::Sprite mTempSprite;
+	sf::CircleShape mTempShape;
 };
 
 #endif

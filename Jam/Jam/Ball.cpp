@@ -6,6 +6,7 @@ Ball::Ball()
 {
 	mTempCircle.setRadius(50.f);
 	mTempCircle.setFillColor(sf::Color::Green);
+	setPosition(sf::Vector2f(200, 200));
 }
 
 Ball::~Ball()

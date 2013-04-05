@@ -15,7 +15,7 @@ AnimationManager::AnimationManager(std::string texture):
 	mSprite.setTextureRect(mTextureBox);
 	mSprite.setOrigin(mSprite.getLocalBounds().width / 2, mSprite.getLocalBounds().height / 2);
 	
-	init();
+	//init();
 }
 
 
@@ -55,7 +55,7 @@ void AnimationManager::setTextBox()
 	mTextureBox.top = mAnimations[mCurrentAnimation].mRowOfSprite * 512;
 }
 
-void AnimationManager::init()
+/*void AnimationManager::init()
 {
 
-}
+}*/

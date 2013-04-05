@@ -1,5 +1,6 @@
 #include "AnimationManager.h"
 #include "tinyxml2.h"
+#include "Utility.h"
 
 AnimationManager::AnimationManager(std::string texture):
 	mCurrentAnimation("idle"),
@@ -65,21 +66,10 @@ void AnimationManager::init()
 
 	while(root)
 	{
-		int rowOfSprite = 0;
-		int numberOfFrames = 0;
-		bool looping = true;
-		std::string next = "none";
-
-		tinyxml2::XMLAttribute* atri = root->FirstAttribute;
-
-		while(atri)
-		{
-			std::string value = atri->Name();
-			if(value == "rowOfSprite")
-			{
-				//rowOfSprite = static_cast<int>(atri->Value());
-			}
-		}
+		int rowOfSprite = Util::fromString<int>(root->Attribute("rowOfSprite"));
+		int numberOfFrames = Util::fromString<int>(root->Attribute("numberOfFrames"));
+		bool looping = Util::fromString<bool>(root->Attribute("looping"));
+		std::string next = "";
 
 		root = root->NextSiblingElement();
 	}

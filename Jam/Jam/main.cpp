@@ -1,11 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include "Display.h"
 #include "StateManager.h"
-<<<<<<< HEAD
 #include "Utility.h"
-=======
 #include "Game.h"
->>>>>>> 5a632a71645147d3fa6577815451299287602d92
 
 int main()
 {

@@ -33,7 +33,7 @@ void GravityField::removeObject(std::shared_ptr<Ball> ball)
 void GravityField::removeObject(std::shared_ptr<Cat> cat)
 {
 	if (mCat == cat)
-		mCat == nullptr;
+		mCat = nullptr;
 }
 
 

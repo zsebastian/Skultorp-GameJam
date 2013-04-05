@@ -34,3 +34,8 @@ void EntityManager::render(Display& display)
 	for(EntityVec::iterator i = mEntities.begin(); i != mEntities.end(); i++)
 		(*i)->render(display);
 }
+
+void EntityManager::pushEntity(std::shared_ptr<Entity> entity)
+{
+	mEntities.push_back(entity);
+}

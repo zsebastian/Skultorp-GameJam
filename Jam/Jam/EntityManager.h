@@ -16,6 +16,9 @@ public:
 
 	void update(); 
 	void render(Display& display);
+
+	void pushEntity(std::shared_ptr<Entity>);
+
 private:
 	EntityVec mEntities;
 };

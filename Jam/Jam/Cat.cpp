@@ -52,6 +52,7 @@ void Cat::update()
 	move();
 
 	mTempShape.setPosition(mPosition);
+	mYarn.updatePosition(mPosition, !mCanJump);
 }
 
 void Cat::move()
@@ -127,6 +128,7 @@ void Cat::render(Display& display)
 	tempSprite.rotate(180 + f);
 
 	display.render(tempSprite);
+
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)

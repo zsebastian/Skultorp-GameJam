@@ -5,6 +5,8 @@
 #include <SFML/Graphics/CircleShape.hpp>
 #include <memory>
 #include "AnimationManager.h"
+#include "Yarn.h"
+
 
 class Ball;
 
@@ -60,9 +62,13 @@ private:
 
 	std::vector<std::shared_ptr<Ball>> mStandsOn;
 
+
 	// animtion
 	AnimationManager mAnimations;
 	bool mLeftDir;
+
+	Yarn mYarn;
+
 };
 
 #endif

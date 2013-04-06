@@ -8,9 +8,8 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	,mGravityVector(0.f, 0.f)
 	,mPosition(position)
 {
-	
+	mStandingOn = nullptr;
 	setRadius(20.f);
-	mTempShape.setFillColor(sf::Color::Red);
 
 	setPosition(position);
 }
@@ -33,8 +32,6 @@ void Cat::setMass(float mass)
 void Cat::setRadius(float radius)
 {
 	mRadius = radius;
-	mTempShape.setRadius(radius);
-	mTempShape.setOrigin(radius, radius);
 }
 
 void Cat::update()
@@ -45,8 +42,12 @@ void Cat::update()
 
 void Cat::render(Display& display)
 {
-	mTempShape.setPosition(mPosition);
-	display.render(mTempShape);
+	sf::CircleShape tempShape;
+	tempShape.setOrigin(mRadius, mRadius);
+	tempShape.setPosition(mPosition);
+	tempShape.setFillColor(sf::Color::Red);
+	tempShape.setRadius(mRadius);	
+	display.render(tempShape);
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)
@@ -55,6 +56,8 @@ void Cat::onCollision(std::shared_ptr<Entity> entity)
 
 	if (ball)
 	{
+		mStandingOn = ball;
+
 		sf::Vector2f dVec = mPosition - ball->getPosition();
 		dVec = Util::normalize(dVec);
 		float distance = ball->getRadius() + mRadius;
@@ -81,4 +84,10 @@ float Cat::getMass() const
 float Cat::getRadius() const
 {
 	return mRadius;
+}
+
+
+std::shared_ptr<Ball> Cat::standsOnPlanet()
+{
+	return mStandingOn;
 }

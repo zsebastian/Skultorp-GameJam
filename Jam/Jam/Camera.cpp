@@ -15,7 +15,7 @@ void Camera::setPosition(const sf::Vector2f& position)
 
 void Camera::setRotation(float rotation)
 {
-	//mView.setRotation(rotation);
+	mView.setRotation(rotation);
 }
 
 void Camera::rotate(float delta)

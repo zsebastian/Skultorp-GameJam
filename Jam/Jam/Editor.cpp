@@ -5,7 +5,7 @@
 #include "EntityManager.h"
 #include "Utility.h"
 
-Editor::Editor(std::shared_ptr<EntityManager> entityManager)
+Editor::Editor(EntityManager* entityManager)
 {
 	//Register events
 	mEventHandler.addEventListener(sf::Event::MouseButtonPressed, std::bind(&Editor::onButtonDown, this, std::placeholders::_1));
@@ -56,20 +56,23 @@ void Editor::update()
 void Editor::render(Display& display)
 {
 	//display.getCamera().setRotation(0.f);
+
+	//Get mouse position
+	mMousePosition = display.getWindow().convertCoords(sf::Mouse::getPosition(display.getWindow()), display.getCamera().getView());
+	mPotentialEntity.setPosition(mMousePosition);
+
 	display.render(mPotentialEntity);
 }
 
 void Editor::onButtonDown(sf::Event& e)
 {
-	sf::Vector2f mousePos(static_cast<float>(e.mouseButton.x), static_cast<float>(e.mouseButton.y));
-
 	if(!mLockedOnEntity)
 	{
 		if(e.mouseButton.button == sf::Mouse::Left)
 		{
 			for(EntityVec::iterator i = mEntities.begin(); i != mEntities.end(); i++)
 			{
-				if((*i)->getGlobalBounds().contains(mousePos))
+				if((*i)->getGlobalBounds().contains(mMousePosition))
 				{
 					mCurrentEntity = *i;
 					mLockedOnEntity = true;
@@ -80,7 +83,7 @@ void Editor::onButtonDown(sf::Event& e)
 		{
 			//Add new ball
 			float radius = mPotentialEntity.getRadius();
-			mEntityManager->pushEntity(std::make_shared<Ball>(mousePos, radius, radius));
+			mEntityManager->pushEntity(std::make_shared<Ball>(mMousePosition, radius, radius));
 		}
 	}
 }
@@ -96,13 +99,9 @@ void Editor::onButtonUp(sf::Event& e)
 
 void Editor::onMouseMove(sf::Event& e)
 {
-	sf::Vector2f mousePos(static_cast<float>(e.mouseMove.x), static_cast<float>(e.mouseMove.y));
-
 	//Set position for locked entity
 	if(mLockedOnEntity && mCurrentEntity != nullptr)
-		mCurrentEntity->setPosition(mousePos);
-
-	mPotentialEntity.setPosition(mousePos);
+		mCurrentEntity->setPosition(mMousePosition);
 }
 
 void Editor::onKeyDown(sf::Event& e)

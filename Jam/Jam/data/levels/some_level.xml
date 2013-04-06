@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<level>
+	<balls>
+		<ball x="100.f" y="100.f" mass="50.f" radius="100.f"/>
+		<ball x="100.f" y="400.f" mass="150.f" radius="150.f"/>
+		<ball x="300.f" y="300.f" mass="300.f" radius="300.f"/>
+	</balls>
+</level>

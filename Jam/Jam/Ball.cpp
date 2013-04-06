@@ -34,7 +34,7 @@ void Ball::setMass(float mass)
 void Ball::setRadius(float radius)
 {
 	mRadius = radius;
-	float scale = (radius*2.f)/mSprite.getLocalBounds().width;
+	float scale = (radius*2.2f)/mSprite.getLocalBounds().width;
 	mSprite.setScale(scale, scale);
 }
 

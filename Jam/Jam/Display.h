@@ -19,6 +19,7 @@ public:
 	void pollEvents();
 
 	bool isOpen() const;
+	sf::RenderWindow& getWindow();
 	Camera& getCamera();
 private:
 	sf::RenderWindow mWindow;

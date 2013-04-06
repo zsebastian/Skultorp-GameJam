@@ -4,7 +4,7 @@
 #include "Utility.h"
 
 EntityManager::EntityManager()
-	:mEditor(std::shared_ptr<EntityManager>(this))
+	:mEditor(this)
 {
 
 }

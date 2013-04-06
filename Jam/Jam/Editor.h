@@ -4,6 +4,7 @@
 #include <vector>
 #include "EventHandler.h"
 #include <SFML/Graphics/CircleShape.hpp>
+#include <SFML/System/Vector2.hpp>
 
 class Display;
 class Entity;
@@ -13,7 +14,7 @@ class Editor
 public:
 	typedef std::vector<std::shared_ptr<Entity> > EntityVec;
 
-	Editor(std::shared_ptr<EntityManager> entityManager);
+	Editor(EntityManager* entityManager = 0);
 	~Editor();
 
 	void pushEntity(std::shared_ptr<Entity> entity);
@@ -26,9 +27,10 @@ private:
 	std::shared_ptr<Entity> mCurrentEntity;
 	bool mLockedOnEntity;
 
-	std::shared_ptr<EntityManager> mEntityManager;
+	EntityManager* mEntityManager;
 
 	sf::CircleShape mPotentialEntity;
+	sf::Vector2f mMousePosition;
 
 	EventHandler mEventHandler;
 	void onButtonDown(sf::Event&);

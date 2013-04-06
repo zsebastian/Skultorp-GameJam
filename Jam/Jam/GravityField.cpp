@@ -49,7 +49,8 @@ void GravityField::update()
 	for (auto ball: mBalls)
 	{
 		//F = G(m1*m2)/r^2
-		float F = ((mGravityForce) * ball->getMass() * mCat->getMass()) / Util::distance(ball->getPosition(), mCat->getPosition());
+		float r = Util::distance(ball->getPosition(), mCat->getPosition());
+		float F = ((mGravityForce) * ball->getMass() * mCat->getMass()) / (r * r);
 		sf::Vector2f gravVector = F * Util::normalize(ball->getPosition() - mCat->getPosition());
 		sumGravVector += gravVector;
 	}

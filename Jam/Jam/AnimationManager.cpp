@@ -70,7 +70,7 @@ void AnimationManager::init()
 		bool looping = true;
 		std::string next = "none";
 
-		tinyxml2::XMLAttribute* atri = root->FirstAttribute;
+		tinyxml2::XMLAttribute* atri;// = root->FirstAttribute();
 
 		while(atri)
 		{

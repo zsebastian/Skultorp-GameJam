@@ -8,7 +8,7 @@
 class Cat : public Entity
 {
 public:
-	Cat();
+	Cat(const sf::Vector2f& position);
 	virtual ~Cat();
 
 	virtual void setPosition(const sf::Vector2f& position);

@@ -6,7 +6,6 @@
 
 int main()
 {
-
 	int i = Util::fromString<int>("1");
 	std::string str = Util::toString(12);
 

@@ -11,7 +11,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AnimationManager.cpp" />
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Cat.cpp" />
     <ClCompile Include="Display.cpp" />
@@ -25,7 +24,6 @@
     <ClCompile Include="tinyxml2.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AnimationManager.h" />
     <ClInclude Include="Ball.h" />
     <ClInclude Include="Cat.h" />
     <ClInclude Include="Display.h" />

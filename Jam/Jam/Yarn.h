@@ -4,6 +4,7 @@
 #include <vector>
 #include "Display.h"
 #include <SFML\System\Vector2.hpp>
+#include <SFML\Graphics\Texture.hpp>
 
 struct Bezier
 {
@@ -37,6 +38,12 @@ private:
 
 	std::vector<Bezier> mBeziers;
 	int currentBezierIndex;
+
+	sf::Texture mTexture;
+
+	float mTotalLength;
+	float getTextureY();
+
 };
 
 #endif

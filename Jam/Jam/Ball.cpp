@@ -1,5 +1,6 @@
 #include "Ball.h"
 #include "Display.h"
+#include "Utility.h"
 
 Ball::Ball(const sf::Vector2f& position, float mass, float radius)
 	:mMass(mass)
@@ -37,6 +38,7 @@ void Ball::update()
 {
 	//HOOOOOOOOW
 	mActualMass += mMass / 500.f;
+
 	if (mActualMass > mMass)
 		mActualMass = mMass;
 }
@@ -65,6 +67,11 @@ float Ball::getMass() const
 float Ball::getRadius() const
 {
 	return mRadius;
+}
+
+sf::FloatRect Ball::getGlobalBounds() const
+{
+	return mTempCircle.getGlobalBounds();
 }
 
 void Ball::resetMass()

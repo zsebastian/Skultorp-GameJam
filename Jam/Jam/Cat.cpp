@@ -134,6 +134,9 @@ void Cat::render(Display& display)
 
 	display.render(mSprite);
 
+	display.getCamera().setPosition(mPosition);
+	
+	mYarn.render(display);
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)
@@ -187,4 +190,9 @@ void Cat::resetStandsOn()
 	}
 
 	mStandsOn.clear();
+}
+
+sf::FloatRect Cat::getGlobalBounds() const
+{
+	return sf::FloatRect(mPosition.x - mRadius, mPosition.y - mRadius, mPosition.x + mRadius, mPosition.y + mRadius);
 }

@@ -5,11 +5,12 @@
 #include <SFML\System\Vector2.hpp>
 #include <sstream>
 #include <cmath>
+#include <limits>
 
 namespace Util
 {
 	template <class T, typename predT>
-	inline void eraseIf(T cont, predT pred)
+	inline void eraseIf(T& cont, predT& pred)
 	{
 		cont.erase(
 			std::remove_if(cont.begin(), cont.end(), pred),
@@ -84,6 +85,12 @@ namespace Util
 			angle = 0;
 		}
 		return angle; 
+	}
+
+	template <typename floatType>
+	bool floatCompare(floatType A, floatType B, floatType epsilon = std::numeric_limits<floatType>::epsilon()) 
+	{
+	   return std::abs(A - B) < epsilon;
 	}
 };
 

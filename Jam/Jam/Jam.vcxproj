@@ -92,6 +92,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="StateManager.cpp" />
     <ClCompile Include="tinyxml2.cpp" />
+    <ClCompile Include="Yarn.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimationManager.h" />
@@ -111,6 +112,7 @@
     <ClInclude Include="StateManager.h" />
     <ClInclude Include="tinyxml2.h" />
     <ClInclude Include="Utility.h" />
+    <ClInclude Include="Yarn.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

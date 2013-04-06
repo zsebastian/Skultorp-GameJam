@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <SFML\System\Vector2.hpp>
 #include <sstream>
+#include <cmath>
 
 namespace Util
 {
@@ -62,6 +63,7 @@ namespace Util
 		
 		return (dx2 + dy2 <= rr2);
 	}
+
 	template <typename T>
 	sf::Vector2<T> getNormal(sf::Vector2<T> vectorIn)
 	{
@@ -71,6 +73,12 @@ namespace Util
 		vectorOut.y = -vectorIn.x;
 
 		return vectorOut;
+	}
+
+	template <typename T>
+	float angle(sf::Vector2<T> v)
+	{
+		return std::atan2(v.y, v.x) * 180 / 3.14f;
 	}
 };
 

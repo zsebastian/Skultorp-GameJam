@@ -3,6 +3,9 @@
 
 #include "Entity.h"
 #include <SFML/Graphics/CircleShape.hpp>
+#include <memory>
+
+class Ball;
 
 class Cat : public Entity
 {
@@ -19,6 +22,8 @@ public:
 	virtual void onCollision(std::shared_ptr<Entity> entity);
 	void setGravityVector(const sf::Vector2f& gravityVector);
 
+	std::shared_ptr<Ball> standsOnPlanet();
+
 	virtual sf::Vector2f getPosition() const;
 	virtual float getMass() const;
 	virtual float getRadius() const;
@@ -33,6 +38,7 @@ private:
 	float mMass;
 	float mRadius;
 
+<<<<<<< HEAD
 	void move();
 	void walk();
 	
@@ -48,6 +54,9 @@ private:
 
 	sf::CircleShape mTempShape;
 
+=======
+	std::shared_ptr<Ball> mStandingOn;
+>>>>>>> origin/master
 };
 
 #endif

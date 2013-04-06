@@ -23,10 +23,11 @@ public:
 private:
 	std::vector<std::shared_ptr<Ball>> mBalls;
 	std::vector<std::shared_ptr<Cat>> mCats;
+	
+	sf::Vector2f calcGravity(std::shared_ptr<Entity>, std::shared_ptr<Entity>) const;
 
 	float mGravityForce;
 	float mTerminalVelocity;
-
-};
+	};
 
 #endif

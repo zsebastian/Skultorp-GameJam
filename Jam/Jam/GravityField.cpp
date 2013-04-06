@@ -54,8 +54,10 @@ void GravityField::update()
 		{
 			for (auto ball = standsOn.begin(); ball != standsOn.end(); ++ball)
 			{
-				sumGravVector += calcGravity((*ball), (*cat));
+				const float standingMultiplier = 1.0;
+				sumGravVector += standingMultiplier * Util::normalize(calcGravity((*ball), (*cat)));
 			}
+			(*cat)->resetStandsOn();
 		}
 		else
 		{

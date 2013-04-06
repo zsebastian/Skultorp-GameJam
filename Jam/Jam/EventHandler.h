@@ -9,6 +9,10 @@ class EventHandler : public sf::NonCopyable
 {
 public:
 	EventHandler(sf::Event::EventType, std::function<void (sf::Event&)> eventFunction);
+	EventHandler();
+
+	void addEventListener(sf::Event::EventType, std::function<void (sf::Event&)> eventFunction);
+
 	~EventHandler();
 };
 #endif

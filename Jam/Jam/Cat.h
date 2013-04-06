@@ -34,6 +34,7 @@ private:
 	sf::Vector2f mGravityVector;
 	sf::Vector2f mRightVector;
 	sf::Vector2f mMoveSpeed;
+	sf::Vector2f mJumpDirection;
 
 	float mWalkSpeed;
 
@@ -55,12 +56,16 @@ private:
 
 	sf::CircleShape mTempShape;
 
+<<<<<<< HEAD
 	std::shared_ptr<Ball> mStandingOn;
 
 	std::vector<std::shared_ptr<Ball>> mStandsOn;
 
 	// animtion
 	AnimationManager mAnimations;
+=======
+	std::vector<std::shared_ptr<Ball>> mStandsOn;
+>>>>>>> 3d7d814fad1542d92c831394213b25e8824af7cf
 };
 
 #endif

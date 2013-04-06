@@ -81,7 +81,8 @@ void Cat::jump()
 		mJumping = true;
 		mCanJump = false;
 		mCurrentJumpPower = mMaxJumpPower;
-		mStandingOn = nullptr;
+		mJumpDirection = -mGravityVector;
+		mStandsOn.clear();
 	}
 }
 
@@ -89,7 +90,7 @@ void Cat::jumping()
 {
 	if(mJumping)
 	{
-		mMoveSpeed -= Util::normalize(mGravityVector) * mCurrentJumpPower;
+		mMoveSpeed += Util::normalize(mJumpDirection) * mCurrentJumpPower;
 
 		mCurrentJumpPower -= mJumpDecelaration;
 		if(mCurrentJumpPower <= 0.f)
@@ -98,6 +99,11 @@ void Cat::jumping()
 			mJumping = false;
 		}
 	}
+<<<<<<< HEAD
+=======
+	//Apply gravity
+	mPosition += mGravityVector;
+>>>>>>> 3d7d814fad1542d92c831394213b25e8824af7cf
 }
 
 void Cat::render(Display& display)
@@ -157,5 +163,10 @@ std::vector<std::shared_ptr<Ball>>& Cat::standsOnPlanets()
 
 void Cat::resetStandsOn()
 {
+	for (auto iter = mStandsOn.begin(); iter != mStandsOn.end(); ++iter)
+	{
+		(*iter)->resetMass();
+	}
+
 	mStandsOn.clear();
 }

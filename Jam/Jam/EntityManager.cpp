@@ -16,8 +16,8 @@ void EntityManager::update()
 	mGravityField.update();
 
 	//Update entities
-	for(auto entity : mEntities)
-		entity->update();
+	for(auto iter = mEntities.begin(); iter != mEntities.end(); ++iter)
+		(*iter)->update();
 
 	//Check for collisions
 	for(auto iter0 = mEntities.begin(); iter0 != mEntities.end(); ++iter0)
@@ -40,8 +40,8 @@ void EntityManager::update()
 void EntityManager::render(Display& display)
 {
 	//Render entities
-	for(auto entity : mEntities)
-		entity->render(display);
+	for(auto iter = mEntities.begin(); iter != mEntities.end(); ++iter)
+		(*iter)->render(display);
 }
 
 void EntityManager::pushEntity(std::shared_ptr<Entity> entity)

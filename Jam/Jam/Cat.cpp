@@ -53,6 +53,15 @@ void Cat::update()
 
 	mTempShape.setPosition(mPosition);
 	mYarn.updatePosition(mPosition, !mCanJump);
+
+	if (mYarn.intersect(mPosition, mRadius))
+	{
+		mTempShape.setFillColor(sf::Color::Blue);
+	}
+	else
+	{
+		mTempShape.setFillColor(sf::Color::Red);
+	}
 }
 
 void Cat::move()
@@ -134,7 +143,7 @@ void Cat::render(Display& display)
 	
 	mYarn.render(display);
 
-	display.render(tempSprite);
+	display.render(mTempShape);
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)

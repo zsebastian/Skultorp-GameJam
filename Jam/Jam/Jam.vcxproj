@@ -80,6 +80,7 @@
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Cat.cpp" />
     <ClCompile Include="Display.cpp" />
+    <ClCompile Include="Editor.cpp" />
     <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="EventHandler.cpp" />
     <ClCompile Include="EventManager.cpp" />
@@ -93,6 +94,7 @@
     <ClInclude Include="Ball.h" />
     <ClInclude Include="Cat.h" />
     <ClInclude Include="Display.h" />
+    <ClInclude Include="Editor.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityManager.h" />
     <ClInclude Include="EventHandler.h" />

@@ -14,6 +14,12 @@ void Display::render(const sf::Drawable& drawable)
 	mWindow.setView(mCamera.getView());
 	mWindow.draw(drawable);
 }
+
+void Display::render(const sf::Drawable& drawable, const sf::RenderStates& renderState)
+{
+	mWindow.draw(drawable, renderState);
+}
+	
 	
 void Display::flip()
 {

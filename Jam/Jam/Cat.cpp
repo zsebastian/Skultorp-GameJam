@@ -135,6 +135,7 @@ void Cat::render(Display& display)
 	if(mCanJump)
 		display.getCamera().rotate(camRot*0.03);
 	
+	mYarn.render(display);
 	display.render(tempSprite);
 }
 

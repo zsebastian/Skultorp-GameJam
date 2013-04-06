@@ -11,6 +11,7 @@ class Display : public EventHandler
 public:
 	Display(sf::VideoMode videoMode, const std::string& windowText);
 	void render(const sf::Drawable& drawable);
+	void render(const sf::Drawable& drawable, const sf::RenderStates& renderState);
 	
 	void flip();
 	void clear(sf::Color clearColor = sf::Color::Black);

@@ -2,6 +2,7 @@
 #include "Display.h"
 #include "Ball.h"
 #include "Utility.h"
+#include <string>
 
 Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	:mMass(mass)
@@ -11,13 +12,14 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	,mWalkSpeed(3)
 	,mCanJump(false)
 	,mJumping(false)
-	,mMaxJumpPower(10.f)
+	,mMaxJumpPower(7.f)
 	,mCurrentJumpPower(0)
-	,mJumpDecelaration(0.7f)
+	,mJumpDecelaration(0.15f)
 	,mAnimations("cat.png")
 	,mLeftDir(false)
+	,mSpriteDown(0.f, 1.f)
 {
-	setRadius(20.f);
+	setRadius(40.f);
 
 	setPosition(position);
 }
@@ -46,6 +48,7 @@ void Cat::update()
 {
 	mMoveSpeed = sf::Vector2f();
 
+	rotate();
 	jump();
 	jumping();
 	walk();
@@ -75,15 +78,31 @@ void Cat::walk()
 	mRightVector = Util::normalize(mRightVector);
 	mRightVector *= mWalkSpeed;
 
-	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && mAnimations.getCurrentAnimation() != "jump")
 	{
-		mMoveSpeed += mRightVector;
 		mLeftDir = false;
+		if(mCanJump && mAnimations.getCurrentAnimation() != "inair")
+		{
+			mAnimations.setCurrentAnimation("walk");
+		}
+		mMoveSpeed += mRightVector;
 	}
-	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && mAnimations.getCurrentAnimation() != "jump")
 	{
-		mMoveSpeed -= mRightVector;
 		mLeftDir = true;
+		if(mCanJump && mAnimations.getCurrentAnimation() != "inair")
+		{
+			mAnimations.setCurrentAnimation("walk");
+		}
+		mMoveSpeed -= mRightVector;
+	}
+	
+	if(!sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	{
+		if(mCanJump && mAnimations.getCurrentAnimation() == "walk")
+		{
+			mAnimations.setCurrentAnimation("idle");
+		}
 	}
 }
 
@@ -96,12 +115,13 @@ void Cat::jump()
 		mCurrentJumpPower = mMaxJumpPower;
 		mJumpDirection = -mGravityVector;
 		mStandsOn.clear();
+		mAnimations.setCurrentAnimation("jump");
 	}
 }
 
 void Cat::jumping()
 {
-	if(mJumping)
+	if(mJumping && mAnimations.getCurrentAnimation() == "inair")
 	{
 		mMoveSpeed += Util::normalize(mJumpDirection) * mCurrentJumpPower;
 
@@ -114,39 +134,58 @@ void Cat::jumping()
 	}
 }
 
+void Cat::rotate()
+{
+	mTargetAngle = Util::angle(mGravityVector) - 90;
+	float spriteRotation = mSprite.getRotation();
+
+	float shortestDist = mTargetAngle - spriteRotation;
+	while(shortestDist < -180)
+	{
+		shortestDist += 360;
+	}
+	while(shortestDist > 180)
+	{
+		shortestDist -= 360;
+	}
+
+	float rotateSpeed = 0.5f;
+
+	if(!mCanJump)
+	{
+		rotateSpeed = 0.1;
+	}
+	mAnimations.setRotation(shortestDist * rotateSpeed);
+
+}
+
 void Cat::render(Display& display)
 {
-	//sf::CircleShape tempShape;
-	//tempShape.setOrigin(mRadius, mRadius);
-	//tempShape.setPosition(mPosition);
-	//tempShape.setFillColor(sf::Color::Red);
-	//tempShape.setRadius(mRadius);	
-	//display.render(tempShape);
-
-	sf::Sprite tempSprite = mAnimations.getSprite(mPosition);
+	mSprite = mAnimations.getSprite(mPosition);
 
 	if(mLeftDir)
-		tempSprite.scale(-1.f, 1.f);
+	{
+		mSprite.scale(-1.f, 1.f);
+	}
 
-	tempSprite.scale(0.2f, 0.2f);
-
-	tempSprite.setRotation(Util::angle(mGravityVector) - 90);
+	mSprite.scale(0.4f, 0.4f);
 
 	//Set camera position
 	sf::Vector2f camPos = mPosition - display.getCamera().getPosition();
 	display.getCamera().move(sf::Vector2f(camPos.x*0.05, camPos.y*0.05));
 	
+	mYarn.render(display);
+
 	//Set camera rotation
-	float camRot = tempSprite.getRotation() - display.getCamera().getRotation();
+	float camRot = mSprite.getRotation() - display.getCamera().getRotation();
 	
 	while(camRot < -180) camRot += 360;
 	while(camRot > 180) camRot -= 360;
 
 	if(mCanJump)
 		display.getCamera().rotate(camRot*0.03);
-	
-	mYarn.render(display);
-	display.render(tempSprite);
+
+	display.render(mSprite);
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)
@@ -162,6 +201,12 @@ void Cat::onCollision(std::shared_ptr<Entity> entity)
 		float distance = ball->getRadius() + mRadius;
 		dVec = dVec * distance;
 		mPosition = ball->getPosition() + dVec;
+		
+		if(mCanJump && mAnimations.getCurrentAnimation() == "inair")
+		{
+			mAnimations.setCurrentAnimation("land");
+		}
+
 		mCanJump = true;
 	}
 }

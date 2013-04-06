@@ -16,6 +16,7 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	,mJumpDecelaration(0.7f)
 	,mAnimations("cat.png")
 	,mLeftDir(false)
+	,mSpriteDown(0.f, 1.f)
 {
 	setRadius(20.f);
 
@@ -107,25 +108,31 @@ void Cat::jumping()
 
 void Cat::render(Display& display)
 {
-	//sf::CircleShape tempShape;
-	//tempShape.setOrigin(mRadius, mRadius);
-	//tempShape.setPosition(mPosition);
-	//tempShape.setFillColor(sf::Color::Red);
-	//tempShape.setRadius(mRadius);	
-	//display.render(tempShape);
+	mTargetAngle = Util::angle(mGravityVector) - 90;
+	float spriteRotation = mSprite.getRotation();
 
-	sf::Sprite tempSprite = mAnimations.getSprite(mPosition);
+	float shortestDist = mTargetAngle - spriteRotation;
+	while(shortestDist < -180)
+	{
+		shortestDist += 360;
+	}
+	while(shortestDist > 180)
+	{
+		shortestDist -= 360;
+	}
+
+	mAnimations.setRotation(shortestDist * 0.1f);
+
+	mSprite = mAnimations.getSprite(mPosition);
 
 	if(mLeftDir)
 	{
-		tempSprite.scale(-1.f, 1.f);
+		mSprite.scale(-1.f, 1.f);
 	}
 
-	tempSprite.scale(0.2f, 0.2f);
+	mSprite.scale(0.2f, 0.2f);
 
-	tempSprite.setRotation(Util::angle(mGravityVector) - 90);
-
-	display.render(tempSprite);
+	display.render(mSprite);
 
 }
 

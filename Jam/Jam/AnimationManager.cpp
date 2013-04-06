@@ -81,3 +81,12 @@ void AnimationManager::init()
 		root = root->NextSiblingElement();
 	}
 }
+
+void AnimationManager::setRotation(float angle)
+{
+	mSprite.rotate(angle);
+	if(mSprite.getRotation() >= 359)
+	{
+		mSprite.setRotation(0);
+	}
+}

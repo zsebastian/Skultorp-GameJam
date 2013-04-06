@@ -15,6 +15,8 @@ public:
 	void setCurrentAnimation(std::string animation);
 	sf::Sprite getSprite(sf::Vector2f& position);
 
+	void setRotation(float angle);
+
 private:
 
 	void init();

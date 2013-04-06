@@ -37,6 +37,7 @@ private:
 	sf::Vector2f mRightVector;
 	sf::Vector2f mMoveSpeed;
 	sf::Vector2f mJumpDirection;
+	sf::Vector2f mSpriteDown;
 
 	float mWalkSpeed;
 
@@ -66,6 +67,8 @@ private:
 	// animtion
 	AnimationManager mAnimations;
 	bool mLeftDir;
+	sf::Sprite mSprite;
+	float mTargetAngle;
 
 	Yarn mYarn;
 

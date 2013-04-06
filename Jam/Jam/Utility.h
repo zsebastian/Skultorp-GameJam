@@ -78,7 +78,12 @@ namespace Util
 	template <typename T>
 	float angle(sf::Vector2<T> v)
 	{
-		return std::atan2(v.y, v.x) * 180 / 3.14f;
+		float angle = std::atan2(v.y, v.x) * 180 / 3.14f;
+		if(angle >= 359)
+		{
+			angle = 0;
+		}
+		return angle; 
 	}
 };
 

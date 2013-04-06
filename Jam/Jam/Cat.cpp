@@ -15,7 +15,6 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	,mCurrentJumpPower(0)
 	,mJumpDecelaration(0.7f)
 {
-	mStandingOn = nullptr;
 	setRadius(20.f);
 
 	setPosition(position);
@@ -43,6 +42,7 @@ void Cat::setRadius(float radius)
 
 void Cat::update()
 {
+<<<<<<< HEAD
 	mMoveSpeed = sf::Vector2f();
 
 	jump();
@@ -98,6 +98,11 @@ void Cat::jumping()
 			mJumping = false;
 		}
 	}
+=======
+	//Apply gravity
+	mPosition += mGravityVector;
+	mStandsOn.clear();
+>>>>>>> 403293f09e69f208bac7ebe162062683fca7c103
 }
 
 void Cat::render(Display& display)
@@ -116,7 +121,7 @@ void Cat::onCollision(std::shared_ptr<Entity> entity)
 
 	if (ball)
 	{
-		mStandingOn = ball;
+		mStandsOn.push_back(ball);
 
 		sf::Vector2f dVec = mPosition - ball->getPosition();
 		dVec = Util::normalize(dVec);
@@ -148,7 +153,12 @@ float Cat::getRadius() const
 }
 
 
-std::shared_ptr<Ball> Cat::standsOnPlanet()
+std::vector<std::shared_ptr<Ball>>& Cat::standsOnPlanets()
 {
-	return mStandingOn;
+	return mStandsOn;
+}
+
+void Cat::resetStandsOn()
+{
+	mStandsOn.clear();
 }

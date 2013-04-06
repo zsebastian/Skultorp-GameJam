@@ -22,7 +22,8 @@ public:
 	virtual void onCollision(std::shared_ptr<Entity> entity);
 	void setGravityVector(const sf::Vector2f& gravityVector);
 
-	std::shared_ptr<Ball> standsOnPlanet();
+	std::vector<std::shared_ptr<Ball>>& standsOnPlanets();
+	void resetStandsOn();
 
 	virtual sf::Vector2f getPosition() const;
 	virtual float getMass() const;
@@ -38,6 +39,7 @@ private:
 	float mMass;
 	float mRadius;
 
+<<<<<<< HEAD
 	void move();
 	void walk();
 	
@@ -55,6 +57,9 @@ private:
 
 	std::shared_ptr<Ball> mStandingOn;
 
+=======
+	std::vector<std::shared_ptr<Ball>> mStandsOn;
+>>>>>>> 403293f09e69f208bac7ebe162062683fca7c103
 };
 
 #endif

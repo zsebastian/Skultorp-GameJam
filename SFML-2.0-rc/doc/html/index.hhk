@@ -25,36 +25,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Packet.htm#a7dd6e429b87520008326c4d71f1cf011"><param name="Name" value="sf::Packet"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VertexArray.htm#a80c8f6865e53bd21fc6cb10fffa10035"><param name="Name" value="sf::VertexArray"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#aefd4b1cc8e264598b94bd70aaac5bc99"><param name="Name" value="applyBlendMode"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#aefd4b1cc8e264598b94bd70aaac5bc99"><param name="Name" value="sf::RenderTarget"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#aefd4b1cc8e264598b94bd70aaac5bc99"><param name="Name" value="sf::RenderTexture"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#aefd4b1cc8e264598b94bd70aaac5bc99"><param name="Name" value="sf::RenderWindow"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a3ed439c5445e9c7d7ff786ff37005efa"><param name="Name" value="applyCurrentView"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a3ed439c5445e9c7d7ff786ff37005efa"><param name="Name" value="sf::RenderTarget"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a3ed439c5445e9c7d7ff786ff37005efa"><param name="Name" value="sf::RenderTexture"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a3ed439c5445e9c7d7ff786ff37005efa"><param name="Name" value="sf::RenderWindow"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a6f8bc92f07c70ccd57cbf632fe9de0ba"><param name="Name" value="applyShader"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a6f8bc92f07c70ccd57cbf632fe9de0ba"><param name="Name" value="sf::RenderTarget"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a6f8bc92f07c70ccd57cbf632fe9de0ba"><param name="Name" value="sf::RenderTexture"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a6f8bc92f07c70ccd57cbf632fe9de0ba"><param name="Name" value="sf::RenderWindow"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#afb8a49305171aad158a27e0dfbb03709"><param name="Name" value="applyTexture"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#afb8a49305171aad158a27e0dfbb03709"><param name="Name" value="sf::RenderTarget"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#afb8a49305171aad158a27e0dfbb03709"><param name="Name" value="sf::RenderTexture"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#afb8a49305171aad158a27e0dfbb03709"><param name="Name" value="sf::RenderWindow"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a0b23bd7c287d0fc12b0521b649a0a0e0"><param name="Name" value="applyTransform"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a0b23bd7c287d0fc12b0521b649a0a0e0"><param name="Name" value="sf::RenderTarget"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a0b23bd7c287d0fc12b0521b649a0a0e0"><param name="Name" value="sf::RenderTexture"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a0b23bd7c287d0fc12b0521b649a0a0e0"><param name="Name" value="sf::RenderWindow"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp.htm#a1cd6b89ad23253f6d97e6d4ca4d558cbac9e544a22dce8ef3177449cb235d15c2"><param name="Name" value="Ascii"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ae41a7e0ca73ceea771b3c150c12abdd2"><param name="Name" value="asMicroseconds"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a85e6deb41fa71896508ce0f64059a6ae"><param name="Name" value="asMilliseconds"></OBJECT>
@@ -64,8 +34,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Joystick.htm#a951a7c775921304a5f3443c6e2bb4d65accf3e487c9f6ee2f384351323626a42c"><param name="Name" value="AxisCount"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a6707aedd0609c8920e12df5d7abc53cb"><param name="Name" value="b"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142aca3142235e5c4199f0b8b45d8368ef94"><param name="Name" value="B"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a7fdbaa81e34620710589948ab780560b"><param name="Name" value="Back"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a536df84e73859aa44e11e192459470b6"><param name="Name" value="BackSlash"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a33aeaab900abcd01eebf2fcc4f6d97e2"><param name="Name" value="BackSpace"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1Response.htm#af81738f06b6f571761696291276acb3bad0c7ab07f01c1f7af16a1852650d7c47"><param name="Name" value="BadCommandSequence"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1Response.htm#af81738f06b6f571761696291276acb3bad0c7ab07f01c1f7af16a1852650d7c47"><param name="Name" value="sf::Ftp::DirectoryResponse"></OBJECT>
@@ -76,10 +46,10 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Http_1_1Response.htm#a663e071978e30fbbeb20ed045be874d8a3f88a714cf5483ee22f9051e5a3c080a"><param name="Name" value="BadRequest"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a8ec30ddc08e3a6bd11c99aed782f6dfe"><param name="Name" value="begin"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp.htm#a1cd6b89ad23253f6d97e6d4ca4d558cba6f253b362639fb5e059dc292762a21ee"><param name="Name" value="Binary"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#ab170f43610b4fcc7c69a55575650fb95"><param name="Name" value="bind"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#a09778f78afcbeb854d608c8dacd8ea30"><param name="Name" value="bind"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#ab170f43610b4fcc7c69a55575650fb95"><param name="Name" value="sf::Shader"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Texture.htm#ae4063cbdf35eb24645bf5f267ac5b78d"><param name="Name" value="sf::Texture"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#a09778f78afcbeb854d608c8dacd8ea30"><param name="Name" value="sf::Shader"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Texture.htm#ae9a4274e7b95ebf7244d09c7445833b0"><param name="Name" value="sf::Texture"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1UdpSocket.htm#ab0bf8d32849836f92beb2fd734565481"><param name="Name" value="sf::UdpSocket"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#aa080f1ef96a1008d58b1920eceb189df"><param name="Name" value="bitsPerPixel"></OBJECT>
@@ -181,12 +151,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Context.htm#aba22797a790706ca2c5c04ee39f2b555"><param name="Name" value="Context"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structsf_1_1ContextSettings.htm#aafe35f8e257f9d1e496ed64e33e2ee9f"><param name="Name" value="ContextSettings"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structsf_1_1Event_1_1KeyEvent.htm#a9255861c2f88501d80ad6b44a310b62f"><param name="Name" value="control"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#afc047333937f7cb7fe557aec60239233"><param name="Name" value="convertCoords"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#afc047333937f7cb7fe557aec60239233"><param name="Name" value="sf::RenderTarget"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#afc047333937f7cb7fe557aec60239233"><param name="Name" value="sf::RenderTexture"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#afc047333937f7cb7fe557aec60239233"><param name="Name" value="sf::RenderWindow"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ConvexShape.htm#a4f4686f57622bfbbe419ac1420b1432a"><param name="Name" value="ConvexShape"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Image.htm#ab2fa337c956f85f93377dcb52153a45a"><param name="Name" value="copy"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Texture.htm#aefc19bcd95565dd2348fd4cec0facddc"><param name="Name" value="copyToImage"></OBJECT>
@@ -195,23 +159,23 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Event.htm#af41fa9ed45c02449030699f671331d4aae51749211243cab2ab270b29cdc32a70"><param name="Name" value="sf::Event"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Joystick.htm#a951a7c775921304a5f3443c6e2bb4d65a6e0a2a95bc1da277610c04d80f52715e"><param name="Name" value="sf::Joystick"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a8a999396e691c97dd1bd5576471327bc"><param name="Name" value="count"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a6df8d9be8211ffe1095b3b82eac83f6f"><param name="Name" value="count"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a8a999396e691c97dd1bd5576471327bc"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#ac57503316089dc16a52be835b9bad32f"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#ae65b052d8d9082b9000cc4a91576db2d"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a6df8d9be8211ffe1095b3b82eac83f6f"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a9b18c32b9e6d4b3126e9b4af45988b55"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#af1f15d9a772ee887be39e97431e15d32"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Image.htm#a2a67930e2fd9ad97cf004e918cf5832b"><param name="Name" value="create"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Image.htm#a2a67930e2fd9ad97cf004e918cf5832b"><param name="Name" value="sf::Image"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#aefbb76eb3b87e368ab974b2660931ccb"><param name="Name" value="sf::RenderTexture"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a21c51afab5ae676c9c8b325d453958d5"><param name="Name" value="sf::RenderWindow"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a30e6edf2162f8dbff61023b9de5d961d"><param name="Name" value="sf::RenderWindow"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Socket.htm#aafbe140f4b1921e0d19e88cf7a61dcbc"><param name="Name" value="sf::Socket"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Socket.htm#aafbe140f4b1921e0d19e88cf7a61dcbc"><param name="Name" value="sf::TcpListener"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Socket.htm#aafbe140f4b1921e0d19e88cf7a61dcbc"><param name="Name" value="sf::TcpSocket"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Texture.htm#a89b4c7d204acf1033c3a1b6e0a3ad0a3"><param name="Name" value="sf::Texture"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Socket.htm#aafbe140f4b1921e0d19e88cf7a61dcbc"><param name="Name" value="sf::UdpSocket"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a21c51afab5ae676c9c8b325d453958d5"><param name="Name" value="sf::Window"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a30e6edf2162f8dbff61023b9de5d961d"><param name="Name" value="sf::Window"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Http_1_1Response.htm#a663e071978e30fbbeb20ed045be874d8a0a6e8bafa9365a0ed10b8a9cbfd0649b"><param name="Name" value="Created"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp.htm#a247b84c4b25da37804218c2b748c4787"><param name="Name" value="createDirectory"></OBJECT>
@@ -239,14 +203,14 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1Response.htm#af81738f06b6f571761696291276acb3ba757b89ff1f236941f7759b0ed0c28b88"><param name="Name" value="sf::Ftp::ListingResponse"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1Response.htm#af81738f06b6f571761696291276acb3ba757b89ff1f236941f7759b0ed0c28b88"><param name="Name" value="sf::Ftp::Response"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a759915b18e2022b9f91e07a63d6bb561"><param name="Name" value="decode"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a17be6fc08e51182e7ac8bf9269dfae37"><param name="Name" value="decode"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a759915b18e2022b9f91e07a63d6bb561"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a5d0416a12d8839e09a32f990baa7867e"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a87e2e077bb41a6680f9700a9244206c6"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a17be6fc08e51182e7ac8bf9269dfae37"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#ad754ce8476f7b80563890dec12cefd46"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a59d4e8d5832961e62b263d308b72bf4b"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a7df5ec90577bf2ae28c41a9b05a9dcba"><param name="Name" value="decodeAnsi"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a814ba4d687716ab33a49ddc24489ed03"><param name="Name" value="decodeWide"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a68346ea833f88267a7c739d4d96fb86f"><param name="Name" value="decodeAnsi"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a043fe25f5f4dbc205e78e6f1d99840dc"><param name="Name" value="decodeWide"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderStates.htm#ad29672df29f19ce50c3021d95f2bb062"><param name="Name" value="Default"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderStates.htm#ad29672df29f19ce50c3021d95f2bb062"><param name="Name" value="sf::RenderStates"></OBJECT>
@@ -307,14 +271,14 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a0e027c08438a8bf77e2e1e5d5d75bd84"><param name="Name" value="E"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp.htm#a1cd6b89ad23253f6d97e6d4ca4d558cbabb1e34435231e73c96534c71090be7f4"><param name="Name" value="Ebcdic"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a69a63e861a0b387d6dd438c9b81bd83c"><param name="Name" value="encode"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a516090c84ceec2cfde0a13b6148363bb"><param name="Name" value="encode"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a69a63e861a0b387d6dd438c9b81bd83c"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#abc63307c2d872679f50a697dc32b810f"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a8ac5d374bb2e192c175add87132577a0"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a516090c84ceec2cfde0a13b6148363bb"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a27b9d3f3fc49a8c88d91966889fcfca1"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a5fbc6b5a996f52e9e4a14633d0d71847"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#ae274c5057c343ba353253bd2c531a283"><param name="Name" value="encodeAnsi"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a12b65aa82e36e6b81812c7ccf6e9faf1"><param name="Name" value="encodeWide"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#af6590226a071076ca22d818573a16ded"><param name="Name" value="encodeAnsi"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a52e511e74ddc5df1bbf18f910193bc47"><param name="Name" value="encodeWide"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a4478343b2b7efc310f995fd4251a264d"><param name="Name" value="End"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#ac823012f39cb6f61100418876e99d53b"><param name="Name" value="end"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Packet.htm#aee3adfca6303f1e6bde3c62be392b945"><param name="Name" value="endOfPacket"></OBJECT>
@@ -396,23 +360,23 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Font.htm#a506404655b8869ed60d1e7709812f583"><param name="Name" value="Font"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Http_1_1Response.htm#a663e071978e30fbbeb20ed045be874d8a64492842e823ebe12a85539b6b454986"><param name="Name" value="Forbidden"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#afaa1aa65e5de37b74d047da9def9f9b3ace6e88eec3a56b2e55ee3c8e64e9b89a"><param name="Name" value="Fragment"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a8fdd9d5436c4ae71d325f92b6af42ce2"><param name="Name" value="fromAnsi"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a8a595dc1ea57ecf7aad944964913f0ff"><param name="Name" value="fromAnsi"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a8fdd9d5436c4ae71d325f92b6af42ce2"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#af228da61a61de57361fdda1d633ea2b9"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#ae3a6545508ceb0b32458f9c1ede971cf"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a8a595dc1ea57ecf7aad944964913f0ff"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a384a4169287af15876783ad477cac4e3"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a1b62ba85ad3c8ce68746e16192b3eef0"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a36c87bba8e60882b68ea0f228ddd59e9"><param name="Name" value="fromLatin1"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a52293df75893733fe6cf84b8a017cbf7"><param name="Name" value="fromLatin1"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a36c87bba8e60882b68ea0f228ddd59e9"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a66fa9221062e57c0ca4ebb640ea7c2c1"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a07822dbf977807dc28eb779861db558d"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a52293df75893733fe6cf84b8a017cbf7"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a05741b76b5a26267a72735e40ca61c55"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a85dd3643b7109a1a2f802747e55e28e8"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ae3701b025a759bfb611b04d4daeb2950"><param name="Name" value="fromWide"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a263423929b6f8e4d3ad09b45ac5cb0a1"><param name="Name" value="fromWide"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ae3701b025a759bfb611b04d4daeb2950"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a4cbae8c7a80cbe347f21a559acfbc606"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a9f59bc50f652999b659a08c0708dc976"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a263423929b6f8e4d3ad09b45ac5cb0a1"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#abdf0d41e0c8814a68326688e3b8d187f"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#aa99e636a7addc157b425dfc11b008f42"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="group__window.htm#gga8d7a3b8425c907a2872cb57e32cea5b8a6288ec86830245cf957e2d234f79f50d"><param name="Name" value="Fullscreen"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a591daf9c3c55dea830c76c962d6ba1a5"><param name="Name" value="g"></OBJECT>
@@ -455,7 +419,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#af2d4e70869ebd38e225c6796e1325ae4"><param name="Name" value="sf::String"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Packet.htm#a004b62aa5bafa69df8917171a3fe1fa0"><param name="Name" value="getDataSize"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Font.htm#a88fc3372800948a1f8655c533cb8a952"><param name="Name" value="getDefaultFont"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a718b1aa6296bf855171699cc18251ced"><param name="Name" value="getDefaultView"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a718b1aa6296bf855171699cc18251ced"><param name="Name" value="sf::RenderTarget"></OBJECT>
@@ -473,7 +436,6 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Clock.htm#a799feb6acb099b57b58d8d20984fce11"><param name="Name" value="getElapsedTime"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Http_1_1Response.htm#a25d7cf86538a1045d31e0b601090b8f0"><param name="Name" value="getField"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1ListingResponse.htm#a8196384f8cb4e16171780fb08d456e63"><param name="Name" value="getFilenames"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#ad7f7fe601a8bb24efe9aa77809a35c12"><param name="Name" value="getFillColor"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#ad7f7fe601a8bb24efe9aa77809a35c12"><param name="Name" value="sf::CircleShape"></OBJECT>
@@ -481,7 +443,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#ad7f7fe601a8bb24efe9aa77809a35c12"><param name="Name" value="sf::RectangleShape"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#ad7f7fe601a8bb24efe9aa77809a35c12"><param name="Name" value="sf::Shape"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#a6f9c34aec007f14b2227dd6efff0c5c9"><param name="Name" value="getFont"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#ab831de193307ab591b34221440613aa1"><param name="Name" value="getFont"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a6815b9b3b35767d5b4563fbed4bfc67b"><param name="Name" value="getFullscreenModes"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#a5257341fe832884dbba6b9dc855e33cc"><param name="Name" value="getGlobalBounds"></OBJECT>
   <UL>
@@ -515,6 +477,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Font.htm#a4093f7d2d195c88ea90b34cf14e003c8"><param name="Name" value="getKerning"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Font.htm#a05f23b88b13bd094083da5b7efc94371"><param name="Name" value="getLineSpacing"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1ListingResponse.htm#a5f0771b52a966bf25b33a70602b6f97f"><param name="Name" value="getListing"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1IpAddress.htm#a4c31622ad87edca48adbb8e8ed00ee4a"><param name="Name" value="getLocalAddress"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#a5d26a18ccfe850ff8d327ca97edbc34a"><param name="Name" value="getLocalBounds"></OBJECT>
   <UL>
@@ -965,11 +928,23 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a6fe70d90b65b2163dd066a84ac00426c"><param name="Name" value="Magenta"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structsf_1_1ContextSettings.htm#a99a680d5c15a7e34c935654155dd5166"><param name="Name" value="majorVersion"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#aa0c11e1989573f2cce64c621205f8e83"><param name="Name" value="mapCoordsToPixel"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#aa0c11e1989573f2cce64c621205f8e83"><param name="Name" value="sf::RenderTarget"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#aa0c11e1989573f2cce64c621205f8e83"><param name="Name" value="sf::RenderTexture"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#aa0c11e1989573f2cce64c621205f8e83"><param name="Name" value="sf::RenderWindow"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a2b0cab0e4c6af29d4efaba149d28116d"><param name="Name" value="mapPixelToCoords"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a2b0cab0e4c6af29d4efaba149d28116d"><param name="Name" value="sf::RenderTarget"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a2b0cab0e4c6af29d4efaba149d28116d"><param name="Name" value="sf::RenderTexture"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a2b0cab0e4c6af29d4efaba149d28116d"><param name="Name" value="sf::RenderWindow"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1UdpSocket.htm#a14c7b7816e33ed1ef1f2fdb2404c06b5a728a7d33027bee0d65f70f964dd9c9eb"><param name="Name" value="MaxDatagramSize"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a4aac50ce7c4923f96323fe84d592b139"><param name="Name" value="Menu"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ab4f5b719ece75ebd11593f935fbe3bcb"><param name="Name" value="microseconds"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a39279e08c495e6e726addb7b889657d4"><param name="Name" value="microseconds"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Mouse.htm#a4fb128be433f9aafe66bc0c605daaa90a2c353189c4b11cf216d7caddafcc609d"><param name="Name" value="Middle"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a8dc1cb5f5fdde2ed2221d5af80cce853"><param name="Name" value="milliseconds"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a24379a7cc231b7a11d73dbccf010ebf0"><param name="Name" value="milliseconds"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structsf_1_1ContextSettings.htm#aaeb0efe9d2658b840da93b30554b100f"><param name="Name" value="minorVersion"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Event.htm#af41fa9ed45c02449030699f671331d4aa55a3dcc8bf6c40e37f9ff2cdf606481f"><param name="Name" value="MouseButtonPressed"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Event.htm#af41fa9ed45c02449030699f671331d4aa9be69ecc07e484467ebbb133182fe5c1"><param name="Name" value="MouseButtonReleased"></OBJECT>
@@ -1020,11 +995,11 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1Response.htm#af81738f06b6f571761696291276acb3ba9249e3fe9818eb93f181fbbf3ae3bc56"><param name="Name" value="sf::Ftp::Response"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="group__network.htm"><param name="Name" value="Network module"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ab8c0deb3f1126c9e728e5dbd5ca96673"><param name="Name" value="next"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ab899108d77ce088eb001588e84d91525"><param name="Name" value="next"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ab8c0deb3f1126c9e728e5dbd5ca96673"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#ac2612aac4c588d4759206a252c8f36d9"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a53c9cc893c618fb5faada74602707164"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ab899108d77ce088eb001588e84d91525"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a788b4ebc728dde2aaba38f3605d4867c"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a0365a0b38700baa161843563d083edf6"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Http_1_1Response.htm#a663e071978e30fbbeb20ed045be874d8aefde9e4abf5682dcd314d63143be42e0"><param name="Name" value="NoContent"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1NonCopyable.htm#a2110add170580fdb946f887719da6860"><param name="Name" value="NonCopyable"></OBJECT>
@@ -1134,96 +1109,96 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a3664f92c3b488bf9f60f6b8eafe1844d"><param name="Name" value="operator std::string"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a20d50d45020d1dbe1779dda69ee83732"><param name="Name" value="operator std::wstring"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ThreadLocalPtr.htm#ab4a6a341c26b58f0ed3ef86502bd9572"><param name="Name" value="operator T *"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a5d6501b7dd05f481b79f7163899f1d92"><param name="Name" value="operator!="></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a394c3495753c4b17f9cd45556ef00b8c"><param name="Name" value="operator!="></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a5d6501b7dd05f481b79f7163899f1d92"><param name="Name" value="sf::Color"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#a90260b53741ec32180f3705a5225f7a6"><param name="Name" value="sf::Rect"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a2b592c36be218b4811795fdc84eecc69"><param name="Name" value="sf::String"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ae06b561f6422ec8ca414d400efd2cf4b"><param name="Name" value="sf::Time"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a128bc6743be87cbb770e09a7524049e2"><param name="Name" value="sf::Vector2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a94503e07bd84a007f7dd50a74919ece2"><param name="Name" value="sf::Vector3"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#abd7bf172d318085ea572b8c10033f7b7"><param name="Name" value="sf::VideoMode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a394c3495753c4b17f9cd45556ef00b8c"><param name="Name" value="sf::Color"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#a03fc4c105687b7d0f07b6b4ed4b45581"><param name="Name" value="sf::Rect"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a3bfb9217788a9978499b8d5696bb0ef2"><param name="Name" value="sf::String"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a3a142729f295af8b1baf2d8762bc39ac"><param name="Name" value="sf::Time"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a01673da35ef9c52d0e54b8263549a956"><param name="Name" value="sf::Vector2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a608500d1ad3b78082cb5bb4356742bd4"><param name="Name" value="sf::Vector3"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a34b5c266a7b9cd5bc95de62f8beafc5a"><param name="Name" value="sf::VideoMode"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a8953be58a47ced92fb25966d6ee90511"><param name="Name" value="operator*="></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a7d1ea2b9bd5dbe29bb2e54feba9b4b38"><param name="Name" value="operator*="></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a8953be58a47ced92fb25966d6ee90511"><param name="Name" value="sf::Color"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a8996b6a6fcb8f3854b486b8e43949b50"><param name="Name" value="sf::Time"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#a45a9de70a463117f851f1264a6f558ba"><param name="Name" value="sf::Transform"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#ab356072020215d4d64aed2db8bb3b53f"><param name="Name" value="sf::Vector2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a24d653f4da89bddc7288f9683312512d"><param name="Name" value="sf::Vector3"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a7d1ea2b9bd5dbe29bb2e54feba9b4b38"><param name="Name" value="sf::Color"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a3f7baa961b8961fc5e6a37dea7de10e3"><param name="Name" value="sf::Time"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#a189899674616490f6250953ac581ac30"><param name="Name" value="sf::Transform"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#abea24cb28c0d6e2957e259ba4e65d70e"><param name="Name" value="sf::Vector2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#ad5fb972775ce8ab58cd9670789e806a7"><param name="Name" value="sf::Vector3"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#aa9de267d831b4ec8ba65b627e51d50c3"><param name="Name" value="operator*"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a1bae779fb49bb92dbf820a65e45a6602"><param name="Name" value="operator*"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#aa9de267d831b4ec8ba65b627e51d50c3"><param name="Name" value="sf::Color"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a1bae779fb49bb92dbf820a65e45a6602"><param name="Name" value="sf::Color"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ThreadLocalPtr.htm#aa3bac9a08e8739613961659d10e0fadd"><param name="Name" value="sf::ThreadLocalPtr"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ac1386c6360872d354b9b59eadcd9778d"><param name="Name" value="sf::Time"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#a423ade8d6aa1378c695f8eb4bfce8981"><param name="Name" value="sf::Transform"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a80a6e4893c6fbd8eca6047cdaf1c5416"><param name="Name" value="sf::Vector2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a16e46f951acade01406c6db40d7fb1a3"><param name="Name" value="sf::Vector3"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ab891d4f3dbb454f6c1c484a7844bb581"><param name="Name" value="sf::Time"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#a85ea4e5539795f9b2ceb7d4b06736c8f"><param name="Name" value="sf::Transform"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a5f48ca928995b41c89f155afe8d16b02"><param name="Name" value="sf::Vector2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a44ec312b31c1a85dcff4863795f98329"><param name="Name" value="sf::Vector3"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a19917f2453a4acfd69de2539bfab8031"><param name="Name" value="operator+="></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#af39790b2e677c9ab418787f5ff4583ef"><param name="Name" value="operator+="></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a19917f2453a4acfd69de2539bfab8031"><param name="Name" value="sf::Color"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#af39790b2e677c9ab418787f5ff4583ef"><param name="Name" value="sf::Color"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#ae6563ce2c243ae2160eea8a354199f4e"><param name="Name" value="sf::String"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a831c8df4b7b9b47eaa0c5a52a1be654c"><param name="Name" value="sf::Time"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#ad631747b8bd20bb3e75ed51771c0d7ed"><param name="Name" value="sf::Vector2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a2bfc9f041078c357ce6c56317fc8f979"><param name="Name" value="sf::Vector3"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a34b983deefecaf2725131771d54631e0"><param name="Name" value="sf::Time"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#ad4b7a9d355d57790bfc7df0ade8bb628"><param name="Name" value="sf::Vector2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#abc28859af163c63318ea2723b81c5ad9"><param name="Name" value="sf::Vector3"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a90e79ecc276114cda519a88119ac645b"><param name="Name" value="operator+"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a0355ba6bfd2f83ffd8f8fafdca26cdd0"><param name="Name" value="operator+"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a90e79ecc276114cda519a88119ac645b"><param name="Name" value="sf::Color"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a55ef2bf7dc6b295ef7127b0bc1e58760"><param name="Name" value="sf::String"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a7155e965f238f8c32d63649b0189ef47"><param name="Name" value="sf::Time"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a9f2f19f0acff87ebd0bbc0716cd8b98a"><param name="Name" value="sf::Vector2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#abe389440c31f100032c3a2ceb2d70db5"><param name="Name" value="sf::Vector3"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a0355ba6bfd2f83ffd8f8fafdca26cdd0"><param name="Name" value="sf::Color"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#af140f992b7698cf1448677c2c8e11bf1"><param name="Name" value="sf::String"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a8249d3a28c8062c7c46cc426186f76c8"><param name="Name" value="sf::Time"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a72421239823c38a6b780c86a710ead07"><param name="Name" value="sf::Vector2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a6500a0cb00e07801e9e9d7e96852ddd3"><param name="Name" value="sf::Vector3"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#aaf7888302cf4847f97cfc26875367b94"><param name="Name" value="operator-="></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ae0a16136d024a44bbaa4ca49ac172c8f"><param name="Name" value="operator-="></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#aaf7888302cf4847f97cfc26875367b94"><param name="Name" value="sf::Time"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#ae63028b6ab752bbec460ed2587623847"><param name="Name" value="sf::Vector2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a6208200eb2f76e7e7d1651d2566efa93"><param name="Name" value="sf::Vector3"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ae0a16136d024a44bbaa4ca49ac172c8f"><param name="Name" value="sf::Time"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a30a5a12ad03c9a3a982a0a313bf84e6f"><param name="Name" value="sf::Vector2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#aa465672d2a4ee5fd354e585cf08d2ab9"><param name="Name" value="sf::Vector3"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ThreadLocalPtr.htm#aa0b559f78929b22cb2585cb2966edfb2"><param name="Name" value="operator->"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a1b23b91cf367764338c2ff922c65da4e"><param name="Name" value="operator-"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#acaead0aa2de9f82a548fcd8208a40f70"><param name="Name" value="operator-"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a1b23b91cf367764338c2ff922c65da4e"><param name="Name" value="sf::Time"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#af91ba9e90b2364cfa8302b73401bd00a"><param name="Name" value="sf::Vector2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a954923aa9a4e4e60d1887893074ae410"><param name="Name" value="sf::Vector3"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#acaead0aa2de9f82a548fcd8208a40f70"><param name="Name" value="sf::Time"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a3885c2e66dc427cec7eaa178d59d8e8b"><param name="Name" value="sf::Vector2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a9b75d2fb9b0f2fd9fe33f8f06f9dda75"><param name="Name" value="sf::Vector3"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a9835490c54cab06492ec3aa9e9275ef9"><param name="Name" value="operator/="></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ad513a413be41bc66feb0ff2b29d5f947"><param name="Name" value="operator/="></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a9835490c54cab06492ec3aa9e9275ef9"><param name="Name" value="sf::Time"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a0aebb326092754768f08d959053cd913"><param name="Name" value="sf::Vector2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a9518f240e6ed3f34d362a940c2e872bc"><param name="Name" value="sf::Vector3"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ad513a413be41bc66feb0ff2b29d5f947"><param name="Name" value="sf::Time"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#ac4d293c9dc7954ccfd5e373972f38b03"><param name="Name" value="sf::Vector2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a8995a700f9dffccc6dddb3696ae17b64"><param name="Name" value="sf::Vector3"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a3386c392dbc62e51dfa59730854d1ed2"><param name="Name" value="operator/"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a67510d018fd010819ee075db2cbd004f"><param name="Name" value="operator/"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a3386c392dbc62e51dfa59730854d1ed2"><param name="Name" value="sf::Time"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a64659ab5db944895a1104e01e8309efa"><param name="Name" value="sf::Vector2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a5eee3c79e4965dea6cc8e4a0881bd381"><param name="Name" value="sf::Vector3"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a67510d018fd010819ee075db2cbd004f"><param name="Name" value="sf::Time"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a7409dd89cb3aad6c3bc6622311107311"><param name="Name" value="sf::Vector2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#ad4ba4a83de236ddeb92a7b759187e90d"><param name="Name" value="sf::Vector3"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Packet.htm#aa5a465ed02ba29d83ecdafb0ac3fff21"><param name="Name" value="operator<<"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#abd342b6094b81cd086c7929b53b112ae"><param name="Name" value="operator<="></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#ac1c1bb5dcf02aad3b2c0a1bf74a11cc9"><param name="Name" value="operator<="></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#abd342b6094b81cd086c7929b53b112ae"><param name="Name" value="sf::String"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a2c22369869bf903578635bc6517c44d4"><param name="Name" value="sf::Time"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a09b0a83f9135d934e540800bad12f0ca"><param name="Name" value="sf::VideoMode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#ac1c1bb5dcf02aad3b2c0a1bf74a11cc9"><param name="Name" value="sf::String"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#aafb9de87ed6047956cd9487ab807371f"><param name="Name" value="sf::Time"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#aa094b7b9ae4c0194892ebda7b4b9bb37"><param name="Name" value="sf::VideoMode"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#ac2ca5a7703402a2bbafd85eec6d1e846"><param name="Name" value="operator<"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a5158a142e0966685ec7fb4e147b24ef0"><param name="Name" value="operator<"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#ac2ca5a7703402a2bbafd85eec6d1e846"><param name="Name" value="sf::String"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ac222933174ddcff5d14c3ac7d1020d54"><param name="Name" value="sf::Time"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a8e3d8fa57fa10dca05edbc34c4e2f1a8"><param name="Name" value="sf::VideoMode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a5158a142e0966685ec7fb4e147b24ef0"><param name="Name" value="sf::String"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a3bad89721b8c026e80082a7aa539f244"><param name="Name" value="sf::Time"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a54cc77c0b6c4b133e0147a43d6829b13"><param name="Name" value="sf::VideoMode"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a7498d4670c7655e8d4d91ef49cc6064e"><param name="Name" value="operator=="></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a2adc3f68860f7aa5e4d7c79dcbb31d30"><param name="Name" value="operator=="></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a7498d4670c7655e8d4d91ef49cc6064e"><param name="Name" value="sf::Color"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#a043682e7c1f0da0cdc4875fe225bdbc1"><param name="Name" value="sf::Rect"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a2a385459fa9a237e61a712fa956d489e"><param name="Name" value="sf::String"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a2b8453227f651e9d5db3663fa08c47e2"><param name="Name" value="sf::Time"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#ac873f3e94b54998e6b1c940af4e97678"><param name="Name" value="sf::Vector2"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a364083bf1ab290f84393016b5993808d"><param name="Name" value="sf::Vector3"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a03c51c119811ffd4403c6e2bcbd4ceaf"><param name="Name" value="sf::VideoMode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a2adc3f68860f7aa5e4d7c79dcbb31d30"><param name="Name" value="sf::Color"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#ab3488b5dbd0e587c4d7cb80605affc46"><param name="Name" value="sf::Rect"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a483931724196c580552b68751fb4d837"><param name="Name" value="sf::String"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a9bbb2368cf012149f1001535a20c664a"><param name="Name" value="sf::Time"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a9a7b2d36c3850828fdb651facfd25136"><param name="Name" value="sf::Vector2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a388d72db973306a35ba467016b3dee30"><param name="Name" value="sf::Vector3"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#aca24086fd94d11014f3a0b5ca9a3acd6"><param name="Name" value="sf::VideoMode"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Font.htm#a232515549846e3172a514d0b47918399"><param name="Name" value="operator="></OBJECT>
   <UL>
@@ -1235,18 +1210,18 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Texture.htm#a80a089b6b19bb09b83012d5f0e6af9ba"><param name="Name" value="sf::Texture"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ThreadLocalPtr.htm#a14dcf1cdf5f6b3bcdd633014b2b671f5"><param name="Name" value="sf::ThreadLocalPtr"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a8d2979d7829d6616330a768956f251e1"><param name="Name" value="operator>="></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a112689eec28e0ca9489e8c4ec6a34493"><param name="Name" value="operator>="></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a8d2979d7829d6616330a768956f251e1"><param name="Name" value="sf::String"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ad69edc80cd01b7a03f5673b4276181eb"><param name="Name" value="sf::Time"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a7f7983e336203d34c9878c77fff60f1f"><param name="Name" value="sf::VideoMode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a112689eec28e0ca9489e8c4ec6a34493"><param name="Name" value="sf::String"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a158c5f9a6abf575651b7b2f6af8aedaa"><param name="Name" value="sf::Time"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a6e3d91683fcabb88c5b640e9884fe3df"><param name="Name" value="sf::VideoMode"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Packet.htm#af8e26c63ba9bdccd262565ff0d3eeba2"><param name="Name" value="operator>>"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a5efc1eca58cf5c17d01eb8501d303538"><param name="Name" value="operator>"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#ac96278a8cbe282632b11f0c8c007df0c"><param name="Name" value="operator>"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a5efc1eca58cf5c17d01eb8501d303538"><param name="Name" value="sf::String"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a23978402846bf3c7ac54a3f2c6b397a2"><param name="Name" value="sf::Time"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#ab6e5b2c65a428a4b56de8551b3706a36"><param name="Name" value="sf::VideoMode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#ac96278a8cbe282632b11f0c8c007df0c"><param name="Name" value="sf::String"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a9a472ce6d82aa0caf8e20af4a4b309f2"><param name="Name" value="sf::Time"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a5b894cab5f2a3a14597e4c6d200179a4"><param name="Name" value="sf::VideoMode"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a649b89a65866bf03652f7b5cb6de3bb6"><param name="Name" value="operator[]"></OBJECT>
   <UL>
@@ -1366,16 +1341,9 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderStates.htm#a885bf14070d0d5391f062f62b270b7d0"><param name="Name" value="RenderStates"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Drawable.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="RenderTarget"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Drawable.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="sf::CircleShape"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Drawable.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="sf::ConvexShape"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Drawable.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="sf::Drawable"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Drawable.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="sf::RectangleShape"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a2997c96cbd93cb8ce0aba2ddae35b86f"><param name="Name" value="sf::RenderTarget"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Drawable.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="sf::Shape"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Drawable.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="sf::Sprite"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Drawable.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="sf::Text"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Texture.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="sf::Texture"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Drawable.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="sf::VertexArray"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#a19ee6e5b4c40ad251803389b3953a9c6"><param name="Name" value="RenderTexture"></OBJECT>
   <UL>
@@ -1447,7 +1415,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#a3f46af807f69d74120fb836334268671"><param name="Name" value="sf::Transform"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transformable.htm#a3de0c6d8957f3cf318092f3f60656391"><param name="Name" value="sf::Transformable"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#abe757d058fd820b4c84232c1451c1efa"><param name="Name" value="seconds"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#abeb69917dd7201034107c499210c1d19"><param name="Name" value="seconds"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1InputStream.htm#a76aba8e5d5cf9b1c5902d5e04f7864fc"><param name="Name" value="seek"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a460ab09a36f9ed230504b89b9815de88"><param name="Name" value="SemiColon"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1TcpSocket.htm#affce26ab3bcc4f5b9269dad79db544c0"><param name="Name" value="send"></OBJECT>
@@ -1681,10 +1649,10 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#a2029cc820d1740d14ac794b82525e157"><param name="Name" value="sf::Shape"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Sprite.htm#a3fefec419a4e6a90c0fd54c793d82ec2"><param name="Name" value="sf::Sprite"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a7f419f99a799424376aba838abfbd273"><param name="Name" value="setTitle"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a3b3f3513bb6be90f5cd456c20b5fd5fa"><param name="Name" value="setTitle"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a7f419f99a799424376aba838abfbd273"><param name="Name" value="sf::RenderWindow"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a7f419f99a799424376aba838abfbd273"><param name="Name" value="sf::Window"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a3b3f3513bb6be90f5cd456c20b5fd5fa"><param name="Name" value="sf::RenderWindow"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a3b3f3513bb6be90f5cd456c20b5fd5fa"><param name="Name" value="sf::Window"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Http_1_1Request.htm#a3723de4b4f1a14b744477841c4ac22e6"><param name="Name" value="setUri"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ThreadLocal.htm#ab7e334c83d77644a8e67ee31c3230007"><param name="Name" value="setValue"></OBJECT>
@@ -1736,7 +1704,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1CircleShape.htm#af7c4c80a435b85a622812711cf510439"><param name="Name" value="getTextureRect"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1CircleShape.htm#a3b48c3362e3e2c14fef7551252deb7bb"><param name="Name" value="getTransform"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1CircleShape.htm#a86b461d6a941ad390c2ad8b6a4a20391"><param name="Name" value="move"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1CircleShape.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="RenderTarget"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1CircleShape.htm#af8a5ffddc0d93f238fee3bf8efe1ebda"><param name="Name" value="rotate"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1CircleShape.htm#a3de0c6d8957f3cf318092f3f60656391"><param name="Name" value="scale"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1CircleShape.htm#a3506f9b5d916fec14d583d16f23c2485"><param name="Name" value="setFillColor"></OBJECT>
@@ -1769,12 +1736,12 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a591daf9c3c55dea830c76c962d6ba1a5"><param name="Name" value="g"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a95629b30de8c6856aa7d3afed12eb865"><param name="Name" value="Green"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a6fe70d90b65b2163dd066a84ac00426c"><param name="Name" value="Magenta"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a5d6501b7dd05f481b79f7163899f1d92"><param name="Name" value="operator!="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#aa9de267d831b4ec8ba65b627e51d50c3"><param name="Name" value="operator*"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a8953be58a47ced92fb25966d6ee90511"><param name="Name" value="operator*="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a90e79ecc276114cda519a88119ac645b"><param name="Name" value="operator+"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a19917f2453a4acfd69de2539bfab8031"><param name="Name" value="operator+="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a7498d4670c7655e8d4d91ef49cc6064e"><param name="Name" value="operator=="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a394c3495753c4b17f9cd45556ef00b8c"><param name="Name" value="operator!="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a1bae779fb49bb92dbf820a65e45a6602"><param name="Name" value="operator*"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a7d1ea2b9bd5dbe29bb2e54feba9b4b38"><param name="Name" value="operator*="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a0355ba6bfd2f83ffd8f8fafdca26cdd0"><param name="Name" value="operator+"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#af39790b2e677c9ab418787f5ff4583ef"><param name="Name" value="operator+="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a2adc3f68860f7aa5e4d7c79dcbb31d30"><param name="Name" value="operator=="></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a6a5256ca24a4f9f0e0808f6fc23e01e1"><param name="Name" value="r"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a127dbf55db9c07d0fa8f4bfcbb97594a"><param name="Name" value="Red"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Color.htm#a569b45471737f770656f50ae7bbac292"><param name="Name" value="Transparent"></OBJECT>
@@ -1816,7 +1783,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ConvexShape.htm#af7c4c80a435b85a622812711cf510439"><param name="Name" value="getTextureRect"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ConvexShape.htm#a3b48c3362e3e2c14fef7551252deb7bb"><param name="Name" value="getTransform"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ConvexShape.htm#a86b461d6a941ad390c2ad8b6a4a20391"><param name="Name" value="move"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ConvexShape.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="RenderTarget"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ConvexShape.htm#af8a5ffddc0d93f238fee3bf8efe1ebda"><param name="Name" value="rotate"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ConvexShape.htm#a3de0c6d8957f3cf318092f3f60656391"><param name="Name" value="scale"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ConvexShape.htm#a3506f9b5d916fec14d583d16f23c2485"><param name="Name" value="setFillColor"></OBJECT>
@@ -1914,7 +1880,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Font.htm"><param name="Name" value="sf::Font"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Font.htm#a506404655b8869ed60d1e7709812f583"><param name="Name" value="Font"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Font.htm#a88fc3372800948a1f8655c533cb8a952"><param name="Name" value="getDefaultFont"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Font.htm#a148eb92890113052f12f8a231ad619b9"><param name="Name" value="getGlyph"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Font.htm#a4093f7d2d195c88ea90b34cf14e003c8"><param name="Name" value="getKerning"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Font.htm#a05f23b88b13bd094083da5b7efc94371"><param name="Name" value="getLineSpacing"></OBJECT>
@@ -1997,7 +1962,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1ListingResponse.htm#af81738f06b6f571761696291276acb3ba03254aba823298179a98056e15568c5b"><param name="Name" value="FilenameNotAllowed"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1ListingResponse.htm#af81738f06b6f571761696291276acb3baebddfc7997dca289c83068dff3f47dce"><param name="Name" value="FileStatus"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1ListingResponse.htm#af81738f06b6f571761696291276acb3ba3f8f931e499936fde6b750d81f5ecfef"><param name="Name" value="FileUnavailable"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1ListingResponse.htm#a8196384f8cb4e16171780fb08d456e63"><param name="Name" value="getFilenames"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1ListingResponse.htm#a5f0771b52a966bf25b33a70602b6f97f"><param name="Name" value="getListing"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1ListingResponse.htm#a0015675c528a4a84a671484b9e5499d6"><param name="Name" value="getMessage"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1ListingResponse.htm#ac7f937b3883d1c4fbc75c003a1786aaa"><param name="Name" value="getStatus"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1ListingResponse.htm#af81738f06b6f571761696291276acb3ba840fd2a1872fd4310b046541f57fdeb7"><param name="Name" value="HelpMessage"></OBJECT>
@@ -2227,8 +2192,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a9d06fa7ac9af597034ea724fb08b991e"><param name="Name" value="A"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a158c586cbe8609031d1a7932e1a8dba2"><param name="Name" value="Add"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142aca3142235e5c4199f0b8b45d8368ef94"><param name="Name" value="B"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a7fdbaa81e34620710589948ab780560b"><param name="Name" value="Back"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a536df84e73859aa44e11e192459470b6"><param name="Name" value="BackSlash"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a33aeaab900abcd01eebf2fcc4f6d97e2"><param name="Name" value="BackSpace"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a0d586c4ec0cd6b537cb6f49180fedecc"><param name="Name" value="C"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142ab7374f48cc79e3085739160b8e3ef2f9"><param name="Name" value="Comma"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142ae778600bd3e878b59df1dbdd5877ba7a"><param name="Name" value="D"></OBJECT>
@@ -2321,6 +2286,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a20c552c39c8356b1078f1cfff7936b4a"><param name="Name" value="Tab"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a90be0882086bccb516e3afc5c7fb82eb"><param name="Name" value="Tilde"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142ab4f30ae34848ee934dd4f5496a8fb4a1"><param name="Name" value="U"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a840c43fa8e05ff854f6fe9a86c7c939e"><param name="Name" value="Unknown"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142ac4cf6ef2d2632445e9e26c8f2b70e82d"><param name="Name" value="Up"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142aec9074abd2d41628d1ecdc14e1b2cd96"><param name="Name" value="V"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a258aa89e9c6c9aad1ccbaeb41839c5e0"><param name="Name" value="W"></OBJECT>
@@ -2426,8 +2392,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#a6fa0fc7de1636d78cae1a1b54eef95cd"><param name="Name" value="height"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#a566740c8f58e01bb052266f47e7e1011"><param name="Name" value="intersects"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#aa49960fa465103d9cb7069ceb25c7c32"><param name="Name" value="left"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#a90260b53741ec32180f3705a5225f7a6"><param name="Name" value="operator!="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#a043682e7c1f0da0cdc4875fe225bdbc1"><param name="Name" value="operator=="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#a03fc4c105687b7d0f07b6b4ed4b45581"><param name="Name" value="operator!="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#ab3488b5dbd0e587c4d7cb80605affc46"><param name="Name" value="operator=="></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#a0f87ebaef9722a6222fd2e04ce8efb37"><param name="Name" value="Rect"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#abd3d3a2d0ad211ef0082bd0aa1a5c0e3"><param name="Name" value="top"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#a4dd5b9d4333bebbc51bd309298fd500f"><param name="Name" value="width"></OBJECT>
@@ -2452,7 +2418,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RectangleShape.htm#a3b48c3362e3e2c14fef7551252deb7bb"><param name="Name" value="getTransform"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RectangleShape.htm#a86b461d6a941ad390c2ad8b6a4a20391"><param name="Name" value="move"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RectangleShape.htm#a83a2be157ebee85c95ed491c3e78dd7c"><param name="Name" value="RectangleShape"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RectangleShape.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="RenderTarget"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RectangleShape.htm#af8a5ffddc0d93f238fee3bf8efe1ebda"><param name="Name" value="rotate"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RectangleShape.htm#a3de0c6d8957f3cf318092f3f60656391"><param name="Name" value="scale"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RectangleShape.htm#a3506f9b5d916fec14d583d16f23c2485"><param name="Name" value="setFillColor"></OBJECT>
@@ -2478,19 +2443,15 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm"><param name="Name" value="sf::RenderTarget"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#aefd4b1cc8e264598b94bd70aaac5bc99"><param name="Name" value="applyBlendMode"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a3ed439c5445e9c7d7ff786ff37005efa"><param name="Name" value="applyCurrentView"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a6f8bc92f07c70ccd57cbf632fe9de0ba"><param name="Name" value="applyShader"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#afb8a49305171aad158a27e0dfbb03709"><param name="Name" value="applyTexture"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a0b23bd7c287d0fc12b0521b649a0a0e0"><param name="Name" value="applyTransform"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a6bb6f0ba348f2b1e2f46114aeaf60f26"><param name="Name" value="clear"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#afc047333937f7cb7fe557aec60239233"><param name="Name" value="convertCoords"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a12417a3bcc245c41d957b29583556f39"><param name="Name" value="draw"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a718b1aa6296bf855171699cc18251ced"><param name="Name" value="getDefaultView"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a2e5ade2457d9fb4c4907ae5b3d9e94a5"><param name="Name" value="getSize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a98f721cc6dc11478922427fedfb2288b"><param name="Name" value="getView"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#aae035b0d45f87a0da2a28a0de6ba1086"><param name="Name" value="getViewport"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#af530274b34159d644e509b4b4dc43eb7"><param name="Name" value="initialize"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#aa0c11e1989573f2cce64c621205f8e83"><param name="Name" value="mapCoordsToPixel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a2b0cab0e4c6af29d4efaba149d28116d"><param name="Name" value="mapPixelToCoords"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#ad5a98401113df931ddcd54c080f7aa8e"><param name="Name" value="popGLStates"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a8d1998464ccc54e789aaf990242b47f7"><param name="Name" value="pushGLStates"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTarget.htm#a2997c96cbd93cb8ce0aba2ddae35b86f"><param name="Name" value="RenderTarget"></OBJECT>
@@ -2500,13 +2461,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm"><param name="Name" value="sf::RenderTexture"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#aefd4b1cc8e264598b94bd70aaac5bc99"><param name="Name" value="applyBlendMode"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#a3ed439c5445e9c7d7ff786ff37005efa"><param name="Name" value="applyCurrentView"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#a6f8bc92f07c70ccd57cbf632fe9de0ba"><param name="Name" value="applyShader"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#afb8a49305171aad158a27e0dfbb03709"><param name="Name" value="applyTexture"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#a0b23bd7c287d0fc12b0521b649a0a0e0"><param name="Name" value="applyTransform"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#a6bb6f0ba348f2b1e2f46114aeaf60f26"><param name="Name" value="clear"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#afc047333937f7cb7fe557aec60239233"><param name="Name" value="convertCoords"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#aefbb76eb3b87e368ab974b2660931ccb"><param name="Name" value="create"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#af92886d5faef3916caff9fa9ab32c555"><param name="Name" value="display"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#a12417a3bcc245c41d957b29583556f39"><param name="Name" value="draw"></OBJECT>
@@ -2517,6 +2472,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#aae035b0d45f87a0da2a28a0de6ba1086"><param name="Name" value="getViewport"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#af530274b34159d644e509b4b4dc43eb7"><param name="Name" value="initialize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#ae385f4f4dbd2af50fb11947bf0bcb83d"><param name="Name" value="isSmooth"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#aa0c11e1989573f2cce64c621205f8e83"><param name="Name" value="mapCoordsToPixel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#a2b0cab0e4c6af29d4efaba149d28116d"><param name="Name" value="mapPixelToCoords"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#ad5a98401113df931ddcd54c080f7aa8e"><param name="Name" value="popGLStates"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#a8d1998464ccc54e789aaf990242b47f7"><param name="Name" value="pushGLStates"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderTexture.htm#a19ee6e5b4c40ad251803389b3953a9c6"><param name="Name" value="RenderTexture"></OBJECT>
@@ -2528,16 +2485,10 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm"><param name="Name" value="sf::RenderWindow"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#aefd4b1cc8e264598b94bd70aaac5bc99"><param name="Name" value="applyBlendMode"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a3ed439c5445e9c7d7ff786ff37005efa"><param name="Name" value="applyCurrentView"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a6f8bc92f07c70ccd57cbf632fe9de0ba"><param name="Name" value="applyShader"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#afb8a49305171aad158a27e0dfbb03709"><param name="Name" value="applyTexture"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a0b23bd7c287d0fc12b0521b649a0a0e0"><param name="Name" value="applyTransform"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a9bd8655d0bac83145bfc329ea7a6d538"><param name="Name" value="capture"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a6bb6f0ba348f2b1e2f46114aeaf60f26"><param name="Name" value="clear"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a99d1e030387b0c26f5995670504fe7b5"><param name="Name" value="close"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#afc047333937f7cb7fe557aec60239233"><param name="Name" value="convertCoords"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a21c51afab5ae676c9c8b325d453958d5"><param name="Name" value="create"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a30e6edf2162f8dbff61023b9de5d961d"><param name="Name" value="create"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#adabf839cb103ac96cfc82f781638772a"><param name="Name" value="display"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a12417a3bcc245c41d957b29583556f39"><param name="Name" value="draw"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a718b1aa6296bf855171699cc18251ced"><param name="Name" value="getDefaultView"></OBJECT>
@@ -2549,6 +2500,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#aae035b0d45f87a0da2a28a0de6ba1086"><param name="Name" value="getViewport"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#af530274b34159d644e509b4b4dc43eb7"><param name="Name" value="initialize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a5aa9c2b2b0e51d3423c2b66c80253337"><param name="Name" value="isOpen"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#aa0c11e1989573f2cce64c621205f8e83"><param name="Name" value="mapCoordsToPixel"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a2b0cab0e4c6af29d4efaba149d28116d"><param name="Name" value="mapPixelToCoords"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a5bef0040b0fa87bed9fbd459c980d53a"><param name="Name" value="onCreate"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a5c85fe482313562d33ffd24a194b6fef"><param name="Name" value="onResize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a338e996585faf82e93069858e3b531b7"><param name="Name" value="pollEvent"></OBJECT>
@@ -2564,7 +2517,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#aad3991c25e0a83afbb4d62febf9b7b14"><param name="Name" value="setMouseCursorVisible"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a6c4078bfbf61c29bfc4b4732ce764f17"><param name="Name" value="setPosition"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#ad6513418bb2963347cd1819a1810524d"><param name="Name" value="setSize"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a7f419f99a799424376aba838abfbd273"><param name="Name" value="setTitle"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a3b3f3513bb6be90f5cd456c20b5fd5fa"><param name="Name" value="setTitle"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a59041c4556e0351048f8aff366034f61"><param name="Name" value="setVerticalSyncEnabled"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a063db6dd0a14913504af30e50cb6d946"><param name="Name" value="setView"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderWindow.htm#a160f7f11a207603d7e99ce606e749703"><param name="Name" value="setVisible"></OBJECT>
@@ -2575,7 +2528,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structsf_1_1Shader_1_1CurrentTextureType.htm"><param name="Name" value="sf::Shader::CurrentTextureType"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm"><param name="Name" value="sf::Shader"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#ab170f43610b4fcc7c69a55575650fb95"><param name="Name" value="bind"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#a09778f78afcbeb854d608c8dacd8ea30"><param name="Name" value="bind"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#ac84c7953eec2e19358ea6e2cc5385b8d"><param name="Name" value="CurrentTexture"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#ae0efa7935241644608ca32ba47b22a33"><param name="Name" value="ensureGlContext"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#afaa1aa65e5de37b74d047da9def9f9b3ace6e88eec3a56b2e55ee3c8e64e9b89a"><param name="Name" value="Fragment"></OBJECT>
@@ -2585,7 +2538,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#a2ee1b130c0606e4f8bcdf65c1efc2a53"><param name="Name" value="loadFromStream"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#a47e4dd78f0752ae08664b4ee616db1cf"><param name="Name" value="setParameter"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#a1d7f28f26b4122959fcafec871c2c3c5"><param name="Name" value="Shader"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#a86f6ce37c2ad74250c9ee9fdd18452a5"><param name="Name" value="unbind"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#afaa1aa65e5de37b74d047da9def9f9b3a8718008f827eb32e29bbdd1791c62dce"><param name="Name" value="Vertex"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#a4bac6cc8b046ecd8fb967c145a2380e6"><param name="Name" value="~Shader"></OBJECT>
   </UL>
@@ -2607,7 +2559,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#af7c4c80a435b85a622812711cf510439"><param name="Name" value="getTextureRect"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#a3b48c3362e3e2c14fef7551252deb7bb"><param name="Name" value="getTransform"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#a86b461d6a941ad390c2ad8b6a4a20391"><param name="Name" value="move"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="RenderTarget"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#af8a5ffddc0d93f238fee3bf8efe1ebda"><param name="Name" value="rotate"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#a3de0c6d8957f3cf318092f3f60656391"><param name="Name" value="scale"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#a3506f9b5d916fec14d583d16f23c2485"><param name="Name" value="setFillColor"></OBJECT>
@@ -2801,7 +2752,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Sprite.htm#a89aa58bc39e2072c6afe7c547d27b5a0"><param name="Name" value="getTextureRect"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Sprite.htm#a3b48c3362e3e2c14fef7551252deb7bb"><param name="Name" value="getTransform"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Sprite.htm#a86b461d6a941ad390c2ad8b6a4a20391"><param name="Name" value="move"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Sprite.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="RenderTarget"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Sprite.htm#af8a5ffddc0d93f238fee3bf8efe1ebda"><param name="Name" value="rotate"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Sprite.htm#a3de0c6d8957f3cf318092f3f60656391"><param name="Name" value="scale"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Sprite.htm#a14def44da6437bfea20c4df5e71aba4c"><param name="Name" value="setColor"></OBJECT>
@@ -2829,15 +2779,15 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#ac90f2b7b28f703020f8d027e98806235"><param name="Name" value="Iterator"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a3664f92c3b488bf9f60f6b8eafe1844d"><param name="Name" value="operator std::string"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a20d50d45020d1dbe1779dda69ee83732"><param name="Name" value="operator std::wstring"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a2b592c36be218b4811795fdc84eecc69"><param name="Name" value="operator!="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a55ef2bf7dc6b295ef7127b0bc1e58760"><param name="Name" value="operator+"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a3bfb9217788a9978499b8d5696bb0ef2"><param name="Name" value="operator!="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#af140f992b7698cf1448677c2c8e11bf1"><param name="Name" value="operator+"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#ae6563ce2c243ae2160eea8a354199f4e"><param name="Name" value="operator+="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#ac2ca5a7703402a2bbafd85eec6d1e846"><param name="Name" value="operator<"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#abd342b6094b81cd086c7929b53b112ae"><param name="Name" value="operator<="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a5158a142e0966685ec7fb4e147b24ef0"><param name="Name" value="operator<"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#ac1c1bb5dcf02aad3b2c0a1bf74a11cc9"><param name="Name" value="operator<="></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a096255c066e5ef8c31952216b8ce9c42"><param name="Name" value="operator="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a2a385459fa9a237e61a712fa956d489e"><param name="Name" value="operator=="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a5efc1eca58cf5c17d01eb8501d303538"><param name="Name" value="operator>"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a8d2979d7829d6616330a768956f251e1"><param name="Name" value="operator>="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a483931724196c580552b68751fb4d837"><param name="Name" value="operator=="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#ac96278a8cbe282632b11f0c8c007df0c"><param name="Name" value="operator>"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a112689eec28e0ca9489e8c4ec6a34493"><param name="Name" value="operator>="></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a649b89a65866bf03652f7b5cb6de3bb6"><param name="Name" value="operator[]"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a9563a4e93f692e0c8e8702b374ef8692"><param name="Name" value="String"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a71d111ccfaf295b8b8be8ca4a3ceb5f4"><param name="Name" value="toAnsiString"></OBJECT>
@@ -2892,7 +2842,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#adf120ed4159e43daa782b17fea23ea82"><param name="Name" value="findCharacterPos"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#a9abb85c6966c9879f6ba4d6e47be1dd5"><param name="Name" value="getCharacterSize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#ae42818342a74a9d04644e2fbbd4ca29a"><param name="Name" value="getColor"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#a6f9c34aec007f14b2227dd6efff0c5c9"><param name="Name" value="getFont"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#ab831de193307ab591b34221440613aa1"><param name="Name" value="getFont"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#a95d732f58bd12bf7ec388b106f3729ba"><param name="Name" value="getGlobalBounds"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#ab00de62b5d1efb2ee4cf2566dea98175"><param name="Name" value="getInverseTransform"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#a8a766ea03a1b8899cd1542765771a4ae"><param name="Name" value="getLocalBounds"></OBJECT>
@@ -2906,7 +2856,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#aa8add4aef484c6e6b20faff07452bd82aee249eb803848723c542c2062ebe69d8"><param name="Name" value="Italic"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#a86b461d6a941ad390c2ad8b6a4a20391"><param name="Name" value="move"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#aa8add4aef484c6e6b20faff07452bd82a2af9ae5e1cda126570f744448e0caa32"><param name="Name" value="Regular"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="RenderTarget"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#af8a5ffddc0d93f238fee3bf8efe1ebda"><param name="Name" value="rotate"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#a3de0c6d8957f3cf318092f3f60656391"><param name="Name" value="scale"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#ae96f835fc1bff858f8a23c5b01eaaf7e"><param name="Name" value="setCharacterSize"></OBJECT>
@@ -2923,7 +2872,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Texture.htm"><param name="Name" value="sf::Texture"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Texture.htm#ae4063cbdf35eb24645bf5f267ac5b78d"><param name="Name" value="bind"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Texture.htm#ae9a4274e7b95ebf7244d09c7445833b0"><param name="Name" value="bind"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Texture.htm#aefc19bcd95565dd2348fd4cec0facddc"><param name="Name" value="copyToImage"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Texture.htm#a89b4c7d204acf1033c3a1b6e0a3ad0a3"><param name="Name" value="create"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Texture.htm#ae0efa7935241644608ca32ba47b22a33"><param name="Name" value="ensureGlContext"></OBJECT>
@@ -2950,7 +2899,7 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Thread.htm#a74f75a9e86e1eb47479496314048b5f6"><param name="Name" value="launch"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Thread.htm#ad6b205d4f1ce38b8d44bba0f5501477c"><param name="Name" value="terminate"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Thread.htm#a59c944f12a55330be6017cde7b2941bf"><param name="Name" value="Thread"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Thread.htm#a4cc65399bbb111cf8132537783b8e96c"><param name="Name" value="Thread"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Thread.htm#a724b1f94c2d54f84280f2f78bde95fa0"><param name="Name" value="wait"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Thread.htm#af77942fc1730af7c31bc4c3a913a9c1d"><param name="Name" value="~Thread"></OBJECT>
   </UL>
@@ -2976,23 +2925,23 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ae41a7e0ca73ceea771b3c150c12abdd2"><param name="Name" value="asMicroseconds"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a85e6deb41fa71896508ce0f64059a6ae"><param name="Name" value="asMilliseconds"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a7538140d095e48da9d7eee015dd455a9"><param name="Name" value="asSeconds"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ab4f5b719ece75ebd11593f935fbe3bcb"><param name="Name" value="microseconds"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a8dc1cb5f5fdde2ed2221d5af80cce853"><param name="Name" value="milliseconds"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ae06b561f6422ec8ca414d400efd2cf4b"><param name="Name" value="operator!="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ac1386c6360872d354b9b59eadcd9778d"><param name="Name" value="operator*"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a8996b6a6fcb8f3854b486b8e43949b50"><param name="Name" value="operator*="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a7155e965f238f8c32d63649b0189ef47"><param name="Name" value="operator+"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a831c8df4b7b9b47eaa0c5a52a1be654c"><param name="Name" value="operator+="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a1b23b91cf367764338c2ff922c65da4e"><param name="Name" value="operator-"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#aaf7888302cf4847f97cfc26875367b94"><param name="Name" value="operator-="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a3386c392dbc62e51dfa59730854d1ed2"><param name="Name" value="operator/"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a9835490c54cab06492ec3aa9e9275ef9"><param name="Name" value="operator/="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ac222933174ddcff5d14c3ac7d1020d54"><param name="Name" value="operator<"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a2c22369869bf903578635bc6517c44d4"><param name="Name" value="operator<="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a2b8453227f651e9d5db3663fa08c47e2"><param name="Name" value="operator=="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a23978402846bf3c7ac54a3f2c6b397a2"><param name="Name" value="operator>"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ad69edc80cd01b7a03f5673b4276181eb"><param name="Name" value="operator>="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#abe757d058fd820b4c84232c1451c1efa"><param name="Name" value="seconds"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a39279e08c495e6e726addb7b889657d4"><param name="Name" value="microseconds"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a24379a7cc231b7a11d73dbccf010ebf0"><param name="Name" value="milliseconds"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a3a142729f295af8b1baf2d8762bc39ac"><param name="Name" value="operator!="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ab891d4f3dbb454f6c1c484a7844bb581"><param name="Name" value="operator*"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a3f7baa961b8961fc5e6a37dea7de10e3"><param name="Name" value="operator*="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a8249d3a28c8062c7c46cc426186f76c8"><param name="Name" value="operator+"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a34b983deefecaf2725131771d54631e0"><param name="Name" value="operator+="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#acaead0aa2de9f82a548fcd8208a40f70"><param name="Name" value="operator-"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ae0a16136d024a44bbaa4ca49ac172c8f"><param name="Name" value="operator-="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a67510d018fd010819ee075db2cbd004f"><param name="Name" value="operator/"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#ad513a413be41bc66feb0ff2b29d5f947"><param name="Name" value="operator/="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a3bad89721b8c026e80082a7aa539f244"><param name="Name" value="operator<"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#aafb9de87ed6047956cd9487ab807371f"><param name="Name" value="operator<="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a9bbb2368cf012149f1001535a20c664a"><param name="Name" value="operator=="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a9a472ce6d82aa0caf8e20af4a4b309f2"><param name="Name" value="operator>"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a158c5f9a6abf575651b7b2f6af8aedaa"><param name="Name" value="operator>="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#abeb69917dd7201034107c499210c1d19"><param name="Name" value="seconds"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#acba0cfbc49e3a09a22a8e079eb67a05c"><param name="Name" value="Time"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#a8db127b632fa8da21550e7282af11fa0"><param name="Name" value="Zero"></OBJECT>
   </UL>
@@ -3002,8 +2951,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#ab1c033198b0aae8cdb9daa3d3bef3fc1"><param name="Name" value="getInverse"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#ae4c1969c47533e2b01deb526ff73b37f"><param name="Name" value="getMatrix"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#aa4eb1eecbcb9979d76e2543b337fdb13"><param name="Name" value="Identity"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#a423ade8d6aa1378c695f8eb4bfce8981"><param name="Name" value="operator*"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#a45a9de70a463117f851f1264a6f558ba"><param name="Name" value="operator*="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#a85ea4e5539795f9b2ceb7d4b06736c8f"><param name="Name" value="operator*"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#a189899674616490f6250953ac581ac30"><param name="Name" value="operator*="></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#a3e548c3c9e3fb9d4bd43cf852669e555"><param name="Name" value="rotate"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#a3f46af807f69d74120fb836334268671"><param name="Name" value="scale"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Transform.htm#ac32de51bd0b9f3d52fbe0838225ee83b"><param name="Name" value="Transform"></OBJECT>
@@ -3054,84 +3003,84 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf.htm"><param name="Name" value="sf::Utf"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a8a999396e691c97dd1bd5576471327bc"><param name="Name" value="count"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a759915b18e2022b9f91e07a63d6bb561"><param name="Name" value="decode"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a69a63e861a0b387d6dd438c9b81bd83c"><param name="Name" value="encode"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a8fdd9d5436c4ae71d325f92b6af42ce2"><param name="Name" value="fromAnsi"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a36c87bba8e60882b68ea0f228ddd59e9"><param name="Name" value="fromLatin1"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ae3701b025a759bfb611b04d4daeb2950"><param name="Name" value="fromWide"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ab8c0deb3f1126c9e728e5dbd5ca96673"><param name="Name" value="next"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a3f368cff7e369fa95b49a12214981b63"><param name="Name" value="toAnsi"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ad05ef5b152e091e93d2f00445238fc8f"><param name="Name" value="toLatin1"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#aa47751b281aa56ec636d6aa852b0ec5e"><param name="Name" value="toUtf16"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a43818ced5b57614280d428e8fd3d4445"><param name="Name" value="toUtf32"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a8b03a29de6398c6024c1477d86c8ab2b"><param name="Name" value="toUtf8"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a3458bc10a0cc6e89e6f3d87540ee6434"><param name="Name" value="toWide"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a6df8d9be8211ffe1095b3b82eac83f6f"><param name="Name" value="count"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a17be6fc08e51182e7ac8bf9269dfae37"><param name="Name" value="decode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a516090c84ceec2cfde0a13b6148363bb"><param name="Name" value="encode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a8a595dc1ea57ecf7aad944964913f0ff"><param name="Name" value="fromAnsi"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a52293df75893733fe6cf84b8a017cbf7"><param name="Name" value="fromLatin1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a263423929b6f8e4d3ad09b45ac5cb0a1"><param name="Name" value="fromWide"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ab899108d77ce088eb001588e84d91525"><param name="Name" value="next"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a6d2bfbdfe46364bd49bca28a410b18f7"><param name="Name" value="toAnsi"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ad0cc57ebf48fac584f4d5f3d30a20010"><param name="Name" value="toLatin1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a0c9744c8f142360a8afebb24da134b34"><param name="Name" value="toUtf16"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a781174f776a3effb96c1ccd9a4513ab1"><param name="Name" value="toUtf32"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#afdd2f31536ce3fba4dfb632dfdd6e4b7"><param name="Name" value="toUtf8"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a42bace5988f7f20497cfdd6025c2d7f2"><param name="Name" value="toWide"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#ac57503316089dc16a52be835b9bad32f"><param name="Name" value="count"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a5d0416a12d8839e09a32f990baa7867e"><param name="Name" value="decode"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a7df5ec90577bf2ae28c41a9b05a9dcba"><param name="Name" value="decodeAnsi"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a814ba4d687716ab33a49ddc24489ed03"><param name="Name" value="decodeWide"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#abc63307c2d872679f50a697dc32b810f"><param name="Name" value="encode"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#ae274c5057c343ba353253bd2c531a283"><param name="Name" value="encodeAnsi"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a12b65aa82e36e6b81812c7ccf6e9faf1"><param name="Name" value="encodeWide"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#af228da61a61de57361fdda1d633ea2b9"><param name="Name" value="fromAnsi"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a66fa9221062e57c0ca4ebb640ea7c2c1"><param name="Name" value="fromLatin1"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a4cbae8c7a80cbe347f21a559acfbc606"><param name="Name" value="fromWide"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#ac2612aac4c588d4759206a252c8f36d9"><param name="Name" value="next"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#aa199119337c048cbbb638dafb14ca5fd"><param name="Name" value="toAnsi"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#abe582973966ef8b1d0870c18931343e8"><param name="Name" value="toLatin1"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#ae15acc68735f15aecdcfc49fd09c9f1c"><param name="Name" value="toUtf16"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#aa441b9756cebad0e045332d022f286c3"><param name="Name" value="toUtf32"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a9e5ab717ba3fb132edd60e22c5ac02b3"><param name="Name" value="toUtf8"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#ac646ef46f5a3277c8c82397bf1ec395c"><param name="Name" value="toWide"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a9b18c32b9e6d4b3126e9b4af45988b55"><param name="Name" value="count"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#ad754ce8476f7b80563890dec12cefd46"><param name="Name" value="decode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a68346ea833f88267a7c739d4d96fb86f"><param name="Name" value="decodeAnsi"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a043fe25f5f4dbc205e78e6f1d99840dc"><param name="Name" value="decodeWide"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a27b9d3f3fc49a8c88d91966889fcfca1"><param name="Name" value="encode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#af6590226a071076ca22d818573a16ded"><param name="Name" value="encodeAnsi"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a52e511e74ddc5df1bbf18f910193bc47"><param name="Name" value="encodeWide"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a384a4169287af15876783ad477cac4e3"><param name="Name" value="fromAnsi"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a05741b76b5a26267a72735e40ca61c55"><param name="Name" value="fromLatin1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#abdf0d41e0c8814a68326688e3b8d187f"><param name="Name" value="fromWide"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a788b4ebc728dde2aaba38f3605d4867c"><param name="Name" value="next"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a768cb205f7f1d20cd900e34fb48f9316"><param name="Name" value="toAnsi"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a064ce0ad81768d0d99b6b3e2e980e3ce"><param name="Name" value="toLatin1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a3f97efb599ad237af06f076f3fcfa354"><param name="Name" value="toUtf16"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#abd7c1e80791c80c4d78257440de96140"><param name="Name" value="toUtf32"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a193e155964b073c8ba838434f41d5e97"><param name="Name" value="toUtf8"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a0d5bf45a9732beb935592da6bed1242c"><param name="Name" value="toWide"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#ae65b052d8d9082b9000cc4a91576db2d"><param name="Name" value="count"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a87e2e077bb41a6680f9700a9244206c6"><param name="Name" value="decode"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a8ac5d374bb2e192c175add87132577a0"><param name="Name" value="encode"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#ae3a6545508ceb0b32458f9c1ede971cf"><param name="Name" value="fromAnsi"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a07822dbf977807dc28eb779861db558d"><param name="Name" value="fromLatin1"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a9f59bc50f652999b659a08c0708dc976"><param name="Name" value="fromWide"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a53c9cc893c618fb5faada74602707164"><param name="Name" value="next"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#ae60c92eb0bbbec2ef620dd3ceccd01fd"><param name="Name" value="toAnsi"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#ab842d791ddd55a4560ede96a008fa696"><param name="Name" value="toLatin1"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#ae106ebb1aae66a9cf4ac3f18e9d520fc"><param name="Name" value="toUtf16"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a36c78be73401c7155b4452e628c06a79"><param name="Name" value="toUtf32"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a7131a60b781d27170cab3dc08e43026a"><param name="Name" value="toUtf8"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a13d53dd07104947e8eea9cb52f760327"><param name="Name" value="toWide"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#af1f15d9a772ee887be39e97431e15d32"><param name="Name" value="count"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a59d4e8d5832961e62b263d308b72bf4b"><param name="Name" value="decode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a5fbc6b5a996f52e9e4a14633d0d71847"><param name="Name" value="encode"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a1b62ba85ad3c8ce68746e16192b3eef0"><param name="Name" value="fromAnsi"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a85dd3643b7109a1a2f802747e55e28e8"><param name="Name" value="fromLatin1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#aa99e636a7addc157b425dfc11b008f42"><param name="Name" value="fromWide"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a0365a0b38700baa161843563d083edf6"><param name="Name" value="next"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a3d8b02f29021bd48831e7706d826f0c5"><param name="Name" value="toAnsi"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#adf6f6e0a8ee0527c8ab390ce5c0b6b13"><param name="Name" value="toLatin1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a925ac9e141dcb6f9b07c7b95f7cfbda2"><param name="Name" value="toUtf16"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a79395429baba13dd04a8c1fba745ce65"><param name="Name" value="toUtf32"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#aef68054cab6a592c0b04de94e93bb520"><param name="Name" value="toUtf8"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#ac6633c64ff1fad6bd1bfe72c37b3a468"><param name="Name" value="toWide"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm"><param name="Name" value="sf::Vector2"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a128bc6743be87cbb770e09a7524049e2"><param name="Name" value="operator!="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a80a6e4893c6fbd8eca6047cdaf1c5416"><param name="Name" value="operator*"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#ab356072020215d4d64aed2db8bb3b53f"><param name="Name" value="operator*="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a9f2f19f0acff87ebd0bbc0716cd8b98a"><param name="Name" value="operator+"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#ad631747b8bd20bb3e75ed51771c0d7ed"><param name="Name" value="operator+="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#af91ba9e90b2364cfa8302b73401bd00a"><param name="Name" value="operator-"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#ae63028b6ab752bbec460ed2587623847"><param name="Name" value="operator-="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a64659ab5db944895a1104e01e8309efa"><param name="Name" value="operator/"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a0aebb326092754768f08d959053cd913"><param name="Name" value="operator/="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#ac873f3e94b54998e6b1c940af4e97678"><param name="Name" value="operator=="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a01673da35ef9c52d0e54b8263549a956"><param name="Name" value="operator!="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a5f48ca928995b41c89f155afe8d16b02"><param name="Name" value="operator*"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#abea24cb28c0d6e2957e259ba4e65d70e"><param name="Name" value="operator*="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a72421239823c38a6b780c86a710ead07"><param name="Name" value="operator+"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#ad4b7a9d355d57790bfc7df0ade8bb628"><param name="Name" value="operator+="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a3885c2e66dc427cec7eaa178d59d8e8b"><param name="Name" value="operator-"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a30a5a12ad03c9a3a982a0a313bf84e6f"><param name="Name" value="operator-="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a7409dd89cb3aad6c3bc6622311107311"><param name="Name" value="operator/"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#ac4d293c9dc7954ccfd5e373972f38b03"><param name="Name" value="operator/="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a9a7b2d36c3850828fdb651facfd25136"><param name="Name" value="operator=="></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a58c32383b5291380db4b43a289f75988"><param name="Name" value="Vector2"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a1e6ad77fa155f3753bfb92699bd28141"><param name="Name" value="x"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector2.htm#a420f2481b015f4eb929c75f2af564299"><param name="Name" value="y"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm"><param name="Name" value="sf::Vector3"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a94503e07bd84a007f7dd50a74919ece2"><param name="Name" value="operator!="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a16e46f951acade01406c6db40d7fb1a3"><param name="Name" value="operator*"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a24d653f4da89bddc7288f9683312512d"><param name="Name" value="operator*="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#abe389440c31f100032c3a2ceb2d70db5"><param name="Name" value="operator+"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a2bfc9f041078c357ce6c56317fc8f979"><param name="Name" value="operator+="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a954923aa9a4e4e60d1887893074ae410"><param name="Name" value="operator-"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a6208200eb2f76e7e7d1651d2566efa93"><param name="Name" value="operator-="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a5eee3c79e4965dea6cc8e4a0881bd381"><param name="Name" value="operator/"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a9518f240e6ed3f34d362a940c2e872bc"><param name="Name" value="operator/="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a364083bf1ab290f84393016b5993808d"><param name="Name" value="operator=="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a608500d1ad3b78082cb5bb4356742bd4"><param name="Name" value="operator!="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a44ec312b31c1a85dcff4863795f98329"><param name="Name" value="operator*"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#ad5fb972775ce8ab58cd9670789e806a7"><param name="Name" value="operator*="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a6500a0cb00e07801e9e9d7e96852ddd3"><param name="Name" value="operator+"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#abc28859af163c63318ea2723b81c5ad9"><param name="Name" value="operator+="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a9b75d2fb9b0f2fd9fe33f8f06f9dda75"><param name="Name" value="operator-"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#aa465672d2a4ee5fd354e585cf08d2ab9"><param name="Name" value="operator-="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#ad4ba4a83de236ddeb92a7b759187e90d"><param name="Name" value="operator/"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a8995a700f9dffccc6dddb3696ae17b64"><param name="Name" value="operator/="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a388d72db973306a35ba467016b3dee30"><param name="Name" value="operator=="></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#aee8be1985c6e45e381ad4071265636f9"><param name="Name" value="Vector3"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a3cb0c769390bc37c346bb1a69e510d16"><param name="Name" value="x"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Vector3.htm#a6590d50ccb862c5efc5512e974e9b794"><param name="Name" value="y"></OBJECT>
@@ -3152,7 +3101,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VertexArray.htm#af2205f76fe98fb3cf1f303f25d43c045"><param name="Name" value="getPrimitiveType"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VertexArray.htm#a683fa176683f3b0343bab164608378f9"><param name="Name" value="getVertexCount"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VertexArray.htm#a5db1da21b170ecf4c52d49030db385fd"><param name="Name" value="operator[]"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VertexArray.htm#aa5afc6f82b7b587ed5ada4d227ce32aa"><param name="Name" value="RenderTarget"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VertexArray.htm#a9884c43c4f5ba152046ab3a5c91efb3b"><param name="Name" value="resize"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VertexArray.htm#aa38c10707c28a97f4627ae8b2f3ad969"><param name="Name" value="setPrimitiveType"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VertexArray.htm#a15729e01df8fc0021f9774dfb56295c1"><param name="Name" value="VertexArray"></OBJECT>
@@ -3164,12 +3112,12 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a6815b9b3b35767d5b4563fbed4bfc67b"><param name="Name" value="getFullscreenModes"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a5a88d44c9470db7474361a42a189342d"><param name="Name" value="height"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#aa64ff5420dde3b31c24b9c4e2be9cd9c"><param name="Name" value="isValid"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#abd7bf172d318085ea572b8c10033f7b7"><param name="Name" value="operator!="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a8e3d8fa57fa10dca05edbc34c4e2f1a8"><param name="Name" value="operator<"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a09b0a83f9135d934e540800bad12f0ca"><param name="Name" value="operator<="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a03c51c119811ffd4403c6e2bcbd4ceaf"><param name="Name" value="operator=="></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#ab6e5b2c65a428a4b56de8551b3706a36"><param name="Name" value="operator>"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a7f7983e336203d34c9878c77fff60f1f"><param name="Name" value="operator>="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a34b5c266a7b9cd5bc95de62f8beafc5a"><param name="Name" value="operator!="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a54cc77c0b6c4b133e0147a43d6829b13"><param name="Name" value="operator<"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#aa094b7b9ae4c0194892ebda7b4b9bb37"><param name="Name" value="operator<="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#aca24086fd94d11014f3a0b5ca9a3acd6"><param name="Name" value="operator=="></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a5b894cab5f2a3a14597e4c6d200179a4"><param name="Name" value="operator>"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a6e3d91683fcabb88c5b640e9884fe3df"><param name="Name" value="operator>="></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a04c9417e5c304510bef5f6aeb03f6ce1"><param name="Name" value="VideoMode"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1VideoMode.htm#a9b3b2ad2cac6b9c266823fb5ed506d90"><param name="Name" value="width"></OBJECT>
   </UL>
@@ -3194,7 +3142,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm"><param name="Name" value="sf::Window"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a99d1e030387b0c26f5995670504fe7b5"><param name="Name" value="close"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a21c51afab5ae676c9c8b325d453958d5"><param name="Name" value="create"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a30e6edf2162f8dbff61023b9de5d961d"><param name="Name" value="create"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#adabf839cb103ac96cfc82f781638772a"><param name="Name" value="display"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#ae0efa7935241644608ca32ba47b22a33"><param name="Name" value="ensureGlContext"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a2e6bc12612ea289afea8268fe37c8678"><param name="Name" value="getPosition"></OBJECT>
@@ -3213,7 +3161,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#aad3991c25e0a83afbb4d62febf9b7b14"><param name="Name" value="setMouseCursorVisible"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a6c4078bfbf61c29bfc4b4732ce764f17"><param name="Name" value="setPosition"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#ad6513418bb2963347cd1819a1810524d"><param name="Name" value="setSize"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a7f419f99a799424376aba838abfbd273"><param name="Name" value="setTitle"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a3b3f3513bb6be90f5cd456c20b5fd5fa"><param name="Name" value="setTitle"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a59041c4556e0351048f8aff366034f61"><param name="Name" value="setVerticalSyncEnabled"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#a160f7f11a207603d7e99ce606e749703"><param name="Name" value="setVisible"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Window.htm#aaf02ab64fbc1d374eef3696df54137bc"><param name="Name" value="waitEvent"></OBJECT>
@@ -3225,7 +3173,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#a413a457f720835b9f5d8e97ca8b80960"><param name="Name" value="Shape"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structsf_1_1Event_1_1KeyEvent.htm#a776af1a3ca79abeeec18ebf1c0065aa9"><param name="Name" value="shift"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a7424bf901434a587a6c202c423e6786c"><param name="Name" value="Slash"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__system.htm#ga2f2620831533dee0ed432ed982342e09"><param name="Name" value="sleep"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="group__system.htm#gab8c0d1f966b4e5110fd370b662d8c11b"><param name="Name" value="sleep"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Socket.htm#a80ffb47ec0bafc83af019055d3e6a303"><param name="Name" value="Socket"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Socket.htm#a23fafd48278ea4f8f9c25f1f0f43693c"><param name="Name" value="SocketSelector"></OBJECT>
   <UL>
@@ -3271,7 +3219,7 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="group__system.htm#ga7fe7f475639e26334606b5142c29551f"><param name="Name" value="err"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structsf_1_1Event_1_1KeyEvent.htm#ac0557f7edc2a608ec65175fdd843afc5"><param name="Name" value="sf::Event::KeyEvent"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__system.htm#ga2f2620831533dee0ed432ed982342e09"><param name="Name" value="sleep"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="group__system.htm#gab8c0d1f966b4e5110fd370b662d8c11b"><param name="Name" value="sleep"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1Response.htm#af81738f06b6f571761696291276acb3ba9bdd02ae119b8be639e778859ee74060"><param name="Name" value="SystemStatus"></OBJECT>
   <UL>
@@ -3312,51 +3260,51 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1RenderStates.htm#a457fc5a41731889de9cf39cf9b3436c3"><param name="Name" value="texture"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Texture.htm#a3e04674853b8533bf981db3173e3a4a7"><param name="Name" value="Texture"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Glyph.htm#a0d502d326449f8c49011ed91d2805f5b"><param name="Name" value="textureRect"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Thread.htm#a59c944f12a55330be6017cde7b2941bf"><param name="Name" value="Thread"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Thread.htm#a4cc65399bbb111cf8132537783b8e96c"><param name="Name" value="Thread"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ThreadLocal.htm#a44ea3c4be4eef118080275cbf4cf04cd"><param name="Name" value="ThreadLocal"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1ThreadLocalPtr.htm#a8c678211d7828d2a8c41cb534422d649"><param name="Name" value="ThreadLocalPtr"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a90be0882086bccb516e3afc5c7fb82eb"><param name="Name" value="Tilde"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Time.htm#acba0cfbc49e3a09a22a8e079eb67a05c"><param name="Name" value="Time"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="group__window.htm#gga8d7a3b8425c907a2872cb57e32cea5b8ab4c8b32b05ed715928513787cb1e85b6"><param name="Name" value="Titlebar"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a3f368cff7e369fa95b49a12214981b63"><param name="Name" value="toAnsi"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a6d2bfbdfe46364bd49bca28a410b18f7"><param name="Name" value="toAnsi"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a3f368cff7e369fa95b49a12214981b63"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#aa199119337c048cbbb638dafb14ca5fd"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#ae60c92eb0bbbec2ef620dd3ceccd01fd"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a6d2bfbdfe46364bd49bca28a410b18f7"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a768cb205f7f1d20cd900e34fb48f9316"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a3d8b02f29021bd48831e7706d826f0c5"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#a71d111ccfaf295b8b8be8ca4a3ceb5f4"><param name="Name" value="toAnsiString"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1IpAddress.htm#af42678b08b23def2560aed7d98b24d89"><param name="Name" value="toInteger"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ad05ef5b152e091e93d2f00445238fc8f"><param name="Name" value="toLatin1"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ad0cc57ebf48fac584f4d5f3d30a20010"><param name="Name" value="toLatin1"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ad05ef5b152e091e93d2f00445238fc8f"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#abe582973966ef8b1d0870c18931343e8"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#ab842d791ddd55a4560ede96a008fa696"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#ad0cc57ebf48fac584f4d5f3d30a20010"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a064ce0ad81768d0d99b6b3e2e980e3ce"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#adf6f6e0a8ee0527c8ab390ce5c0b6b13"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Rect.htm#abd3d3a2d0ad211ef0082bd0aa1a5c0e3"><param name="Name" value="top"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1IpAddress.htm#a52f4be92fb0ceb689abc469e4a85fd82"><param name="Name" value="toString"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#aa47751b281aa56ec636d6aa852b0ec5e"><param name="Name" value="toUtf16"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a0c9744c8f142360a8afebb24da134b34"><param name="Name" value="toUtf16"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#aa47751b281aa56ec636d6aa852b0ec5e"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#ae15acc68735f15aecdcfc49fd09c9f1c"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#ae106ebb1aae66a9cf4ac3f18e9d520fc"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a0c9744c8f142360a8afebb24da134b34"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a3f97efb599ad237af06f076f3fcfa354"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a925ac9e141dcb6f9b07c7b95f7cfbda2"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a43818ced5b57614280d428e8fd3d4445"><param name="Name" value="toUtf32"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a781174f776a3effb96c1ccd9a4513ab1"><param name="Name" value="toUtf32"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a43818ced5b57614280d428e8fd3d4445"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#aa441b9756cebad0e045332d022f286c3"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a36c78be73401c7155b4452e628c06a79"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a781174f776a3effb96c1ccd9a4513ab1"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#abd7c1e80791c80c4d78257440de96140"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a79395429baba13dd04a8c1fba745ce65"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a8b03a29de6398c6024c1477d86c8ab2b"><param name="Name" value="toUtf8"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#afdd2f31536ce3fba4dfb632dfdd6e4b7"><param name="Name" value="toUtf8"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a8b03a29de6398c6024c1477d86c8ab2b"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a9e5ab717ba3fb132edd60e22c5ac02b3"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a7131a60b781d27170cab3dc08e43026a"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#afdd2f31536ce3fba4dfb632dfdd6e4b7"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a193e155964b073c8ba838434f41d5e97"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#aef68054cab6a592c0b04de94e93bb520"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a3458bc10a0cc6e89e6f3d87540ee6434"><param name="Name" value="toWide"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a42bace5988f7f20497cfdd6025c2d7f2"><param name="Name" value="toWide"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a3458bc10a0cc6e89e6f3d87540ee6434"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#ac646ef46f5a3277c8c82397bf1ec395c"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#a13d53dd07104947e8eea9cb52f760327"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0116_01_4.htm#a42bace5988f7f20497cfdd6025c2d7f2"><param name="Name" value="sf::Utf< 16 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_0132_01_4.htm#a0d5bf45a9732beb935592da6bed1242c"><param name="Name" value="sf::Utf< 32 >"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Utf_3_018_01_4.htm#ac6633c64ff1fad6bd1bfe72c37b3a468"><param name="Name" value="sf::Utf< 8 >"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1String.htm#afd8b085ad7255543e4dc1285389d2d82"><param name="Name" value="toWideString"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Ftp_1_1Response.htm#af81738f06b6f571761696291276acb3ba7cfefcc586c12ba70f752353fde7126e"><param name="Name" value="TransferAborted"></OBJECT>
@@ -3394,13 +3342,10 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1UdpSocket.htm#abb10725e26dee9d3a8165fe87ffb71bb"><param name="Name" value="sf::UdpSocket"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Http_1_1Response.htm#a663e071978e30fbbeb20ed045be874d8ab7a79b7bff50fb1902c19eecbb4e2a2d"><param name="Name" value="Unauthorized"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#a86f6ce37c2ad74250c9ee9fdd18452a5"><param name="Name" value="unbind"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shader.htm#a86f6ce37c2ad74250c9ee9fdd18452a5"><param name="Name" value="sf::Shader"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1UdpSocket.htm#a2c4abb8102a1bd31f51fcfe7f15427a3"><param name="Name" value="sf::UdpSocket"></OBJECT>
-  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1UdpSocket.htm#a2c4abb8102a1bd31f51fcfe7f15427a3"><param name="Name" value="unbind"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Text.htm#aa8add4aef484c6e6b20faff07452bd82a664bd143f92b6e8c709d7f788e8b20df"><param name="Name" value="Underlined"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structsf_1_1Event_1_1TextEvent.htm#a00d96b1a5328a1d7cbc276e161befcb0"><param name="Name" value="unicode"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142a840c43fa8e05ff854f6fe9a86c7c939e"><param name="Name" value="Unknown"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Mutex.htm#ade71268ffc5e80756652058b01c23c33"><param name="Name" value="unlock"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Keyboard.htm#acb4cacd7cc5802dec45724cf3314a142ac4cf6ef2d2632445e9e26c8f2b70e82d"><param name="Name" value="Up"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classsf_1_1Shape.htm#adfb2bd966c8edbc5d6c92ebc375e4ac1"><param name="Name" value="update"></OBJECT>

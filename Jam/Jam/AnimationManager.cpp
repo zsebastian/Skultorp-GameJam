@@ -32,6 +32,7 @@ void AnimationManager::setCurrentAnimation(std::string animation)
 	{
 		mCurrentFrame = 0;
 		mCurrentAnimation = animation;
+		mUpdateRate = mAnimations[mCurrentAnimation].mUpdateRate;
 	}
 }
 

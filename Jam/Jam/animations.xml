@@ -9,7 +9,7 @@
 	<Animation name="idle8" rowOfSprite="1" numberOfFrames="4" looping="0" next="idle9" updateRate="250"/>
 	<Animation name="idle9" rowOfSprite="1" numberOfFrames="4" looping="0" next="idle" updateRate="250"/>
 	<Animation name="walk" rowOfSprite="3" numberOfFrames="6" looping="1" next="none" updateRate="100"/>
-	<Animation name="jump" rowOfSprite="0" numberOfFrames="4" looping="0" next="inair" updateRate="5"/>
-	<Animation name="inair" rowOfSprite="2" numberOfFrames="6" looping="1" next="none" updateRate="100"/>
-	<Animation name="land" rowOfSprite="4" numberOfFrames="3" looping="0" next="idle" updateRate="70"/>	
+	<Animation name="jump" rowOfSprite="0" numberOfFrames="4" looping="0" next="inair" updateRate="100"/>
+	<Animation name="inair" rowOfSprite="2" numberOfFrames="6" looping="1" next="none" updateRate="150"/>
+	<Animation name="land" rowOfSprite="4" numberOfFrames="2" looping="0" next="idle" updateRate="200"/>	
 </Body>

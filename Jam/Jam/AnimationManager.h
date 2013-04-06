@@ -36,7 +36,7 @@ private:
 	// clock
 	sf::Clock mFrameClock;
 	float mElapsed;
-	const float mUpdateRate;
+	float mUpdateRate;
 
 	struct Animation
 	{

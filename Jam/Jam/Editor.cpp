@@ -55,7 +55,7 @@ void Editor::update()
 
 void Editor::render(Display& display)
 {
-	display.getCamera().setRotation(0.f);
+	//display.getCamera().setRotation(0.f);
 	display.render(mPotentialEntity);
 }
 

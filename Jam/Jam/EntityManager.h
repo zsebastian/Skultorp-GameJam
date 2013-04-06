@@ -4,6 +4,7 @@
 #include <vector>
 #include <memory>
 #include "GravityField.h"
+#include "Editor.h"
 
 class Display;
 class Entity;
@@ -23,6 +24,7 @@ public:
 private:
 	EntityVec mEntities;
 	GravityField mGravityField;
+	Editor mEditor;
 };
 
 #endif

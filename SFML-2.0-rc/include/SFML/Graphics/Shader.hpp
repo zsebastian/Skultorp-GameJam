@@ -382,7 +382,7 @@ public :
     /// \endcode
     /// \code
     /// sf::Transform transform;
-    /// transform.translate(5, 10);
+    /// transform.Translate(5, 10);
     /// shader.setParameter("matrix", transform);
     /// \endcode
     ///
@@ -448,27 +448,34 @@ public :
     void setParameter(const std::string& name, CurrentTextureType);
 
     ////////////////////////////////////////////////////////////
-    /// \brief Bind a shader for rendering
+    /// \brief Bind the shader for rendering (activate it)
     ///
-    /// This function is not part of the graphics API, it mustn't be
-    /// used when drawing SFML entities. It must be used only if you
-    /// mix sf::Shader with OpenGL code.
-    ///
+    /// This function is normally for internal use only, unless
+    /// you want to use the shader with a custom OpenGL rendering
+    /// instead of a SFML drawable.
     /// \code
-    /// sf::Shader s1, s2;
-    /// ...
-    /// sf::Shader::bind(&s1);
-    /// // draw OpenGL stuff that use s1...
-    /// sf::Shader::bind(&s2);
-    /// // draw OpenGL stuff that use s2...
-    /// sf::Shader::bind(NULL);
-    /// // draw OpenGL stuff that use no shader...
+    /// window.setActive();
+    /// shader.bind();
+    /// ... render OpenGL geometry ...
+    /// shader.unbind();
     /// \endcode
     ///
-    /// \param shader Shader to bind, can be null to use no shader
+    /// \see unbind
     ///
     ////////////////////////////////////////////////////////////
-    static void bind(const Shader* shader);
+    void bind() const;
+
+    ////////////////////////////////////////////////////////////
+    /// \brief Unbind the shader (deactivate it)
+    ///
+    /// This function is normally for internal use only, unless
+    /// you want to use the shader with a custom OpenGL rendering
+    /// instead of a SFML drawable.
+    ///
+    /// \see bind
+    ///
+    ////////////////////////////////////////////////////////////
+    void unbind() const;
 
     ////////////////////////////////////////////////////////////
     /// \brief Tell whether or not the system supports shaders
@@ -540,7 +547,7 @@ private :
 ///
 /// A sf::Shader can be composed of either a vertex shader
 /// alone, a fragment shader alone, or both combined
-/// (see the variants of the load functions).
+/// (see the variants of the Load functions).
 ///
 /// Shaders are written in GLSL, which is a C-like
 /// language dedicated to OpenGL shaders. You'll probably
@@ -549,19 +556,17 @@ private :
 ///
 /// Like any C/C++ program, a shader has its own variables
 /// that you can set from your C++ application. sf::Shader
-/// handles 5 different types of variables:
+/// handles 4 different types of variables:
 /// \li floats
 /// \li vectors (2, 3 or 4 components)
-/// \li colors
 /// \li textures
 /// \li transforms (matrices)
 ///
 /// The value of the variables can be changed at any time
-/// with the various overloads of the setParameter function:
+/// with either the various overloads of the setParameter function:
 /// \code
 /// shader.setParameter("offset", 2.f);
-/// shader.setParameter("point", 0.5f, 0.8f, 0.3f);
-/// shader.setParameter("color", sf::Color(128, 50, 255));
+/// shader.setParameter("color", 0.5f, 0.8f, 0.3f);
 /// shader.setParameter("matrix", transform); // transform is a sf::Transform
 /// shader.setParameter("overlay", texture); // texture is a sf::Texture
 /// shader.setParameter("texture", sf::Shader::CurrentTexture);
@@ -574,18 +579,15 @@ private :
 /// To apply a shader to a drawable, you must pass it as an
 /// additional parameter to the Draw function:
 /// \code
-/// window.draw(sprite, &shader);
+/// window.draw(sprite, shader);
 /// \endcode
 ///
 /// ... which is in fact just a shortcut for this:
 /// \code
 /// sf::RenderStates states;
-/// states.shader = &shader;
+/// states.shader = shader;
 /// window.draw(sprite, states);
 /// \endcode
-///
-/// In the code above we pass a pointer to the shader, because it may
-/// be null (which means "no shader").
 ///
 /// Shaders can be used on any drawable, but some combinations are
 /// not interesting. For example, using a vertex shader on a sf::Sprite
@@ -615,9 +617,10 @@ private :
 /// sf::Shader can also be used directly as a raw shader for
 /// custom OpenGL geometry.
 /// \code
-/// sf::Shader::bind(&shader);
+/// window.setActive();
+/// shader.bind();
 /// ... render OpenGL geometry ...
-/// sf::Shader::bind(NULL);
+/// shader.unbind();
 /// \endcode
 ///
 ////////////////////////////////////////////////////////////

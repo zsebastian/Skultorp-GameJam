@@ -20,6 +20,7 @@ public:
 	virtual sf::Vector2f getPosition() const = 0;
 	virtual float getMass() const = 0;
 	virtual float getRadius() const = 0;
+	virtual sf::FloatRect getGlobalBounds() const = 0;
 };
 
 #endif

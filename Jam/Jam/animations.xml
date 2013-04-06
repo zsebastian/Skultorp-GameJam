@@ -1,0 +1,15 @@
+<Body>
+	<Animation name="idle" rowOfSprite="0" numberOfFrames="8" looping="0" next="idle2">
+	<Animation name="idle2" rowOfSprite="0" numberOfFrames="8" looping="0" next="idle3">
+	<Animation name="idle3" rowOfSprite="0" numberOfFrames="8" looping="0" next="idle4">
+	<Animation name="idle4" rowOfSprite="0" numberOfFrames="8" looping="0" next="idle5">
+	<Animation name="idle5" rowOfSprite="0" numberOfFrames="8" looping="0" next="idle6">
+	<Animation name="idle6" rowOfSprite="0" numberOfFrames="8" looping="0" next="idle7">
+	<Animation name="idle7" rowOfSprite="0" numberOfFrames="8" looping="0" next="idle8">
+	<Animation name="idle8" rowOfSprite="0" numberOfFrames="8" looping="0" next="idle9">
+	<Animation name="idle9" rowOfSprite="1" numberOfFrames="8" looping="0" next="idle">
+	<Animation name="walk" rowOfSprite="2" numberOfFrames="8" looping="1" next="none">
+	<Animation name="jump" rowOfSprite="3" numberOfFrames="8" looping="0" next="inair">
+	<Animation name="inair" rowOfSprite="4" numberOfFrames="8" looping="1" next="none">
+	<Animation name="land" rowOfSprite="5" numberOfFrames="8" looping="0" next="idle">	
+</Body>

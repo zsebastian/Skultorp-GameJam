@@ -1,5 +1,6 @@
 #include "AnimationManager.h"
 #include "tinyxml2.h"
+#include "Utility.h"
 
 AnimationManager::AnimationManager(std::string texture):
 	mCurrentAnimation("idle"),
@@ -15,7 +16,7 @@ AnimationManager::AnimationManager(std::string texture):
 	mSprite.setTextureRect(mTextureBox);
 	mSprite.setOrigin(mSprite.getLocalBounds().width / 2, mSprite.getLocalBounds().height / 2);
 	
-	//init();
+	init();
 }
 
 
@@ -29,7 +30,7 @@ void AnimationManager::setCurrentAnimation(std::string animation)
 	mCurrentFrame = 0;
 }
 
-sf::Sprite AnimationManager::getSprite()
+sf::Sprite AnimationManager::getSprite(sf::Vector2f& position)
 {
 	for(mElapsed += mFrameClock.restart().asMilliseconds(); mElapsed > mUpdateRate; mElapsed -= mUpdateRate)
 	{
@@ -45,6 +46,7 @@ sf::Sprite AnimationManager::getSprite()
 	}
 
 	setTextBox();
+	mSprite.setPosition(position);
 
 	return mSprite;
 }
@@ -57,32 +59,23 @@ void AnimationManager::setTextBox()
 
 void AnimationManager::init()
 {
+	tinyxml2::XMLDocument doc;
+	doc.LoadFile("animations.xml");
 
-<<<<<<< HEAD
 	tinyxml2::XMLElement* root = doc.FirstChildElement("body");
 	root = root->FirstChildElement("Animation");
 
 	while(root)
 	{
-		int rowOfSprite = 0;
-		int numberOfFrames = 0;
-		bool looping = true;
-		std::string next = "none";
+		int rowOfSprite = Util::fromString<int>(root->Attribute("rowOfSprite"));
+		int numberOfFrames = Util::fromString<int>(root->Attribute("numberOfFrames"));
+		bool looping = Util::fromString<bool>(root->Attribute("looping"));
+		std::string next = root->Attribute("next");
 
-		tinyxml2::XMLAttribute* atri;// = root->FirstAttribute();
+		std::string name = root->Attribute("name");
 
-		while(atri)
-		{
-			std::string value = atri->Name();
-			if(value == "rowOfSprite")
-			{
-				//rowOfSprite = static_cast<int>(atri->Value());
-			}
-		}
+		mAnimations.insert(std::make_pair(name, Animation(rowOfSprite, numberOfFrames, looping, next)));
 
 		root = root->NextSiblingElement();
 	}
 }
-=======
-}
->>>>>>> 15cdf73c3a7f815b8f9e0634d1a01cd8acaa8452

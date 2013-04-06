@@ -14,6 +14,7 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	,mMaxJumpPower(10.f)
 	,mCurrentJumpPower(0)
 	,mJumpDecelaration(0.7f)
+	,mAnimations("cat.png")
 {
 	setRadius(20.f);
 
@@ -42,7 +43,6 @@ void Cat::setRadius(float radius)
 
 void Cat::update()
 {
-<<<<<<< HEAD
 	mMoveSpeed = sf::Vector2f();
 
 	jump();
@@ -98,11 +98,6 @@ void Cat::jumping()
 			mJumping = false;
 		}
 	}
-=======
-	//Apply gravity
-	mPosition += mGravityVector;
-	mStandsOn.clear();
->>>>>>> 403293f09e69f208bac7ebe162062683fca7c103
 }
 
 void Cat::render(Display& display)
@@ -113,6 +108,8 @@ void Cat::render(Display& display)
 	tempShape.setFillColor(sf::Color::Red);
 	tempShape.setRadius(mRadius);	
 	display.render(tempShape);
+
+	//display.render(mAnimations.getSprite(mPosition));
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)

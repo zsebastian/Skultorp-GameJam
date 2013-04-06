@@ -62,17 +62,16 @@ void AnimationManager::init()
 	tinyxml2::XMLDocument doc;
 	doc.LoadFile("animations.xml");
 
-	tinyxml2::XMLElement* root = doc.FirstChildElement("body");
+	tinyxml2::XMLElement* root = doc.FirstChildElement("Body");
 	root = root->FirstChildElement("Animation");
 
 	while(root)
 	{
+		std::string name = root->Attribute("name");
 		int rowOfSprite = Util::fromString<int>(root->Attribute("rowOfSprite"));
 		int numberOfFrames = Util::fromString<int>(root->Attribute("numberOfFrames"));
 		bool looping = Util::fromString<bool>(root->Attribute("looping"));
 		std::string next = root->Attribute("next");
-
-		std::string name = root->Attribute("name");
 
 		mAnimations.insert(std::make_pair(name, Animation(rowOfSprite, numberOfFrames, looping, next)));
 

@@ -42,7 +42,6 @@ void Cat::setRadius(float radius)
 
 void Cat::update()
 {
-<<<<<<< HEAD
 	mMoveSpeed = sf::Vector2f();
 
 	jump();
@@ -81,7 +80,7 @@ void Cat::jump()
 		mJumping = true;
 		mCanJump = false;
 		mCurrentJumpPower = mMaxJumpPower;
-		mStandingOn = nullptr;
+		mStandsOn.clear();
 	}
 }
 
@@ -98,11 +97,8 @@ void Cat::jumping()
 			mJumping = false;
 		}
 	}
-=======
 	//Apply gravity
 	mPosition += mGravityVector;
-	mStandsOn.clear();
->>>>>>> 403293f09e69f208bac7ebe162062683fca7c103
 }
 
 void Cat::render(Display& display)

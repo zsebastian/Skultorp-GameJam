@@ -36,7 +36,7 @@ private:
 	sf::Vector2f mPosition;
 	std::vector<sf::Vector2f> mThreads;
 	int mFrameCounter;
-	const int mThreadingDelay;
+	
 
 	bool mRed;
 
@@ -46,6 +46,9 @@ private:
 	sf::Texture mTexture;
 
 	float mTotalLength;
+	float mLatestThreadLength;
+	const float mThreadingLength;
+
 	float getTextureY();
 
 };

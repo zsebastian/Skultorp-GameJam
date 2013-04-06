@@ -20,7 +20,6 @@ void Display::render(const sf::Drawable& drawable, const sf::RenderStates& rende
 	mWindow.draw(drawable, renderState);
 }
 	
-	
 void Display::flip()
 {
 	mWindow.display();

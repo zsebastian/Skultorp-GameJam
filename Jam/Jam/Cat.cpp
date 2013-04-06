@@ -40,6 +40,8 @@ void Cat::setMass(float mass)
 void Cat::setRadius(float radius)
 {
 	mRadius = radius;
+	mTempShape.setRadius(radius);
+	mTempShape.setOrigin(sf::Vector2f(radius, radius));
 }
 
 void Cat::update()

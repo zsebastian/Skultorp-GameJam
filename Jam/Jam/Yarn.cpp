@@ -4,20 +4,22 @@
 #include <math.h>
 
 Yarn::Yarn()
-	:mThreadingDelay(5)
+	:mThreadingLength(50.f)
 	,mTotalLength(0.f)
+	,mLatestThreadLength(0.f)
 {
-	mFrameCounter = mThreadingDelay;
 	currentBezierIndex = 0;
 	mTexture.loadFromFile("data/thread.png");
 }
 
 void Yarn::updatePosition(sf::Vector2f position, bool add)
 {
-	++mFrameCounter;
+	mLatestThreadLength += Util::length(mPosition - position);
+
 	mPosition = position;
-	if (mFrameCounter > mThreadingDelay)
+	if (mLatestThreadLength > mThreadingLength)
 	{
+		mLatestThreadLength = 0.f;
 		mFrameCounter = 0;
 		addThread();
 	}
@@ -180,7 +182,7 @@ bool Yarn::intersect(sf::Vector2f position, float radius)
 {
 	if (mThreads.size() > 1)
 	{
-		for (size_t i = 1; i < mThreads.size(); ++i)
+		for (size_t i = 1; i < mThreads.size() - 1; ++i)
 		{
 			sf::Vector2f v0 = mThreads[i - 1];
 			sf::Vector2f v1 = mThreads[i];

@@ -3,7 +3,8 @@
 
 #include "Entity.h"
 
-#include <SFML/Graphics/CircleShape.hpp>
+#include <SFML/Graphics/Texture.hpp>
+#include <SFML/Graphics/Sprite.hpp>
 
 class Ball : public Entity
 {
@@ -23,12 +24,15 @@ public:
 	virtual float getMass() const;
 	virtual float getRadius() const;
 	virtual sf::FloatRect getGlobalBounds() const;
+	void resetMass();
 private:
 	sf::Vector2f mPosition;
 	float mMass;
 	float mRadius;
+	float mActualMass;
 
-	sf::CircleShape mTempCircle;
+	sf::Texture mTexture;
+	sf::Sprite mSprite;
 };
 
 #endif

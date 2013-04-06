@@ -18,6 +18,11 @@ void Camera::setRotation(float rotation)
 	mView.setRotation(rotation);
 }
 
+void Camera::rotate(float delta)
+{
+	setRotation(getRotation() + delta);
+}
+
 void Camera::setScale(float scale)
 {
 	mScale = scale;

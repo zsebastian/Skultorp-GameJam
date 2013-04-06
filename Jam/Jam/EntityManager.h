@@ -20,6 +20,7 @@ public:
 	void render(Display& display);
 
 	void pushEntity(std::shared_ptr<Entity>);
+	void popEntity(std::shared_ptr<Entity> entity);
 
 private:
 	EntityVec mEntities;

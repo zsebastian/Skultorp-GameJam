@@ -4,6 +4,9 @@
 #include "Entity.h"
 #include <SFML/Graphics/CircleShape.hpp>
 #include <memory>
+#include "AnimationManager.h"
+#include "Yarn.h"
+
 
 class Ball;
 
@@ -34,6 +37,7 @@ private:
 	sf::Vector2f mGravityVector;
 	sf::Vector2f mRightVector;
 	sf::Vector2f mMoveSpeed;
+	sf::Vector2f mJumpDirection;
 
 	float mWalkSpeed;
 
@@ -55,7 +59,18 @@ private:
 
 	sf::CircleShape mTempShape;
 
+	std::shared_ptr<Ball> mStandingOn;
+
 	std::vector<std::shared_ptr<Ball>> mStandsOn;
+
+
+	// animtion
+	AnimationManager mAnimations;
+	bool mLeftDir;
+
+	Yarn mYarn;
+
+	float mTargetCameraRotation;
 };
 
 #endif

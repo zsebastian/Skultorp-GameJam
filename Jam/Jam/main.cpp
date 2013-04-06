@@ -9,7 +9,7 @@ int main()
 	int i = Util::fromString<int>("1");
 	std::string str = Util::toString(12);
 
-	Display display(sf::VideoMode(800, 600), "YarnCat");
+	Display display(sf::VideoMode(1280, 720), "YarnCat");
 	StateManager stateManager;
 
 	stateManager.pushState(std::make_shared<Game>());

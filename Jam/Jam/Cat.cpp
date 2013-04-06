@@ -14,6 +14,8 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	,mMaxJumpPower(10.f)
 	,mCurrentJumpPower(0)
 	,mJumpDecelaration(0.7f)
+	,mAnimations("cat.png")
+	,mLeftDir(false)
 {
 	setRadius(20.f);
 
@@ -50,6 +52,16 @@ void Cat::update()
 	move();
 
 	mTempShape.setPosition(mPosition);
+	mYarn.updatePosition(mPosition, !mCanJump);
+
+	if (mYarn.intersect(mPosition, mRadius))
+	{
+		mTempShape.setFillColor(sf::Color::Blue);
+	}
+	else
+	{
+		mTempShape.setFillColor(sf::Color::Red);
+	}
 }
 
 void Cat::move()
@@ -66,10 +78,12 @@ void Cat::walk()
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 	{
 		mMoveSpeed += mRightVector;
+		mLeftDir = false;
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 	{
 		mMoveSpeed -= mRightVector;
+		mLeftDir = true;
 	}
 }
 
@@ -80,6 +94,7 @@ void Cat::jump()
 		mJumping = true;
 		mCanJump = false;
 		mCurrentJumpPower = mMaxJumpPower;
+		mJumpDirection = -mGravityVector;
 		mStandsOn.clear();
 	}
 }
@@ -88,7 +103,7 @@ void Cat::jumping()
 {
 	if(mJumping)
 	{
-		mMoveSpeed -= Util::normalize(mGravityVector) * mCurrentJumpPower;
+		mMoveSpeed += Util::normalize(mJumpDirection) * mCurrentJumpPower;
 
 		mCurrentJumpPower -= mJumpDecelaration;
 		if(mCurrentJumpPower <= 0.f)
@@ -97,18 +112,40 @@ void Cat::jumping()
 			mJumping = false;
 		}
 	}
-	//Apply gravity
-	mPosition += mGravityVector;
 }
 
 void Cat::render(Display& display)
 {
-	sf::CircleShape tempShape;
-	tempShape.setOrigin(mRadius, mRadius);
-	tempShape.setPosition(mPosition);
-	tempShape.setFillColor(sf::Color::Red);
-	tempShape.setRadius(mRadius);	
-	display.render(tempShape);
+	//sf::CircleShape tempShape;
+	//tempShape.setOrigin(mRadius, mRadius);
+	//tempShape.setPosition(mPosition);
+	//tempShape.setFillColor(sf::Color::Red);
+	//tempShape.setRadius(mRadius);	
+	//display.render(tempShape);
+
+	sf::Sprite tempSprite = mAnimations.getSprite(mPosition);
+
+	if(mLeftDir)
+		tempSprite.scale(-1.f, 1.f);
+
+	tempSprite.scale(0.2f, 0.2f);
+
+	tempSprite.setRotation(Util::angle(mGravityVector) - 90);
+
+	//Set camera position
+	display.getCamera().setPosition(mPosition);
+	
+	//Set camera rotation
+	float camRot = tempSprite.getRotation() - display.getCamera().getRotation();
+	
+	while(camRot < -180) camRot += 360;
+	while(camRot > 180) camRot -= 360;
+
+	if(mCanJump)
+		display.getCamera().rotate(camRot*0.03);
+	
+	mYarn.render(display);
+	display.render(tempSprite);
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)
@@ -156,10 +193,15 @@ std::vector<std::shared_ptr<Ball>>& Cat::standsOnPlanets()
 
 void Cat::resetStandsOn()
 {
+	for (auto iter = mStandsOn.begin(); iter != mStandsOn.end(); ++iter)
+	{
+		(*iter)->resetMass();
+	}
+
 	mStandsOn.clear();
 }
 
 sf::FloatRect Cat::getGlobalBounds() const
 {
-	return mTempCircle.getGlobalBounds();
+	return sf::FloatRect(mPosition.x - mRadius, mPosition.y - mRadius, mPosition.x + mRadius, mPosition.y + mRadius);
 }

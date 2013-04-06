@@ -4,11 +4,13 @@
 #include <algorithm>
 #include <SFML\System\Vector2.hpp>
 #include <sstream>
+#include <cmath>
+#include <limits>
 
 namespace Util
 {
 	template <class T, typename predT>
-	inline void eraseIf(T cont, predT pred)
+	inline void eraseIf(T& cont, predT& pred)
 	{
 		cont.erase(
 			std::remove_if(cont.begin(), cont.end(), pred),
@@ -61,7 +63,8 @@ namespace Util
 		T rr2 = (r0 + r1) * (r0 + r1);
 		
 		return (dx2 + dy2 <= rr2);
-	}
+	};
+
 	template <typename T>
 	sf::Vector2<T> getNormal(sf::Vector2<T> vectorIn)
 	{
@@ -71,7 +74,28 @@ namespace Util
 		vectorOut.y = -vectorIn.x;
 
 		return vectorOut;
-	}
+	};
+
+	template <typename T>
+	float angle(sf::Vector2<T> v)
+	{
+		return std::atan2(v.y, v.x) * 180 / 3.14f;
+	};
+
+	template <typename floatType>
+	bool floatCompare(floatType A, floatType B, floatType epsilon = std::numeric_limits<floatType>::epsilon()) 
+	{
+	   return std::abs(A - B) < epsilon;
+	};
+
+	template <typename T>
+	T dot(sf::Vector2<T> v0, sf::Vector2<T> v1)
+	{
+		return v0.x * v1.x + v0.y * v1.y;
+	};
+
+	
+
 };
 
 

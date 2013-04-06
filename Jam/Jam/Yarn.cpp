@@ -1,0 +1,259 @@
+#include "Yarn.h"
+#include "Display.h"
+#include "Utility.h"
+#include <math.h>
+
+Yarn::Yarn()
+	:mThreadingDelay(5)
+	,mTotalLength(0.f)
+{
+	mFrameCounter = mThreadingDelay;
+	currentBezierIndex = 0;
+	mTexture.loadFromFile("data/thread.png");
+}
+
+void Yarn::updatePosition(sf::Vector2f position, bool add)
+{
+	++mFrameCounter;
+	mPosition = position;
+	if (mFrameCounter > mThreadingDelay)
+	{
+		mFrameCounter = 0;
+		addThread();
+	}
+}
+
+void Yarn::render(Display& display)
+{
+	mRed = true;
+
+	sf::VertexArray vertices(sf::PrimitiveType::LinesStrip);
+	if (mThreads.empty())
+		return;
+
+	sf::Vector2f last = mThreads[currentBezierIndex];
+
+	//not really a loop but whatevs
+	for (currentBezierIndex; currentBezierIndex < static_cast<int>(mThreads.size()) - 4; currentBezierIndex += 3)
+	{
+
+		int i = currentBezierIndex;
+		sf::VertexArray bezier = makeBezier(last, mThreads[i + 1], mThreads[i + 2], mThreads[i + 3]);
+
+		//glue
+		if (currentBezierIndex > 0 && bezier.getVertexCount() >= 2 && mBeziers.back().vertices.getVertexCount() > 2)
+		{
+			sf::Vector2f textSize = static_cast<sf::Vector2f>(mTexture.getSize());
+
+			sf::VertexArray& last = mBeziers.back().vertices;
+			sf::Vector2f p0(last[last.getVertexCount() - 1].position);
+			sf::Vector2f p1(last[last.getVertexCount() - 2].position);
+			sf::Vector2f p2(bezier[0].position);
+			sf::Vector2f p3(bezier[1].position);
+
+			mBeziers.back().vertices.append(sf::Vertex(p0, sf::Vector2f(0.f, getTextureY())));
+			mBeziers.back().vertices.append(sf::Vertex(p1, sf::Vector2f(textSize.x, getTextureY())));
+
+
+			mBeziers.back().vertices.append(sf::Vertex(p3, sf::Vector2f(textSize.x, getTextureY())));
+			mBeziers.back().vertices.append(sf::Vertex(p2, sf::Vector2f(0.f, getTextureY())));
+
+		}
+		mBeziers.push_back(Bezier(bezier, bezier.getBounds()));
+	}
+
+	sf::RenderStates rend(&mTexture);
+
+	for (auto iter = mBeziers.begin(); iter != mBeziers.end(); ++iter)
+	{
+		display.render(iter->vertices, rend);
+	}
+
+	if (mThreads.size() > 3 && currentBezierIndex > 0 && mBeziers.back().vertices.getVertexCount() > 2)
+	{
+		//what to do to fill the void?;
+
+		sf::VertexArray ret(sf::Quads);
+		sf::Vector2f dir = last - mPosition;
+
+		sf::Vector2f normal = Util::normalize(Util::getNormal(dir));
+		sf::VertexArray& lastBez = mBeziers.back().vertices;
+
+		sf::Vector2f p0 = mPosition - normal * 5.f;
+		sf::Vector2f p1 = mPosition + normal * 5.f;
+		sf::Vector2f p2 = lastBez[lastBez.getVertexCount() - 2].position;
+		sf::Vector2f p3 = lastBez[lastBez.getVertexCount() - 1].position;
+		
+		sf::Vector2f textSize = static_cast<sf::Vector2f>(mTexture.getSize());
+
+		ret.append(sf::Vertex(p0, sf::Vector2f(0.f, 0.f)));
+		ret.append(sf::Vertex(p1, sf::Vector2f(textSize.x, 0.f)));
+		ret.append(sf::Vertex(p3, sf::Vector2f(textSize.x, textSize.y)));
+		ret.append(sf::Vertex(p2, sf::Vector2f(0.f, textSize.y)));
+
+		display.render(ret, rend);
+	}
+	
+}
+
+void Yarn::addThread()
+{
+	mThreads.push_back(mPosition);
+}
+
+sf::VertexArray Yarn::makeBezier(sf::Vector2f p0, sf::Vector2f p1, sf::Vector2f p2, sf::Vector2f p3)
+{
+	sf::VertexArray ret(sf::PrimitiveType::Quads);
+	sf::Vector2f textSize = static_cast<sf::Vector2f>(mTexture.getSize());	
+	std::vector<sf::Vector2f> plots;
+
+	const float quadWidth = 5.f;
+	const float curveFreq = 0.1f;
+	float qx, qy;
+    float q1, q2, q3, q4;
+    float t = 0.0;
+
+	q1 = t*t*t*-1 + t*t*3 + t*-3 + 1;
+    q2 = t*t*t*3 + t*t*-6 + t*3;
+    q3 = t*t*t*-3 + t*t*3;
+    q4 = t*t*t;
+
+	qx = q1*p0.x + q2*p1.x + q3*p2.x + q4*p3.x;
+	qy = q1*p0.y + q2*p1.y + q3*p2.y + q4*p3.y;
+
+    while (t <= 1)
+    {
+        q1 = t*t*t*-1 + t*t*3 + t*-3 + 1;
+        q2 = t*t*t*3 + t*t*-6 + t*3;
+        q3 = t*t*t*-3 + t*t*3;
+        q4 = t*t*t;
+
+		qx = q1*p0.x + q2*p1.x + q3*p2.x + q4*p3.x;
+		qy = q1*p0.y + q2*p1.y + q3*p2.y + q4*p3.y;
+
+		plots.push_back(sf::Vector2f(qx, qy));
+
+        t = t + curveFreq;
+    }
+
+	sf::Vector2f prevp0;
+	sf::Vector2f prevp1;
+	sf::Vector2f dir = plots[0] - plots[1];
+	sf::Vector2f normal = Util::normalize(Util::getNormal(dir));
+	prevp0 = plots[0] + normal * quadWidth;
+	prevp1 = plots[0] - normal * quadWidth;
+	
+	for (size_t i = 1; i < plots.size(); ++i)
+	{
+		sf::Vector2f dir = plots[i - 1] - plots[i];
+		sf::Vector2f normal = Util::normalize(Util::getNormal(dir));
+		
+		sf::Vector2f p0 = plots[i] + normal * quadWidth;
+		sf::Vector2f p1 = plots[i] - normal * quadWidth;
+
+		float distance = Util::length(dir);
+
+		if (Util::floatCompare(distance, 0.f))
+			continue;
+
+		ret.append(sf::Vertex(prevp0, sf::Vector2f(0.f, getTextureY())));
+		ret.append(sf::Vertex(prevp1, sf::Vector2f(textSize.x, getTextureY())));
+		mTotalLength += distance;
+
+		ret.append(sf::Vertex(p1, sf::Vector2f(textSize.x, getTextureY())));
+		ret.append(sf::Vertex(p0, sf::Vector2f(0.f, getTextureY())));
+		
+		prevp0 = p0;
+		prevp1 = p1;
+
+	}
+
+	return ret;
+}
+
+float Yarn::getTextureY()
+{
+	return std::fmod(mTotalLength, static_cast<sf::Vector2f>(mTexture.getSize()).x);
+}
+
+bool Yarn::intersect(sf::Vector2f position, float radius)
+{
+	if (mThreads.size() > 1)
+	{
+		for (size_t i = 1; i < mThreads.size(); ++i)
+		{
+			sf::Vector2f v0 = mThreads[i - 1];
+			sf::Vector2f v1 = mThreads[i];
+
+			if (intersectLineCircle(v0, v1, position, radius))
+				return true;
+		}
+	}
+
+	return false;
+}
+
+bool Yarn::intersectLineCircle(sf::Vector2f linePoint0, sf::Vector2f linePoint1, sf::Vector2f circlePosition, float radius)
+{
+	//E is the starting point of the ray,
+	//L is the end point of the ray,
+	//C is the center of sphere you're testing against
+	//r is the radius of that sphere
+
+	//d = L - E ( Direction vector of ray, from start to end )
+	//f = E - C ( Vector from center sphere to ray start )
+
+	sf::Vector2f d = linePoint1 - linePoint0;
+	sf::Vector2f f = linePoint0 - circlePosition;
+
+	float a = Util::dot(d, d);
+	float b = 2 * Util::dot(f, d);
+	float c = Util::dot(f, f ) - radius * radius ;
+
+	float discriminant = b*b-4*a*c;
+	if( discriminant < 0 )
+	{
+		return false;
+	}
+	else
+	{
+		// ray didn't totally miss sphere,
+		// so there is a solution to
+		// the equation.
+
+		discriminant = std::sqrt( discriminant );
+
+		// either solution may be on or off the ray so need to test both
+		// t1 is always the smaller value, because BOTH discriminant and
+		// a are nonnegative.
+		float t1 = (-b - discriminant)/(2*a);
+		float t2 = (-b + discriminant)/(2*a);
+
+		// 3x HIT cases:
+		//          -o->             --|-->  |            |  --|->
+		// Impale(t1 hit,t2 hit), Poke(t1 hit,t2>1), ExitWound(t1<0, t2 hit), 
+
+		// 3x MISS cases:
+		//       ->  o                     o ->              | -> |
+		// FallShort (t1>1,t2>1), Past (t1<0,t2<0), CompletelyInside(t1<0, t2>1)
+
+		if( t1 >= 0 && t1 <= 1 )
+		{
+		// t1 is an intersection, and if it hits,
+		// it's closer than t2 would be
+		// Impale, Poke
+		return true ;
+		}
+
+		// here t1 didn't intersect so we are either started
+		// inside the sphere or completely past it
+		if( t2 >= 0 && t2 <= 1 )
+		{
+		// ExitWound
+		return true ;
+		}
+
+		// no intn: FallShort, Past, CompletelyInside
+		return false ;
+	}
+}

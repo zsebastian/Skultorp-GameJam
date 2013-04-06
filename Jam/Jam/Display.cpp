@@ -36,9 +36,13 @@ void Display::pollEvents()
 bool Display::isOpen() const
 {
 	return mWindow.isOpen();
+<<<<<<< HEAD
 }
 
 Camera& Display::getCamera()
 {
 	return mCamera;
 }
+=======
+}
+>>>>>>> master

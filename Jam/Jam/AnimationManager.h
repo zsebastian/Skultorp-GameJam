@@ -11,6 +11,7 @@ class AnimationManager
 public:
 	AnimationManager(std::string texture);
 	~AnimationManager();
+
 	void setCurrentAnimation(std::string animation);
 	sf::Sprite getSprite(sf::Vector2f& position);
 
@@ -27,6 +28,7 @@ private:
 	sf::IntRect mTextureBox;
 	int mCurrentFrame;
 	void setTextBox();
+	int mSize;
 
 	// clock
 	sf::Clock mFrameClock;

@@ -48,17 +48,20 @@ void GravityField::update()
 	{
 		sf::Vector2f sumGravVector(0, 0);
 
-		if ((*cat)->standsOnPlanet())
+		auto& standsOn = (*cat)->standsOnPlanets();
+
+		if (!standsOn.empty())
 		{
-			std::shared_ptr<Ball> ball = (*cat)->standsOnPlanet();
-			sumGravVector = calcGravity(ball, (*cat));
+			for (auto ball = standsOn.begin(); ball != standsOn.end(); ++ball)
+			{
+				sumGravVector += calcGravity((*ball), (*cat));
+			}
 		}
 		else
 		{
 			for (auto ball = mBalls.begin(); ball != mBalls.end(); ++ball)
 			{
-				sf::Vector2f gravVector = calcGravity((*ball), (*cat));
-				sumGravVector += gravVector;
+				sumGravVector += calcGravity((*ball), (*cat));
 			}
 		}
 

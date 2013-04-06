@@ -1,9 +1,11 @@
 #include "Yarn.h"
 #include "Display.h"
 #include "Utility.h"
+#include <math.h>
 
 Yarn::Yarn()
 	:mThreadingDelay(5)
+	,mTotalLength(0.f)
 {
 	mFrameCounter = mThreadingDelay;
 	currentBezierIndex = 0;
@@ -39,7 +41,7 @@ void Yarn::render(Display& display)
 		sf::VertexArray bezier = makeBezier(last, mThreads[i + 1], mThreads[i + 2], mThreads[i + 3]);
 
 		//glue
-		if (currentBezierIndex > 0)
+		if (currentBezierIndex > 0 && bezier.getVertexCount() >= 2 && mBeziers.back().vertices.getVertexCount() > 2)
 		{
 			sf::Vector2f textSize = static_cast<sf::Vector2f>(mTexture.getSize());
 
@@ -49,13 +51,12 @@ void Yarn::render(Display& display)
 			sf::Vector2f p2(bezier[0].position);
 			sf::Vector2f p3(bezier[1].position);
 
-			float textY0 = last[last.getVertexCount() - 1].texCoords.y + last[0].texCoords.y;;
-			float textY1 = textY0 + last[0].texCoords.y;
-			
-			mBeziers.back().vertices.append(sf::Vertex(p0, sf::Vector2f(0.f, textY0)));
-			mBeziers.back().vertices.append(sf::Vertex(p1, sf::Vector2f(textSize.x, textY0)));
-			mBeziers.back().vertices.append(sf::Vertex(p3, sf::Vector2f(textSize.x, textY1)));
-			mBeziers.back().vertices.append(sf::Vertex(p2, sf::Vector2f(0.f, textY1)));
+			mBeziers.back().vertices.append(sf::Vertex(p0, sf::Vector2f(0.f, getTextureY())));
+			mBeziers.back().vertices.append(sf::Vertex(p1, sf::Vector2f(textSize.x, getTextureY())));
+
+
+			mBeziers.back().vertices.append(sf::Vertex(p3, sf::Vector2f(textSize.x, getTextureY())));
+			mBeziers.back().vertices.append(sf::Vertex(p2, sf::Vector2f(0.f, getTextureY())));
 
 		}
 		mBeziers.push_back(Bezier(bezier, bezier.getBounds()));
@@ -68,7 +69,7 @@ void Yarn::render(Display& display)
 		display.render(iter->vertices, rend);
 	}
 
-	if (mThreads.size() > 3 && currentBezierIndex > 0)
+	if (mThreads.size() > 3 && currentBezierIndex > 0 && mBeziers.back().vertices.getVertexCount() > 2)
 	{
 		//what to do to fill the void?;
 
@@ -143,8 +144,6 @@ sf::VertexArray Yarn::makeBezier(sf::Vector2f p0, sf::Vector2f p1, sf::Vector2f 
 	prevp0 = plots[0] + normal * quadWidth;
 	prevp1 = plots[0] - normal * quadWidth;
 	
-	float textWalk = textSize.y / (plots.size()); // save 1 for the glue
-	
 	for (size_t i = 1; i < plots.size(); ++i)
 	{
 		sf::Vector2f dir = plots[i - 1] - plots[i];
@@ -153,15 +152,27 @@ sf::VertexArray Yarn::makeBezier(sf::Vector2f p0, sf::Vector2f p1, sf::Vector2f 
 		sf::Vector2f p0 = plots[i] + normal * quadWidth;
 		sf::Vector2f p1 = plots[i] - normal * quadWidth;
 
-		ret.append(sf::Vertex(prevp0, sf::Vector2f(0.f, textWalk * i)));
-		ret.append(sf::Vertex(prevp1, sf::Vector2f(textSize.x, textWalk * i)));
-		ret.append(sf::Vertex(p1, sf::Vector2f(textSize.x, textWalk * (i - 1))));
-		ret.append(sf::Vertex(p0, sf::Vector2f(0.f, textWalk * (i - 1))));
+		float distance = Util::length(dir);
 
+		if (Util::floatCompare(distance, 0.f))
+			continue;
+
+		ret.append(sf::Vertex(prevp0, sf::Vector2f(0.f, getTextureY())));
+		ret.append(sf::Vertex(prevp1, sf::Vector2f(textSize.x, getTextureY())));
+		mTotalLength += distance;
+
+		ret.append(sf::Vertex(p1, sf::Vector2f(textSize.x, getTextureY())));
+		ret.append(sf::Vertex(p0, sf::Vector2f(0.f, getTextureY())));
+		
 		prevp0 = p0;
 		prevp1 = p1;
 
 	}
 
 	return ret;
+}
+
+float Yarn::getTextureY()
+{
+	return std::fmod(mTotalLength, static_cast<sf::Vector2f>(mTexture.getSize()).x);
 }

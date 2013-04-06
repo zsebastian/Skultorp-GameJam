@@ -41,6 +41,9 @@ private:
 
 	sf::Texture mTexture;
 
+	float mTotalLength;
+	float getTextureY();
+
 };
 
 #endif

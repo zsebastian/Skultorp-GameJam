@@ -129,9 +129,12 @@ void Cat::render(Display& display)
 
 	tempSprite.setRotation(Util::angle(mGravityVector) - 90);
 
-	display.render(tempSprite);
-
+	display.getCamera().setPosition(mPosition);
+	display.getCamera().setRotation(tempSprite.getRotation());
+	
 	mYarn.render(display);
+
+	display.render(tempSprite);
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)

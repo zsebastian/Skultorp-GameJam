@@ -5,6 +5,7 @@
 #include <SFML\System\Vector2.hpp>
 #include <sstream>
 #include <cmath>
+#include <limits>
 
 namespace Util
 {
@@ -79,6 +80,12 @@ namespace Util
 	float angle(sf::Vector2<T> v)
 	{
 		return std::atan2(v.y, v.x) * 180 / 3.14f;
+	}
+
+	template <typename floatType>
+	bool floatCompare(floatType A, floatType B, floatType epsilon = std::numeric_limits<floatType>::epsilon()) 
+	{
+	   return std::abs(A - B) < epsilon;
 	}
 };
 

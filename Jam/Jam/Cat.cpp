@@ -78,7 +78,7 @@ void Cat::walk()
 	mRightVector = Util::normalize(mRightVector);
 	mRightVector *= mWalkSpeed;
 
-	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && mAnimations.getCurrentAnimation() != "jump")
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && mAnimations.getCurrentAnimation() != "jump" && mAnimations.getCurrentAnimation() != "land" )
 	{
 		mLeftDir = false;
 		if(mCanJump && mAnimations.getCurrentAnimation() != "inair")
@@ -87,7 +87,7 @@ void Cat::walk()
 		}
 		mMoveSpeed += mRightVector;
 	}
-	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && mAnimations.getCurrentAnimation() != "jump")
+	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && mAnimations.getCurrentAnimation() != "jump" && mAnimations.getCurrentAnimation() != "land" )
 	{
 		mLeftDir = true;
 		if(mCanJump && mAnimations.getCurrentAnimation() != "inair")
@@ -203,10 +203,12 @@ void Cat::onCollision(std::shared_ptr<Entity> entity)
 		
 		if(mCanJump && mAnimations.getCurrentAnimation() == "inair")
 		{
-			mAnimations.setCurrentAnimation("land");
+			mAnimations.setCurrentAnimation("land");	
 		}
-
-		mCanJump = true;
+		if(mAnimations.getCurrentAnimation() != "jump")
+		{
+			mCanJump = true;
+		}
 	}
 }
 

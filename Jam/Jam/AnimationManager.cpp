@@ -3,12 +3,14 @@
 #include "Utility.h"
 
 AnimationManager::AnimationManager(std::string texture):
+	mSize(256),
 	mCurrentAnimation("idle"),
-	mTextureBox(0, 0, 512, 512),
 	mElapsed(0.f),
-	mUpdateRate(200.f),
+	mUpdateRate(100.f),
 	mCurrentFrame(0)
 {
+	mTextureBox = sf::IntRect(0, 0, mSize, mSize),
+
 	mFrameClock.restart();
 
 	mTexture.loadFromFile(texture);
@@ -35,7 +37,7 @@ sf::Sprite AnimationManager::getSprite(sf::Vector2f& position)
 	for(mElapsed += mFrameClock.restart().asMilliseconds(); mElapsed > mUpdateRate; mElapsed -= mUpdateRate)
 	{
 		mCurrentFrame++;
-		if(mCurrentFrame > mAnimations[mCurrentAnimation].mNumberOfFrames)
+		if(mCurrentFrame >= mAnimations[mCurrentAnimation].mNumberOfFrames)
 		{
 			mCurrentFrame = 0;
 			if(!mAnimations[mCurrentAnimation].mLooping)
@@ -45,16 +47,17 @@ sf::Sprite AnimationManager::getSprite(sf::Vector2f& position)
 		}
 	}
 
-	setTextBox();
 	mSprite.setPosition(position);
+	setTextBox();
 
 	return mSprite;
 }
 
 void AnimationManager::setTextBox()
 {
-	mTextureBox.left = mCurrentFrame * 512;
-	mTextureBox.top = mAnimations[mCurrentAnimation].mRowOfSprite * 512;
+	mTextureBox.left = mCurrentFrame * mSize;
+	mTextureBox.top = mAnimations[mCurrentAnimation].mRowOfSprite * mSize;
+	mSprite.setTextureRect(mTextureBox);
 }
 
 void AnimationManager::init()

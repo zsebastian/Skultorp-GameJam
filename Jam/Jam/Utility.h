@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <SFML\System\Vector2.hpp>
 #include <sstream>
+#include <cmath>
 
 namespace Util
 {
@@ -62,6 +63,7 @@ namespace Util
 		
 		return (dx2 + dy2 <= rr2);
 	}
+
 	template <typename T>
 	sf::Vector2<T> getNormal(sf::Vector2<T> vectorIn)
 	{
@@ -71,6 +73,27 @@ namespace Util
 		vectorOut.y = -vectorIn.x;
 
 		return vectorOut;
+	}
+
+	template <typename T>
+	float angleBetween(sf::Vector2<T> v1, sf::Vector2<T> v2)
+	{
+		T dottProduct;
+		sf::Vector2<T> dottVec;
+
+		dottVec.x = v1.x * v2.x;
+		dottVec.y = v1.y * v2.y;
+		dottProduct = dottVec.x + dottVec.y;
+
+		T lengthProduct = length(v1) * length(v2);
+
+		T result = dottProduct / lengthProduct;
+		
+		float f = std::acos(result);
+		
+		f = f * 180 / 3.14f;
+
+		return f;
 	}
 };
 

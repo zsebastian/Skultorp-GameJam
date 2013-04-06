@@ -28,6 +28,7 @@ private:
 	sf::IntRect mTextureBox;
 	int mCurrentFrame;
 	void setTextBox();
+	int mSize;
 
 	// clock
 	sf::Clock mFrameClock;

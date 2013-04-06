@@ -15,6 +15,7 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	,mCurrentJumpPower(0)
 	,mJumpDecelaration(0.7f)
 	,mAnimations("cat.png")
+	,mLeftDir(false)
 {
 	setRadius(20.f);
 
@@ -67,10 +68,12 @@ void Cat::walk()
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 	{
 		mMoveSpeed += mRightVector;
+		mLeftDir = false;
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 	{
 		mMoveSpeed -= mRightVector;
+		mLeftDir = true;
 	}
 }
 
@@ -99,23 +102,31 @@ void Cat::jumping()
 			mJumping = false;
 		}
 	}
-<<<<<<< HEAD
-=======
-	//Apply gravity
-	mPosition += mGravityVector;
->>>>>>> 3d7d814fad1542d92c831394213b25e8824af7cf
 }
 
 void Cat::render(Display& display)
 {
-	sf::CircleShape tempShape;
-	tempShape.setOrigin(mRadius, mRadius);
-	tempShape.setPosition(mPosition);
-	tempShape.setFillColor(sf::Color::Red);
-	tempShape.setRadius(mRadius);	
-	display.render(tempShape);
+	//sf::CircleShape tempShape;
+	//tempShape.setOrigin(mRadius, mRadius);
+	//tempShape.setPosition(mPosition);
+	//tempShape.setFillColor(sf::Color::Red);
+	//tempShape.setRadius(mRadius);	
+	//display.render(tempShape);
 
-	//display.render(mAnimations.getSprite(mPosition));
+	sf::Sprite tempSprite = mAnimations.getSprite(mPosition);
+
+	if(mLeftDir)
+	{
+		tempSprite.scale(-1.f, 1.f);
+	}
+
+	sf::Vector2f upVec(0.f, -1.f);
+
+	float f = Util::angleBetween(mGravityVector, upVec);
+
+	tempSprite.rotate(180 + f);
+
+	display.render(tempSprite);
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)

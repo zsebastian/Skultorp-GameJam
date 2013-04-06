@@ -56,16 +56,13 @@ private:
 
 	sf::CircleShape mTempShape;
 
-<<<<<<< HEAD
 	std::shared_ptr<Ball> mStandingOn;
 
 	std::vector<std::shared_ptr<Ball>> mStandsOn;
 
 	// animtion
 	AnimationManager mAnimations;
-=======
-	std::vector<std::shared_ptr<Ball>> mStandsOn;
->>>>>>> 3d7d814fad1542d92c831394213b25e8824af7cf
+	bool mLeftDir;
 };
 
 #endif

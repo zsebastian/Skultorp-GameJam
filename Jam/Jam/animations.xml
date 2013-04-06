@@ -1,5 +1,5 @@
 <Body>
-	<Animation name="idle" rowOfSprite="0" numberOfFrames="8" looping="0" next="idle2"/>
+	<Animation name="idle" rowOfSprite="0" numberOfFrames="6" looping="1" next="idle2"/>
 	<Animation name="idle2" rowOfSprite="0" numberOfFrames="8" looping="0" next="idle3"/>
 	<Animation name="idle3" rowOfSprite="0" numberOfFrames="8" looping="0" next="idle4"/>
 	<Animation name="idle4" rowOfSprite="0" numberOfFrames="8" looping="0" next="idle5"/>

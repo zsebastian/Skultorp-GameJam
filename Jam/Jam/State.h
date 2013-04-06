@@ -2,12 +2,13 @@
 #define STATE_H
 
 #include <SFML\System\NonCopyable.hpp>
+class Display;
 
 class State: public sf::NonCopyable
 {
 public:
 	virtual ~State() {};
-	virtual void render() = 0;
+	virtual void render(Display&) = 0;
 	virtual void update() = 0;
 	virtual bool isAlive() = 0;
 private:

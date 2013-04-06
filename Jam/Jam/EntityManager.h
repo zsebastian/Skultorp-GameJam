@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <memory>
+#include "GravityField.h"
 
 class Display;
 class Entity;
@@ -16,8 +17,12 @@ public:
 
 	void update(); 
 	void render(Display& display);
+
+	void pushEntity(std::shared_ptr<Entity>);
+
 private:
 	EntityVec mEntities;
+	GravityField mGravityField;
 };
 
 #endif

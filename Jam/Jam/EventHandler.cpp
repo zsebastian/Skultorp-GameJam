@@ -1,9 +1,9 @@
 #include "EventHandler.h"
 #include "EventManager.h"
 
-EventHandler::EventHandler(std::function<void (sf::Event&)> eventFunction)
+EventHandler::EventHandler(sf::Event::EventType eventType, std::function<void (sf::Event&)> eventFunction)
 {
-	EventManager::getInstance()->registerEventHandler(this, eventFunction);
+	EventManager::getInstance()->registerEventHandler(this, eventType, eventFunction);
 }
 
 EventHandler::~EventHandler()

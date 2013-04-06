@@ -1,5 +1,6 @@
 #include "StateManager.h"
 #include <algorithm>
+#include "Utility.h"
 
 StateManager::StateManager()
 	:msElapsed(0.f)
@@ -22,14 +23,19 @@ void StateManager::update()
 		return;
 
 	//remove dead states
-	auto pred = [](std::shared_ptr<State> state) {return state->isAlive();};
-	mStateStack.erase(
-		std::remove_if(mStateStack.begin(), mStateStack.end(), pred),
-		mStateStack.end());
+	auto pred = [](std::shared_ptr<State> state) {return !state->isAlive();};
+	Util::eraseIf(mStateStack, pred);
 
 	//update state using a defined timestep
 	for (msElapsed += clock.restart().asMilliseconds(); msElapsed > msUpdateRate; msElapsed -= msUpdateRate)
 	{
 		mStateStack.back()->update();
 	}
+}
+
+void StateManager::render(Display& display)
+{
+	if (!mStateStack.empty())
+		mStateStack.back()->render(display);
+
 }

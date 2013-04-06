@@ -1,3 +1,6 @@
+#fu filters
+*.vcxproj.filters
+
 # Compiled Object files
 *.slo
 *.lo

@@ -5,6 +5,7 @@
 #include "State.h"
 #include <vector>
 #include <SFML\System\Clock.hpp>
+class Display;
 
 class StateManager
 {
@@ -14,7 +15,7 @@ public:
 	void pushState(std::shared_ptr<State> state);
 
 	void update();
-	void render();
+	void render(Display&);
 public:
 	std::vector<std::shared_ptr<State>> mStateStack;
 

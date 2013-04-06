@@ -14,12 +14,12 @@ public:
 	static EventManager* getInstance();
 
 	void newEvent(sf::Event&);
-	void registerEventHandler(EventHandler*, std::function<void (sf::Event&)>);
+	void registerEventHandler(EventHandler*, sf::Event::EventType, std::function<void (sf::Event&)>);
 	void unregisterEventHandler(EventHandler*);
 private:
 	EventManager();
 
-	std::map<EventHandler*, std::function<void (sf::Event&)>> mEventHandlers;
+	std::map<sf::Event::EventType, std::map<EventHandler*, std::function<void (sf::Event&)>>> mEventHandlers;
 };
 
 #endif

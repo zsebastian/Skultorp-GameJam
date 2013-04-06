@@ -1,15 +1,26 @@
 #include <SFML/Graphics.hpp>
 #include "Display.h"
+#include "StateManager.h"
+#include "Utility.h"
+#include "Game.h"
 
 int main()
 {
-	Display display(sf::VideoMode(1024, 768), "SFML works!");
+	int i = Util::fromString<int>("1");
+	std::string str = Util::toString(12);
+
+	Display display(sf::VideoMode(800, 600), "YarnCat");
+	StateManager stateManager;
+
+	stateManager.pushState(std::make_shared<Game>());
 
     while (display.isOpen())
     {
 		display.pollEvents();
-		display.clear();
+		stateManager.update();
 
+		display.clear();
+		stateManager.render(display);
         display.flip();
     }
 

@@ -1,12 +1,17 @@
 #include "Cat.h"
 #include "Display.h"
+#include "Ball.h"
+#include "Utility.h"
 
-Cat::Cat()
-	:mMass(0.f)
+Cat::Cat(const sf::Vector2f& position, float mass, float radius)
+	:mMass(mass)
 	,mGravityVector(0.f, 0.f)
+	,mPosition(position)
 {
-	mTempTexture.loadFromFile("data/cat.png");
-	mTempSprite.setTexture(mTempTexture);
+	mStandingOn = nullptr;
+	setRadius(20.f);
+
+	setPosition(position);
 }
 
 Cat::~Cat()
@@ -24,6 +29,11 @@ void Cat::setMass(float mass)
 	mMass = mass;
 }
 
+void Cat::setRadius(float radius)
+{
+	mRadius = radius;
+}
+
 void Cat::update()
 {
 	//Apply gravity
@@ -32,12 +42,28 @@ void Cat::update()
 
 void Cat::render(Display& display)
 {
-	display.render(mTempSprite);
+	sf::CircleShape tempShape;
+	tempShape.setOrigin(mRadius, mRadius);
+	tempShape.setPosition(mPosition);
+	tempShape.setFillColor(sf::Color::Red);
+	tempShape.setRadius(mRadius);	
+	display.render(tempShape);
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)
 {
-	
+	std::shared_ptr<Ball> ball = std::dynamic_pointer_cast<Ball>(entity);
+
+	if (ball)
+	{
+		mStandingOn = ball;
+
+		sf::Vector2f dVec = mPosition - ball->getPosition();
+		dVec = Util::normalize(dVec);
+		float distance = ball->getRadius() + mRadius;
+		dVec = dVec * distance;
+		mPosition = ball->getPosition() + dVec;
+	}
 }
 
 void Cat::setGravityVector(const sf::Vector2f& gravityVector)
@@ -53,4 +79,15 @@ sf::Vector2f Cat::getPosition() const
 float Cat::getMass() const
 {
 	return mMass;
+}
+
+float Cat::getRadius() const
+{
+	return mRadius;
+}
+
+
+std::shared_ptr<Ball> Cat::standsOnPlanet()
+{
+	return mStandingOn;
 }

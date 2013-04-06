@@ -24,9 +24,13 @@ public:
 
 	void updatePosition(sf::Vector2f position, bool add = true);
 	void render(Display& display);
+
+	bool intersect(sf::Vector2f position, float radius);
+
 private:
 	void addThread();
-	
+	bool intersectLineCircle(sf::Vector2f linePoint0, sf::Vector2f linePoint1, sf::Vector2f circlePosition, float radius);
+
 	sf::VertexArray makeBezier(sf::Vector2f from, sf::Vector2f to, sf::Vector2f controlA, sf::Vector2f controlB);
 
 	sf::Vector2f mPosition;

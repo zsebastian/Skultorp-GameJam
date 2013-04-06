@@ -192,8 +192,8 @@ Vector2<T>& operator *=(Vector2<T>& left, T right);
 /// \relates Vector2
 /// \brief Overload of binary operator /
 ///
-/// \param left  Left operand (a vector)
-/// \param right Right operand (a scalar value)
+/// \param left  Left operand (a scalar value)
+/// \param right Right operand (a vector)
 ///
 /// \return Memberwise division by \a right
 ///
@@ -274,13 +274,12 @@ typedef Vector2<float>        Vector2f;
 /// and comparisons (==, !=), for example int or float.
 ///
 /// You generally don't have to care about the templated form (sf::Vector2<T>),
-/// the most common specializations have special typedefs:
+/// the two most common specializations have special typedefs:
 /// \li sf::Vector2<float> is sf::Vector2f
 /// \li sf::Vector2<int> is sf::Vector2i
-/// \li sf::Vector2<unsigned int> is sf::Vector2u
 ///
 /// The sf::Vector2 class has a small and simple interface, its x and y members
-/// can be accessed directly (there's no accessor like setX(), getX()) and it
+/// can be accessed directly (there's no accessor like SetX(), GetX()) and it
 /// contains no mathematical function like dot product, cross product, length, etc.
 ///
 /// Usage example:

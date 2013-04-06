@@ -232,19 +232,19 @@ public :
         ListingResponse(const Response& response, const std::vector<char>& data);
 
         ////////////////////////////////////////////////////////////
-        /// \brief Return the array of directory/file names
+        /// \brief Return the array of filenames
         ///
-        /// \return Array containing the requested listing
+        /// \return Array containing the requested filenames
         ///
         ////////////////////////////////////////////////////////////
-        const std::vector<std::string>& getListing() const;
+        const std::vector<std::string>& getFilenames() const;
 
     private :
 
         ////////////////////////////////////////////////////////////
         // Member data
         ////////////////////////////////////////////////////////////
-        std::vector<std::string> m_listing; ///< Directory/file names extracted from the data
+        std::vector<std::string> m_filenames; ///< Filenames extracted from the data
     };
 
 

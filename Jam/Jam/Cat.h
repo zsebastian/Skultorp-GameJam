@@ -38,7 +38,6 @@ private:
 	float mMass;
 	float mRadius;
 
-<<<<<<< HEAD
 	void move();
 	void walk();
 	
@@ -54,9 +53,8 @@ private:
 
 	sf::CircleShape mTempShape;
 
-=======
 	std::shared_ptr<Ball> mStandingOn;
->>>>>>> origin/master
+
 };
 
 #endif

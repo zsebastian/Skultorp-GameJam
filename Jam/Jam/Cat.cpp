@@ -81,6 +81,7 @@ void Cat::jump()
 		mJumping = true;
 		mCanJump = false;
 		mCurrentJumpPower = mMaxJumpPower;
+		mStandingOn = nullptr;
 	}
 }
 

@@ -38,7 +38,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
+    <LinkIncremental>false</LinkIncremental>
     <IncludePath>..\..\SFML-2.0-rc\include;$(IncludePath)</IncludePath>
     <LibraryPath>..\..\SFML-2.0-rc\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -78,9 +78,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AnimationManager.cpp" />
-    <ClCompile Include="Ball.cpp" />
-    <ClCompile Include="Cat.cpp" />
-    <ClCompile Include="Display.cpp" />
     <ClCompile Include="Editor.cpp" />
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Cat.cpp" />
@@ -96,9 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimationManager.h" />
-    <ClInclude Include="Ball.h" />
-    <ClInclude Include="Cat.h" />
-    <ClInclude Include="Display.h" />
     <ClInclude Include="Editor.h" />
     <ClInclude Include="Ball.h" />
     <ClInclude Include="Cat.h" />

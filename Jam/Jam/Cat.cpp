@@ -56,6 +56,15 @@ void Cat::update()
 
 	mTempShape.setPosition(mPosition);
 	mYarn.updatePosition(mPosition, !mCanJump);
+
+	if (mYarn.intersect(mPosition, mRadius))
+	{
+		mTempShape.setFillColor(sf::Color::Blue);
+	}
+	else
+	{
+		mTempShape.setFillColor(sf::Color::Red);
+	}
 }
 
 void Cat::move()
@@ -161,11 +170,21 @@ void Cat::render(Display& display)
 
 	mSprite.scale(0.4f, 0.4f);
 
-	display.render(mSprite);
-
+	//Set camera position
 	display.getCamera().setPosition(mPosition);
 	
 	mYarn.render(display);
+
+	//Set camera rotation
+	float camRot = mSprite.getRotation() - display.getCamera().getRotation();
+	
+	while(camRot < -180) camRot += 360;
+	while(camRot > 180) camRot -= 360;
+
+	if(mCanJump)
+		display.getCamera().rotate(camRot*0.03);
+
+	display.render(mSprite);
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)

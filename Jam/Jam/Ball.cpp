@@ -7,8 +7,13 @@ Ball::Ball(const sf::Vector2f& position, float mass, float radius)
 	,mActualMass(mass)
 	,mPosition(position)
 {
+	mTexture.loadFromFile("data/yarn_ball.png");
+	mSprite.setTexture(mTexture);
+
+	sf::FloatRect localBounds = mSprite.getLocalBounds();
+	mSprite.setOrigin(localBounds.width/2.f, localBounds.height/2.f);
+
 	setRadius(radius);
-	mTempCircle.setFillColor(sf::Color::Green);
 }
 
 Ball::~Ball()
@@ -19,7 +24,6 @@ Ball::~Ball()
 void Ball::setPosition(const sf::Vector2f& position)
 {
 	mPosition = position;
-	mTempCircle.setPosition(mPosition);
 }
 
 void Ball::setMass(float mass)
@@ -30,8 +34,8 @@ void Ball::setMass(float mass)
 void Ball::setRadius(float radius)
 {
 	mRadius = radius;
-	mTempCircle.setRadius(radius);
-	mTempCircle.setOrigin(radius, radius);
+	float scale = (radius*2.f)/mSprite.getLocalBounds().width;
+	mSprite.setScale(scale, scale);
 }
 
 void Ball::update()
@@ -41,12 +45,13 @@ void Ball::update()
 
 	if (mActualMass > mMass)
 		mActualMass = mMass;
+
+	mSprite.setPosition(mPosition);
 }
 
 void Ball::render(Display& display)
 {
-	mTempCircle.setPosition(mPosition);
-	display.render(mTempCircle);
+	display.render(mSprite);
 }
 
 void Ball::onCollision(std::shared_ptr<Entity> entityy)
@@ -71,7 +76,7 @@ float Ball::getRadius() const
 
 sf::FloatRect Ball::getGlobalBounds() const
 {
-	return mTempCircle.getGlobalBounds();
+	return mSprite.getGlobalBounds();
 }
 
 void Ball::resetMass()

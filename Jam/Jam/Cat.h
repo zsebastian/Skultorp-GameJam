@@ -77,6 +77,7 @@ private:
 
 	Yarn mYarn;
 
+	float mTargetCameraRotation;
 };
 
 #endif

@@ -63,7 +63,7 @@ namespace Util
 		T rr2 = (r0 + r1) * (r0 + r1);
 		
 		return (dx2 + dy2 <= rr2);
-	}
+	};
 
 	template <typename T>
 	sf::Vector2<T> getNormal(sf::Vector2<T> vectorIn)
@@ -74,7 +74,7 @@ namespace Util
 		vectorOut.y = -vectorIn.x;
 
 		return vectorOut;
-	}
+	};
 
 	template <typename T>
 	float angle(sf::Vector2<T> v)
@@ -85,13 +85,20 @@ namespace Util
 			angle = 0;
 		}
 		return angle; 
-	}
+	};
 
 	template <typename floatType>
 	bool floatCompare(floatType A, floatType B, floatType epsilon = std::numeric_limits<floatType>::epsilon()) 
 	{
 	   return std::abs(A - B) < epsilon;
-	}
+	};
+
+	template <typename T>
+	T dot(sf::Vector2<T> v0, sf::Vector2<T> v1)
+	{
+		return v0.x * v1.x + v0.y * v1.y;
+	};
+
 };
 
 

@@ -11,6 +11,7 @@ public:
 
 	void setPosition(const sf::Vector2f& position);
 	void setRotation(float rotation);
+	void rotate(float delta);
 	void setScale(float scale);
 
 	sf::Vector2f getPosition() const;

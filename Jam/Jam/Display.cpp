@@ -17,6 +17,7 @@ void Display::render(const sf::Drawable& drawable)
 
 void Display::render(const sf::Drawable& drawable, const sf::RenderStates& renderState)
 {
+	mWindow.setView(mCamera.getView());
 	mWindow.draw(drawable, renderState);
 }
 	
@@ -48,3 +49,4 @@ Camera& Display::getCamera()
 {
 	return mCamera;
 }
+

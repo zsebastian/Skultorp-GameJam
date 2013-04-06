@@ -13,9 +13,6 @@ EntityManager::~EntityManager(){}
 
 void EntityManager::update()
 {
-	//Update editor
-	mEditor.update();
-
 	//Update gravity
 	mGravityField.update();
 
@@ -39,6 +36,9 @@ void EntityManager::update()
 			}
 		}
 	}
+
+	//Update editor
+	mEditor.update();
 }
 
 void EntityManager::render(Display& display)

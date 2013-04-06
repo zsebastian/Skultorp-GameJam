@@ -1,7 +1,7 @@
 #include "Ball.h"
 #include "Display.h"
 
-Ball::Ball(const sf::Vector2f& position, float mass)
+Ball::Ball(const sf::Vector2f& position, float mass, float radius)
 	:mMass(mass)
 	,mPosition(position)
 {
@@ -24,6 +24,11 @@ void Ball::setPosition(const sf::Vector2f& position)
 void Ball::setMass(float mass)
 {
 	mMass = mass;
+}
+
+void Ball::setRadius(float radius)
+{
+	mRadius = radius;
 }
 
 void Ball::update()
@@ -50,4 +55,9 @@ sf::Vector2f Ball::getPosition() const
 float Ball::getMass() const
 {
 	return mMass;
+}
+
+float Ball::getRadius() const
+{
+	return mRadius;
 }

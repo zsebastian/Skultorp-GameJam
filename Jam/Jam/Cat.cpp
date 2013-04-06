@@ -1,7 +1,7 @@
 #include "Cat.h"
 #include "Display.h"
 
-Cat::Cat(const sf::Vector2f& position, float mass)
+Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	:mMass(mass)
 	,mGravityVector(0.f, 0.f)
 	,mPosition(position)
@@ -25,6 +25,11 @@ void Cat::setPosition(const sf::Vector2f& position)
 void Cat::setMass(float mass)
 {
 	mMass = mass;
+}
+
+void Cat::setRadius(float radius)
+{
+	mRadius = radius;
 }
 
 void Cat::update()
@@ -57,4 +62,9 @@ sf::Vector2f Cat::getPosition() const
 float Cat::getMass() const
 {
 	return mMass;
+}
+
+float Cat::getRadius() const
+{
+	return mRadius;
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<level>
+    <balls>
+        <ball x="100" y="100" mass="1.1" radius="100"/>
+        <ball x="100" y="400" mass="150" radius="150"/>
+        <ball x="300" y="300" mass="300" radius="300"/>
+        <ball x="-358.21" y="154.952" mass="20" radius="20"/>
+        <ball x="41.3009" y="-201.006" mass="20" radius="20"/>
+        <ball x="218.519" y="-126.32" mass="20" radius="20"/>
+        <ball x="-185.853" y="226.167" mass="20" radius="20"/>
+    </balls>
+</level>

@@ -44,23 +44,41 @@ void GravityField::removeObject(std::shared_ptr<Entity> entity)
 
 void GravityField::update()
 {
-	for (auto cat: mCats)
+	for (auto cat = mCats.begin(); cat != mCats.end(); ++cat)
 	{
 		sf::Vector2f sumGravVector(0, 0);
-		for (auto ball: mBalls)
+
+		auto& standsOn = (*cat)->standsOnPlanets();
+
+		if (!standsOn.empty())
 		{
-
-			//F = G(m1*m2/r^2)
-			float r = Util::distance(ball->getPosition(), cat->getPosition());
-			float m1 = ball->getMass();
-			float m2 =  cat->getMass();
-			float F = ((mGravityForce) * (( m1 * m2) / (r * r)));
-			if (F > mTerminalVelocity)
-				F = mTerminalVelocity;
-
-			sf::Vector2f gravVector = F * Util::normalize(ball->getPosition() - cat->getPosition());
-			sumGravVector += gravVector;
+			for (auto ball = standsOn.begin(); ball != standsOn.end(); ++ball)
+			{
+				sumGravVector += calcGravity((*ball), (*cat));
+			}
 		}
-		cat->setGravityVector(sumGravVector);
+		else
+		{
+			for (auto ball = mBalls.begin(); ball != mBalls.end(); ++ball)
+			{
+				sumGravVector += calcGravity((*ball), (*cat));
+			}
+		}
+
+		(*cat)->setGravityVector(sumGravVector);
 	}
+}
+
+sf::Vector2f GravityField::calcGravity(const std::shared_ptr<Entity> e0, const std::shared_ptr<Entity> e1) const
+{
+	//F = G(m1*m2/r^2)
+	float r = Util::distance(e0->getPosition(), e1->getPosition());
+	float m1 = e0->getMass();
+	float m2 = e1->getMass();
+	float F = ((mGravityForce) * (( m1 * m2) / (r * r)));
+	if (F > mTerminalVelocity)
+		F = mTerminalVelocity;
+
+	sf::Vector2f ret = F * Util::normalize(e0->getPosition() - e1->getPosition());
+	return ret;
 }

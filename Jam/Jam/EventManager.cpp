@@ -18,9 +18,9 @@ void EventManager::newEvent(sf::Event& ev)
 {
 	if (mEventHandlers.count(ev.type) != 0)
 	{
-		for (auto eventHandler: mEventHandlers.at(ev.type))
+		for (auto iter = mEventHandlers.at(ev.type).begin(); iter != mEventHandlers.at(ev.type).end(); ++iter)
 		{
-			eventHandler.second(ev);
+			(*iter).second(ev);
 		}
 	}
 }
@@ -37,8 +37,8 @@ void EventManager::registerEventHandler(EventHandler* handler, sf::Event::EventT
  */
 void EventManager::unregisterEventHandler(EventHandler* handler)
 {
-	for (auto evType: mEventHandlers)
+	for (auto iter = mEventHandlers.begin(); iter != mEventHandlers.end(); ++iter)
 	{
-		evType.second.erase(handler);
+		(*iter).second.erase(handler);
 	}
 }

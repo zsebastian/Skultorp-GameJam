@@ -12,7 +12,7 @@ public:
 	AnimationManager(std::string texture);
 	~AnimationManager();
 	void setCurrentAnimation(std::string animation);
-	sf::Sprite getSprite();
+	sf::Sprite getSprite(sf::Vector2f& position);
 
 private:
 

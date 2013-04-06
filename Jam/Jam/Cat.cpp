@@ -127,6 +127,7 @@ void Cat::render(Display& display)
 
 	display.render(tempSprite);
 
+	mYarn.render(display);
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)

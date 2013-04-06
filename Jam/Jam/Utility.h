@@ -76,26 +76,9 @@ namespace Util
 	}
 
 	template <typename T>
-	float angleBetween(sf::Vector2<T> v1, sf::Vector2<T> v2)
+	float angle(sf::Vector2<T> v)
 	{
-		//T dottProduct;
-		//sf::Vector2<T> dottVec;
-
-		//dottVec.x = v1.x * v2.x;
-		//dottVec.y = v1.y * v2.y;
-		//dottProduct = dottVec.x + dottVec.y;
-
-		//T lengthProduct = length(v1) * length(v2);
-
-		//T result = dottProduct / lengthProduct;
-		//
-		//float f = std::acos(result);
-		
-		float f = std::atan2(v1.y - v2.y, v1.x - v2.x);
-
-		f = f * 180 / 3.14f;
-
-		return f;
+		return std::atan2(v.y, v.x) * 180 / 3.14f;
 	}
 };
 

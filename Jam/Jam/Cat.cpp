@@ -121,11 +121,9 @@ void Cat::render(Display& display)
 		tempSprite.scale(-1.f, 1.f);
 	}
 
-	sf::Vector2f upVec(0.f, -1.f);
+	tempSprite.scale(0.2f, 0.2f);
 
-	float f = Util::angleBetween(mGravityVector, upVec);
-
-	tempSprite.rotate(180 + f);
+	tempSprite.setRotation(Util::angle(mGravityVector) - 90);
 
 	display.render(tempSprite);
 

@@ -22,7 +22,8 @@ public:
 
 private:
 	std::vector<std::shared_ptr<Ball>> mBalls;
-	std::shared_ptr<Cat> mCat;
+	std::vector<std::shared_ptr<Cat>> mCats;
+
 	float mGravityForce;
 	float mTerminalVelocity;
 

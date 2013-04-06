@@ -1,13 +1,17 @@
 #include "Cat.h"
 #include "Display.h"
+#include "Ball.h"
+#include "Utility.h"
 
 Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	:mMass(mass)
 	,mGravityVector(0.f, 0.f)
 	,mPosition(position)
 {
-	mTempShape.setRadius(20.f);
+	
+	setRadius(20.f);
 	mTempShape.setFillColor(sf::Color::Red);
+	mTempShape.setOrigin(10.f, 10.f);
 
 	setPosition(position);
 }
@@ -29,7 +33,9 @@ void Cat::setMass(float mass)
 
 void Cat::setRadius(float radius)
 {
+	mTempShape.setRadius(radius);
 	mRadius = radius;
+	mTempShape.setOrigin(radius / 2, radius / 2);
 }
 
 void Cat::update()
@@ -46,7 +52,16 @@ void Cat::render(Display& display)
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)
 {
-	
+	std::shared_ptr<Ball> ball = std::dynamic_pointer_cast<Ball>(entity);
+
+	if (ball)
+	{
+		sf::Vector2f dVec = mPosition - ball->getPosition();
+		dVec = Util::normalize(dVec);
+		float distance = ball->getRadius() + mRadius;
+		dVec = dVec * distance;
+		mPosition = ball->getPosition() + dVec;
+	}
 }
 
 void Cat::setGravityVector(const sf::Vector2f& gravityVector)

@@ -5,9 +5,8 @@ Ball::Ball(const sf::Vector2f& position, float mass, float radius)
 	:mMass(mass)
 	,mPosition(position)
 {
-	mTempCircle.setRadius(50.f);
+	setRadius(radius);
 	mTempCircle.setFillColor(sf::Color::Green);
-	mTempCircle.setOrigin(mTempCircle.getRadius() / 2, mTempCircle.getRadius() / 2);
 }
 
 Ball::~Ball()
@@ -29,6 +28,8 @@ void Ball::setMass(float mass)
 void Ball::setRadius(float radius)
 {
 	mRadius = radius;
+	mTempCircle.setRadius(radius);
+	mTempCircle.setOrigin(radius / 2.f, radius / 2.f);
 }
 
 void Ball::update()

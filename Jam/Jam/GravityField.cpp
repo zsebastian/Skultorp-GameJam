@@ -19,7 +19,7 @@ void GravityField::addObject(std::shared_ptr<Entity> entity)
 	std::shared_ptr<Ball> ball = std::dynamic_pointer_cast<Ball>(entity);
 
 	if (cat)
-		mCat = cat;
+		mCats.push_back(cat);
 	else if (ball)
 		mBalls.push_back(ball);
 }
@@ -31,8 +31,8 @@ void GravityField::removeObject(std::shared_ptr<Entity> entity)
 	
 	if (cat)
 	{
-		if (mCat == cat)
-			mCat = nullptr;
+		auto pred = [&cat](std::shared_ptr<Cat> testcat) {return testcat.get() == cat.get();};
+		Util::eraseIf(mCats, pred);
 	}
 	else if (ball)
 	{
@@ -44,21 +44,23 @@ void GravityField::removeObject(std::shared_ptr<Entity> entity)
 
 void GravityField::update()
 {
-	sf::Vector2f sumGravVector(0, 0);
-
-	for (auto ball: mBalls)
+	for (auto cat: mCats)
 	{
-		//F = G(m1*m2/r^2)
-		float r = Util::distance(ball->getPosition(), mCat->getPosition());
-		float m1 = ball->getMass();
-		float m2 =  mCat->getMass();
-		float F = ((mGravityForce) * (( m1 * m2) / (r * r)));
-		if (F > mTerminalVelocity)
-			F = mTerminalVelocity;
+		sf::Vector2f sumGravVector(0, 0);
+		for (auto ball: mBalls)
+		{
 
-		sf::Vector2f gravVector = F * Util::normalize(ball->getPosition() - mCat->getPosition());
-		sumGravVector += gravVector;
+			//F = G(m1*m2/r^2)
+			float r = Util::distance(ball->getPosition(), cat->getPosition());
+			float m1 = ball->getMass();
+			float m2 =  cat->getMass();
+			float F = ((mGravityForce) * (( m1 * m2) / (r * r)));
+			if (F > mTerminalVelocity)
+				F = mTerminalVelocity;
+
+			sf::Vector2f gravVector = F * Util::normalize(ball->getPosition() - cat->getPosition());
+			sumGravVector += gravVector;
+		}
+		cat->setGravityVector(sumGravVector);
 	}
-
-	mCat->setGravityVector(sumGravVector);
 }

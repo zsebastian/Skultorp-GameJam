@@ -78,6 +78,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AnimationManager.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Editor.cpp" />
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Cat.cpp" />
@@ -94,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimationManager.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Editor.h" />
     <ClInclude Include="Ball.h" />
     <ClInclude Include="Cat.h" />

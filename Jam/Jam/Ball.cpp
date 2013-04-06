@@ -3,6 +3,7 @@
 
 Ball::Ball(const sf::Vector2f& position, float mass, float radius)
 	:mMass(mass)
+	,mActualMass(mass)
 	,mPosition(position)
 {
 	setRadius(radius);
@@ -34,7 +35,10 @@ void Ball::setRadius(float radius)
 
 void Ball::update()
 {
-	
+	//HOOOOOOOOW
+	mActualMass += mMass / 500.f;
+	if (mActualMass > mMass)
+		mActualMass = mMass;
 }
 
 void Ball::render(Display& display)
@@ -55,7 +59,7 @@ sf::Vector2f Ball::getPosition() const
 
 float Ball::getMass() const
 {
-	return mMass;
+	return mActualMass;
 }
 
 float Ball::getRadius() const
@@ -66,4 +70,9 @@ float Ball::getRadius() const
 sf::FloatRect Ball::getGlobalBounds() const
 {
 	return mTempCircle.getGlobalBounds();
+}
+
+void Ball::resetMass()
+{
+	mActualMass = 1.f;
 }

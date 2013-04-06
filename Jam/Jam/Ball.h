@@ -23,10 +23,12 @@ public:
 	virtual float getMass() const;
 	virtual float getRadius() const;
 	virtual sf::FloatRect getGlobalBounds() const;
+	void resetMass();
 private:
 	sf::Vector2f mPosition;
 	float mMass;
 	float mRadius;
+	float mActualMass;
 
 	sf::CircleShape mTempCircle;
 };

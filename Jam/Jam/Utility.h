@@ -8,7 +8,7 @@
 namespace Util
 {
 	template <class T, typename predT>
-	inline void eraseIf(T cont, predT pred)
+	inline void eraseIf(T& cont, predT& pred)
 	{
 		cont.erase(
 			std::remove_if(cont.begin(), cont.end(), pred),

@@ -80,6 +80,7 @@ void Cat::jump()
 		mJumping = true;
 		mCanJump = false;
 		mCurrentJumpPower = mMaxJumpPower;
+		mJumpDirection = -mGravityVector;
 		mStandsOn.clear();
 	}
 }
@@ -88,7 +89,7 @@ void Cat::jumping()
 {
 	if(mJumping)
 	{
-		mMoveSpeed -= Util::normalize(mGravityVector) * mCurrentJumpPower;
+		mMoveSpeed += Util::normalize(mJumpDirection) * mCurrentJumpPower;
 
 		mCurrentJumpPower -= mJumpDecelaration;
 		if(mCurrentJumpPower <= 0.f)
@@ -103,6 +104,10 @@ void Cat::jumping()
 
 void Cat::render(Display& display)
 {
+	/*display.getCamera().setPosition(mPosition);
+	display.getCamera().setRotation(mPosition.x-mPosition.y);
+	display.getCamera().setScale(mPosition.x/mPosition.y);*/
+
 	sf::CircleShape tempShape;
 	tempShape.setOrigin(mRadius, mRadius);
 	tempShape.setPosition(mPosition);
@@ -156,10 +161,15 @@ std::vector<std::shared_ptr<Ball>>& Cat::standsOnPlanets()
 
 void Cat::resetStandsOn()
 {
+	for (auto iter = mStandsOn.begin(); iter != mStandsOn.end(); ++iter)
+	{
+		(*iter)->resetMass();
+	}
+
 	mStandsOn.clear();
 }
 
 sf::FloatRect Cat::getGlobalBounds() const
 {
-	return mTempCircle.getGlobalBounds();
+	return sf::FloatRect(mPosition.x - mRadius, mPosition.y - mRadius, mPosition.x + mRadius, mPosition.y + mRadius);
 }

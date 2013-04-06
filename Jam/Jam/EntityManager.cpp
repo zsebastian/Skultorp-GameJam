@@ -4,6 +4,7 @@
 #include "Utility.h"
 
 EntityManager::EntityManager()
+	:mEditor(std::shared_ptr<EntityManager>(this))
 {
 
 }
@@ -55,4 +56,13 @@ void EntityManager::pushEntity(std::shared_ptr<Entity> entity)
 	mEntities.push_back(entity);
 	mGravityField.addObject(entity);
 	mEditor.pushEntity(entity);
+}
+
+void EntityManager::popEntity(std::shared_ptr<Entity> entity)
+{
+	auto pred = [&entity](std::shared_ptr<Entity> someEntity) {return someEntity.get() == entity.get();};
+	Util::eraseIf(mEntities, pred);
+
+	mGravityField.removeObject(entity);
+	mEditor.popEntity(entity);
 }

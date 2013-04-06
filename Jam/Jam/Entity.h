@@ -3,6 +3,7 @@
 
 #include <memory>
 #include <SFML/System/Vector2.hpp>
+#include <SFML/Graphics/Rect.hpp>
 
 class Display;
 class Entity

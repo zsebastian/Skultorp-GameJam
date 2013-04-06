@@ -11,7 +11,6 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	
 	setRadius(20.f);
 	mTempShape.setFillColor(sf::Color::Red);
-	mTempShape.setOrigin(10.f, 10.f);
 
 	setPosition(position);
 }
@@ -33,9 +32,9 @@ void Cat::setMass(float mass)
 
 void Cat::setRadius(float radius)
 {
-	mTempShape.setRadius(radius);
 	mRadius = radius;
-	mTempShape.setOrigin(radius / 2, radius / 2);
+	mTempShape.setRadius(radius);
+	mTempShape.setOrigin(radius, radius);
 }
 
 void Cat::update()

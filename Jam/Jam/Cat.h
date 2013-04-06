@@ -47,6 +47,7 @@ private:
 
 	void move();
 	void walk();
+	void rotate();
 	
 	//jumping
 	void jump();
@@ -57,6 +58,9 @@ private:
 	float mMaxJumpPower;
 	float mCurrentJumpPower;
 	float mJumpDecelaration;
+
+	// walk
+	bool mWalking;
 
 	sf::CircleShape mTempShape;
 

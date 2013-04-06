@@ -2,6 +2,7 @@
 #include "Display.h"
 #include "Ball.h"
 #include "Utility.h"
+#include <string>
 
 Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	:mMass(mass)
@@ -11,14 +12,14 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	,mWalkSpeed(3)
 	,mCanJump(false)
 	,mJumping(false)
-	,mMaxJumpPower(10.f)
+	,mMaxJumpPower(7.f)
 	,mCurrentJumpPower(0)
-	,mJumpDecelaration(0.7f)
+	,mJumpDecelaration(0.15f)
 	,mAnimations("cat.png")
 	,mLeftDir(false)
 	,mSpriteDown(0.f, 1.f)
 {
-	setRadius(20.f);
+	setRadius(40.f);
 
 	setPosition(position);
 }
@@ -47,6 +48,7 @@ void Cat::update()
 {
 	mMoveSpeed = sf::Vector2f();
 
+	rotate();
 	jump();
 	jumping();
 	walk();
@@ -67,15 +69,31 @@ void Cat::walk()
 	mRightVector = Util::normalize(mRightVector);
 	mRightVector *= mWalkSpeed;
 
-	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && mAnimations.getCurrentAnimation() != "jump")
 	{
-		mMoveSpeed += mRightVector;
 		mLeftDir = false;
+		if(mCanJump && mAnimations.getCurrentAnimation() != "inair")
+		{
+			mAnimations.setCurrentAnimation("walk");
+		}
+		mMoveSpeed += mRightVector;
 	}
-	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && mAnimations.getCurrentAnimation() != "jump")
 	{
-		mMoveSpeed -= mRightVector;
 		mLeftDir = true;
+		if(mCanJump && mAnimations.getCurrentAnimation() != "inair")
+		{
+			mAnimations.setCurrentAnimation("walk");
+		}
+		mMoveSpeed -= mRightVector;
+	}
+	
+	if(!sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	{
+		if(mCanJump && mAnimations.getCurrentAnimation() == "walk")
+		{
+			mAnimations.setCurrentAnimation("idle");
+		}
 	}
 }
 
@@ -88,12 +106,13 @@ void Cat::jump()
 		mCurrentJumpPower = mMaxJumpPower;
 		mJumpDirection = -mGravityVector;
 		mStandsOn.clear();
+		mAnimations.setCurrentAnimation("jump");
 	}
 }
 
 void Cat::jumping()
 {
-	if(mJumping)
+	if(mJumping && mAnimations.getCurrentAnimation() == "inair")
 	{
 		mMoveSpeed += Util::normalize(mJumpDirection) * mCurrentJumpPower;
 
@@ -106,7 +125,7 @@ void Cat::jumping()
 	}
 }
 
-void Cat::render(Display& display)
+void Cat::rotate()
 {
 	mTargetAngle = Util::angle(mGravityVector) - 90;
 	float spriteRotation = mSprite.getRotation();
@@ -121,8 +140,18 @@ void Cat::render(Display& display)
 		shortestDist -= 360;
 	}
 
-	mAnimations.setRotation(shortestDist * 0.1f);
+	float rotateSpeed = 0.5f;
 
+	if(!mCanJump)
+	{
+		rotateSpeed = 0.1;
+	}
+	mAnimations.setRotation(shortestDist * rotateSpeed);
+
+}
+
+void Cat::render(Display& display)
+{
 	mSprite = mAnimations.getSprite(mPosition);
 
 	if(mLeftDir)
@@ -130,7 +159,7 @@ void Cat::render(Display& display)
 		mSprite.scale(-1.f, 1.f);
 	}
 
-	mSprite.scale(0.2f, 0.2f);
+	mSprite.scale(0.4f, 0.4f);
 
 	display.render(mSprite);
 
@@ -152,6 +181,12 @@ void Cat::onCollision(std::shared_ptr<Entity> entity)
 		float distance = ball->getRadius() + mRadius;
 		dVec = dVec * distance;
 		mPosition = ball->getPosition() + dVec;
+		
+		if(mCanJump && mAnimations.getCurrentAnimation() == "inair")
+		{
+			mAnimations.setCurrentAnimation("land");
+		}
+
 		mCanJump = true;
 	}
 }

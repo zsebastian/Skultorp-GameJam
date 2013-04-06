@@ -62,3 +62,8 @@ float Ball::getRadius() const
 {
 	return mRadius;
 }
+
+sf::FloatRect Ball::getGlobalBounds() const
+{
+	return mTempCircle.getGlobalBounds();
+}

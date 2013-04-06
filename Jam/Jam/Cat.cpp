@@ -158,3 +158,8 @@ void Cat::resetStandsOn()
 {
 	mStandsOn.clear();
 }
+
+sf::FloatRect Cat::getGlobalBounds() const
+{
+	return mTempCircle.getGlobalBounds();
+}

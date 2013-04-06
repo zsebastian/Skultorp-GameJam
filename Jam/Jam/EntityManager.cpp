@@ -12,6 +12,9 @@ EntityManager::~EntityManager(){}
 
 void EntityManager::update()
 {
+	//Update editor
+	mEditor.update();
+
 	//Update gravity
 	mGravityField.update();
 
@@ -42,10 +45,14 @@ void EntityManager::render(Display& display)
 	//Render entities
 	for(auto iter = mEntities.begin(); iter != mEntities.end(); ++iter)
 		(*iter)->render(display);
+
+	//Render editor
+	mEditor.render(display);
 }
 
 void EntityManager::pushEntity(std::shared_ptr<Entity> entity)
 {
 	mEntities.push_back(entity);
 	mGravityField.addObject(entity);
+	mEditor.pushEntity(entity);
 }

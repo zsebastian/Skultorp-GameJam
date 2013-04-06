@@ -21,8 +21,12 @@ public:
 	void render(Display& display);
 private:
 	EntityVec mEntities;
+	std::shared_ptr<Entity> mCurrentEntity;
+	bool mLockedOnEntity;
 
 	void onButtonDown(sf::Event&);
+	void onButtonUp(sf::Event&);
+	void onMouseMove(sf::Event&);
 };
 
 #endif

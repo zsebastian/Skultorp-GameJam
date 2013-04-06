@@ -4,6 +4,7 @@
 #include "Entity.h"
 #include <SFML/Graphics/CircleShape.hpp>
 #include <memory>
+#include "Yarn.h"
 
 class Ball;
 
@@ -56,6 +57,8 @@ private:
 	sf::CircleShape mTempShape;
 
 	std::vector<std::shared_ptr<Ball>> mStandsOn;
+
+	Yarn mYarn;
 };
 
 #endif

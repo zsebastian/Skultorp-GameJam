@@ -50,6 +50,7 @@ void Cat::update()
 	move();
 
 	mTempShape.setPosition(mPosition);
+	mYarn.updatePosition(mPosition, !mCanJump);
 }
 
 void Cat::move()
@@ -110,6 +111,7 @@ void Cat::render(Display& display)
 	tempShape.setFillColor(sf::Color::Red);
 	tempShape.setRadius(mRadius);	
 	display.render(tempShape);
+	mYarn.render(display);
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)

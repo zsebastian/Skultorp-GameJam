@@ -14,6 +14,7 @@ public:
 private:
 	EntityManager entities;
 
+	void loadLevel(const std::string& filename);
 };
 
 #endif

@@ -45,6 +45,11 @@ bool Display::isOpen() const
 	return mWindow.isOpen();
 }
 
+sf::RenderWindow& Display::getWindow()
+{
+	return mWindow;
+}
+
 Camera& Display::getCamera()
 {
 	return mCamera;

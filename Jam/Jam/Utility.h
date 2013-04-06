@@ -35,8 +35,8 @@ namespace Util
 		return std::abs(std::sqrt((v.x*v.x) + (v.y*v.y)));
 	};
 
-	template <typename T>
-	T fromString(const std::string& str)
+	template <typename T, typename stringT>
+	T fromString(const stringT& str)
 	{
 		std::istringstream ss(str);
 		T ret;

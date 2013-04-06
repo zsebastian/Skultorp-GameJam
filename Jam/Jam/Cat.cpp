@@ -31,6 +31,18 @@ void Cat::update()
 	//Apply gravity
 	mPosition += mGravityVector;
 	mTempShape.setPosition(mPosition);
+
+	mRightVector.x = mGravityVector.y;
+	mRightVector.y = -mGravityVector.x;
+
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	{
+		mPosition += mRightVector;
+	}
+	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	{
+		mPosition -= mRightVector;
+	}
 }
 
 void Cat::render(Display& display)

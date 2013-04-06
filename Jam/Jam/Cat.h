@@ -22,6 +22,7 @@ public:
 private:
 	sf::Vector2f mPosition;
 	sf::Vector2f mGravityVector;
+	sf::Vector2f mRightVector;
 	float mMass;
 
 	sf::CircleShape mTempShape;

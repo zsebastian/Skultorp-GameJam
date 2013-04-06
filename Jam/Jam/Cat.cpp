@@ -133,7 +133,8 @@ void Cat::render(Display& display)
 	tempSprite.setRotation(Util::angle(mGravityVector) - 90);
 
 	//Set camera position
-	display.getCamera().setPosition(mPosition);
+	sf::Vector2f camPos = mPosition - display.getCamera().getPosition();
+	display.getCamera().move(sf::Vector2f(camPos.x*0.05, camPos.y*0.05));
 	
 	//Set camera rotation
 	float camRot = tempSprite.getRotation() - display.getCamera().getRotation();

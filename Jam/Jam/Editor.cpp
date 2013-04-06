@@ -4,6 +4,7 @@
 #include "Ball.h"
 #include "EntityManager.h"
 #include "Utility.h"
+#include "tinyxml2.h"
 
 Editor::Editor(EntityManager* entityManager)
 {
@@ -113,4 +114,44 @@ void Editor::onKeyDown(sf::Event& e)
 		mCurrentEntity = nullptr;
 		mLockedOnEntity = false;
 	}
+
+	//Save level
+	if(e.key.code == sf::Keyboard::F12)
+	{
+		saveLevel("data/levels/test.xml");
+	}
+}
+
+void Editor::saveLevel(const std::string& filename)
+{
+	tinyxml2::XMLDocument doc;
+
+	tinyxml2::XMLElement* level = doc.NewElement("level");
+	tinyxml2::XMLElement* balls = doc.NewElement("balls");
+
+	//Append all the balls
+	for(auto i = mEntities.begin(); i != mEntities.end(); ++i)
+	{
+		std::shared_ptr<Ball> b = std::dynamic_pointer_cast<Ball>(*i);
+		
+		if(b == nullptr)
+			continue;
+
+		tinyxml2::XMLElement* ball = doc.NewElement("ball");
+		sf::Vector2f position = b->getPosition();
+		ball->SetAttribute("x", position.x);
+		ball->SetAttribute("y", position.y);
+		ball->SetAttribute("mass", b->getMass());
+		ball->SetAttribute("radius", b->getRadius());
+		balls->InsertEndChild(ball);
+	}
+
+	//Append to level
+	level->InsertEndChild(balls);
+
+	//Append declaration and level to document
+	doc.InsertEndChild(doc.NewDeclaration());
+	doc.InsertEndChild(level);
+
+	doc.SaveFile(filename.c_str());
 }

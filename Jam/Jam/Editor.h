@@ -37,6 +37,8 @@ private:
 	void onButtonUp(sf::Event&);
 	void onMouseMove(sf::Event&);
 	void onKeyDown(sf::Event&);
+
+	void saveLevel(const std::string& filename);
 };
 
 #endif

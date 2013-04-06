@@ -14,7 +14,7 @@ Game::Game()
 	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(100.f, 500.f), 100.f, 50.f));
 	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(700.f, 500.f), 100.f, 50.f));*/
 
-	loadLevel("data/levels/some_level.xml");
+	loadLevel("data/levels/test.xml");
 }
 
 void Game::render(Display& display)

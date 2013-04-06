@@ -31,6 +31,7 @@ public:
 	virtual sf::Vector2f getPosition() const;
 	virtual float getMass() const;
 	virtual float getRadius() const;
+	virtual sf::FloatRect getGlobalBounds() const;
 private:
 	sf::Vector2f mPosition;
 	sf::Vector2f mGravityVector;

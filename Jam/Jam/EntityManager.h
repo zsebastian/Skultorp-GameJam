@@ -4,6 +4,7 @@
 #include <vector>
 #include <memory>
 #include "GravityField.h"
+#include "Editor.h"
 
 class Display;
 class Entity;
@@ -19,10 +20,12 @@ public:
 	void render(Display& display);
 
 	void pushEntity(std::shared_ptr<Entity>);
+	void popEntity(std::shared_ptr<Entity> entity);
 
 private:
 	EntityVec mEntities;
 	GravityField mGravityField;
+	Editor mEditor;
 };
 
 #endif

@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 #include "EventHandler.h"
+#include "Camera.h"
 
 class Display : public EventHandler
 {
@@ -18,9 +19,10 @@ public:
 	void pollEvents();
 
 	bool isOpen() const;
-
+	Camera& getCamera();
 private:
 	sf::RenderWindow mWindow;
+	Camera mCamera;
 };
 
 #endif

@@ -3,6 +3,7 @@
 
 #include <memory>
 #include <SFML/System/Vector2.hpp>
+#include <SFML/Graphics/Rect.hpp>
 
 class Display;
 class Entity
@@ -20,6 +21,7 @@ public:
 	virtual sf::Vector2f getPosition() const = 0;
 	virtual float getMass() const = 0;
 	virtual float getRadius() const = 0;
+	virtual sf::FloatRect getGlobalBounds() const = 0;
 };
 
 #endif

@@ -3,6 +3,7 @@
 
 Display::Display(sf::VideoMode videoMode, const std::string& windowText)
 	:mWindow(videoMode, windowText)
+	,mCamera(sf::Vector2f(videoMode.width, videoMode.height), sf::Vector2f())
 	,EventHandler(sf::Event::Closed, [&](sf::Event ev){mWindow.close();})
 {
 	mWindow.setFramerateLimit(60);
@@ -10,6 +11,7 @@ Display::Display(sf::VideoMode videoMode, const std::string& windowText)
 
 void Display::render(const sf::Drawable& drawable)
 {
+	mWindow.setView(mCamera.getView());
 	mWindow.draw(drawable);
 }
 
@@ -41,4 +43,9 @@ void Display::pollEvents()
 bool Display::isOpen() const
 {
 	return mWindow.isOpen();
+}
+
+Camera& Display::getCamera()
+{
+	return mCamera;
 }

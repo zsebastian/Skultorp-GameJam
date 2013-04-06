@@ -6,6 +6,11 @@ EventHandler::EventHandler(sf::Event::EventType eventType, std::function<void (s
 	addEventListener(eventType, eventFunction);
 }
 
+EventHandler::EventHandler()
+{
+
+}
+
 EventHandler::~EventHandler()
 {
 	EventManager::getInstance()->unregisterEventHandler(this);

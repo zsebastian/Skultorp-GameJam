@@ -5,7 +5,7 @@ Display::Display(sf::VideoMode videoMode, const std::string& windowText)
 	:mWindow(videoMode, windowText)
 	,EventHandler(sf::Event::Closed, [&](sf::Event ev){mWindow.close();})
 {
-
+	mWindow.setFramerateLimit(60);
 }
 
 void Display::render(const sf::Drawable& drawable)

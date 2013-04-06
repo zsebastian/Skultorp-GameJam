@@ -1,6 +1,7 @@
 #include "EntityManager.h"
 #include "Display.h"
 #include "Entity.h"
+#include "Utility.h"
 
 EntityManager::EntityManager()
 {
@@ -19,14 +20,19 @@ void EntityManager::update()
 		entity->update();
 
 	//Check for collisions
-	for(EntityVec::size_type i = 0; i < mEntities.size(); i++)
+	for(auto iter0 = mEntities.begin(); iter0 != mEntities.end(); ++iter0)
 	{
-		for(EntityVec::size_type j = i+1; j < mEntities.size(); j++)
+		for(auto iter1 = iter0 + 1; iter1 != mEntities.end(); ++iter1)
 		{
 			//Check for intersection
-
-			/*mEntities[i]->onCollision(mEntities[j]);
-			mEntities[j]->onCollision(mEntities[i]);*/
+			if (iter0 != iter1)
+			{
+				if (Util::testCircleCollision((*iter0)->getPosition(), (*iter0)->getRadius(), (*iter1)->getPosition(), (*iter1)->getRadius()))
+				{
+					(*iter0)->onCollision((*iter1));
+					(*iter1)->onCollision((*iter0));
+				}
+			}
 		}
 	}
 }

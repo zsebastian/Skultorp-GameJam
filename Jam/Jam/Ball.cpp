@@ -29,7 +29,7 @@ void Ball::setRadius(float radius)
 {
 	mRadius = radius;
 	mTempCircle.setRadius(radius);
-	mTempCircle.setOrigin(radius, radius);
+	mTempCircle.setOrigin(radius / 2.f, radius / 2.f);
 }
 
 void Ball::update()

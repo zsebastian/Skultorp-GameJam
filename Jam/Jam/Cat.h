@@ -26,10 +26,28 @@ private:
 	sf::Vector2f mPosition;
 	sf::Vector2f mGravityVector;
 	sf::Vector2f mRightVector;
+	sf::Vector2f mMoveSpeed;
+
+	float mWalkSpeed;
+
 	float mMass;
 	float mRadius;
 
+	void move();
+	void walk();
+	
+	//jumping
+	void jump();
+	void jumping();
+
+	bool mCanJump;
+	bool mJumping;
+	float mMaxJumpPower;
+	float mCurrentJumpPower;
+	float mJumpDecelaration;
+
 	sf::CircleShape mTempShape;
+
 };
 
 #endif

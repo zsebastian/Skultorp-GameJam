@@ -62,6 +62,16 @@ namespace Util
 		
 		return (dx2 + dy2 <= rr2);
 	}
+	template <typename T>
+	sf::Vector2<T> getNormal(sf::Vector2<T> vectorIn)
+	{
+		sf::Vector2<T> vectorOut;
+
+		vectorOut.x = vectorIn.y;
+		vectorOut.y = -vectorIn.x;
+
+		return vectorOut;
+	}
 };
 
 

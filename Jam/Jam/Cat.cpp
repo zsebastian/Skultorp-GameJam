@@ -107,10 +107,6 @@ void Cat::jumping()
 
 void Cat::render(Display& display)
 {
-	/*display.getCamera().setPosition(mPosition);
-	display.getCamera().setRotation(mPosition.x-mPosition.y);
-	display.getCamera().setScale(mPosition.x/mPosition.y);*/
-
 	//sf::CircleShape tempShape;
 	//tempShape.setOrigin(mRadius, mRadius);
 	//tempShape.setPosition(mPosition);
@@ -121,14 +117,24 @@ void Cat::render(Display& display)
 	sf::Sprite tempSprite = mAnimations.getSprite(mPosition);
 
 	if(mLeftDir)
-	{
 		tempSprite.scale(-1.f, 1.f);
-	}
 
 	tempSprite.scale(0.2f, 0.2f);
 
 	tempSprite.setRotation(Util::angle(mGravityVector) - 90);
 
+	//Set camera position
+	display.getCamera().setPosition(mPosition);
+	
+	//Set camera rotation
+	float camRot = tempSprite.getRotation() - display.getCamera().getRotation();
+	
+	while(camRot < -180) camRot += 360;
+	while(camRot > 180) camRot -= 360;
+
+	if(mCanJump)
+		display.getCamera().rotate(camRot*0.03);
+	
 	display.render(tempSprite);
 }
 

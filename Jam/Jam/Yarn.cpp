@@ -4,9 +4,10 @@
 #include <math.h>
 
 Yarn::Yarn()
-	:mThreadingLength(50.f)
+	:mThreadingLength(25.f)
 	,mTotalLength(0.f)
 	,mLatestThreadLength(0.f)
+	,mGraceThreads(15)
 {
 	currentBezierIndex = 0;
 	mTexture.loadFromFile("data/thread.png");
@@ -180,9 +181,9 @@ float Yarn::getTextureY()
 
 bool Yarn::intersect(sf::Vector2f position, float radius)
 {
-	if (mThreads.size() > 1)
+	if (mThreads.size() > 1 && mThreads.size() > mGraceThreads)
 	{
-		for (size_t i = 1; i < mThreads.size() - 1; ++i)
+		for (size_t i = 1; i < mThreads.size() - mGraceThreads; ++i)
 		{
 			sf::Vector2f v0 = mThreads[i - 1];
 			sf::Vector2f v1 = mThreads[i];

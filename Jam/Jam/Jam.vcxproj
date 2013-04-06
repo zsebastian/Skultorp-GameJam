@@ -79,7 +79,6 @@
   <ItemGroup>
     <ClCompile Include="AnimationManager.cpp" />
     <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Editor.cpp" />
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Cat.cpp" />
     <ClCompile Include="Display.cpp" />
@@ -89,6 +88,7 @@
     <ClCompile Include="EventManager.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GravityField.cpp" />
+    <ClCompile Include="LooseEnd.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="StateManager.cpp" />
     <ClCompile Include="tinyxml2.cpp" />
@@ -97,7 +97,6 @@
   <ItemGroup>
     <ClInclude Include="AnimationManager.h" />
     <ClInclude Include="Camera.h" />
-    <ClInclude Include="Editor.h" />
     <ClInclude Include="Ball.h" />
     <ClInclude Include="Cat.h" />
     <ClInclude Include="Display.h" />
@@ -108,6 +107,7 @@
     <ClInclude Include="EventManager.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GravityField.h" />
+    <ClInclude Include="LooseEnd.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateManager.h" />
     <ClInclude Include="tinyxml2.h" />

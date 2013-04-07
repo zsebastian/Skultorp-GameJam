@@ -185,6 +185,8 @@ void Cat::render(Display& display)
 	while(camRot > 180) camRot -= 360;
 
 	if(mCanJump)
+		display.getCamera().rotate(camRot*0.01);
+	else
 		display.getCamera().rotate(camRot*0.03);
 
 	display.render(mSprite);

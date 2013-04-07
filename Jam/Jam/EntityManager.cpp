@@ -87,10 +87,12 @@ void EntityManager::clear()
 	mEditor.clear();
 }
 
-void EntityManager::loadLevel(const std::string& filename)
+void EntityManager::loadLevel()
 {
 	tinyxml2::XMLDocument doc;
-	doc.LoadFile(filename.c_str());
+	doc.LoadFile(mLevelList.top().c_str());
+
+	mLevelList.pop();
 
 	tinyxml2::XMLElement* level = doc.FirstChildElement("level");
 	tinyxml2::XMLElement* balls = level->FirstChildElement("balls");
@@ -108,6 +110,24 @@ void EntityManager::loadLevel(const std::string& filename)
 
 		pushEntity(std::make_shared<Ball>(position, mass, radius, index));
 	}
+
+	//Add cat
+	pushEntity(std::make_shared<Cat>(sf::Vector2f(0.f, 0.f), 10.f));
+}
+
+void EntityManager::loadLevelList()
+{
+	tinyxml2::XMLDocument doc;
+	doc.LoadFile("data/levels.xml");
+
+	tinyxml2::XMLElement* levels = doc.FirstChildElement("levels");
+	for(tinyxml2::XMLElement* level = levels->FirstChildElement("level"); level; level = level->NextSiblingElement())
+		mLevelList.push("data/levels/" + std::string(level->Attribute("name"))+".xml");
+}
+
+std::string EntityManager::getLevelFilename()
+{
+	return mLevelList.top();
 }
 
 void EntityManager::checkLevelCleard()

@@ -88,8 +88,12 @@
     <ClCompile Include="EventManager.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GravityField.cpp" />
+    <ClCompile Include="GUIBox.cpp" />
+    <ClCompile Include="GUIButton.cpp" />
+    <ClCompile Include="GUIDraggable.cpp" />
     <ClCompile Include="LooseEnd.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="StateManager.cpp" />
     <ClCompile Include="tinyxml2.cpp" />
     <ClCompile Include="Utility.cpp" />
@@ -108,7 +112,12 @@
     <ClInclude Include="EventManager.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GravityField.h" />
+    <ClInclude Include="GUIBox.h" />
+    <ClInclude Include="GUIButton.h" />
+    <ClInclude Include="GUIDraggable.h" />
+    <ClInclude Include="GUIWidget.h" />
     <ClInclude Include="LooseEnd.h" />
+    <ClInclude Include="MainMenu.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateManager.h" />
     <ClInclude Include="tinyxml2.h" />

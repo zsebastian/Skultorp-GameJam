@@ -9,7 +9,7 @@
 class Game : public State
 {
 public:
-	Game();
+	Game(StateManager& stateManager);
 	virtual void render(Display&);
 	virtual void update();
 	virtual bool isAlive();

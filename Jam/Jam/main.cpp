@@ -1,15 +1,14 @@
-#include <SFML/Graphics.hpp>
+#include <SFML/Window/VideoMode.hpp>
 #include "Display.h"
 #include "StateManager.h"
-#include "Utility.h"
-#include "Game.h"
+#include "MainMenu.h"
 
 int main()
 {
 	Display display(sf::VideoMode(1280, 720), "YarnCat");
 	StateManager stateManager;
 
-	stateManager.pushState(std::make_shared<Game>());
+	stateManager.pushState(std::make_shared<MainMenu>(stateManager));
 
     while (display.isOpen())
     {

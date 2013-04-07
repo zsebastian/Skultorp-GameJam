@@ -56,3 +56,7 @@ Camera& Display::getCamera()
 	return mCamera;
 }
 
+void Display::setToDefaultView()
+{
+	mCamera.getView() = mWindow.getDefaultView(); 
+}

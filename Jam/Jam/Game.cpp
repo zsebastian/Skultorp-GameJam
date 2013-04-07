@@ -6,9 +6,10 @@
 
 Game::Game()
 {
-	entities.pushEntity(std::make_shared<Cat>(sf::Vector2f(50.f, 50.f), 10.f));
+	entities.loadLevelList();
+	entities.loadLevel();
 
-	std::shared_ptr<Ball> ball = std::make_shared<Ball>(sf::Vector2f(200.f, 200.f), 200.f, 100.f, 0);
+	/*std::shared_ptr<Ball> ball = std::make_shared<Ball>(sf::Vector2f(200.f, 200.f), 200.f, 100.f, 0);
 	entities.pushEntity(ball);
 	entities.pushEntity(std::make_shared<LooseEnd>(ball, 180));
 
@@ -18,7 +19,7 @@ Game::Game()
 
 	ball = std::make_shared<Ball>(sf::Vector2f(250.f, 300.f), 200.f, 100.f, 2);
 	entities.pushEntity(ball);
-	entities.pushEntity(std::make_shared<LooseEnd>(ball, 90));
+	entities.pushEntity(std::make_shared<LooseEnd>(ball, 90));*/
 
 	mBackgroundTexture.loadFromFile("data/background.png");
 	mBackgroundSprite.setTexture(mBackgroundTexture);

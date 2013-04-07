@@ -117,7 +117,7 @@ void Editor::onKeyDown(sf::Event& e)
 	//Save level
 	if(e.key.code == sf::Keyboard::F12)
 	{
-		saveLevel("data/levels/test.xml");
+		saveLevel(mEntityManager->getLevelFilename());
 	}
 }
 

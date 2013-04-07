@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <level>
-	<goalIndex value="5"/>
+	<cat x="50" y="100"/>
+	<goal value="5"/>
     <balls>
         <ball x="100" y="100" mass="1.1" radius="100" index="0"/>
         <ball x="100" y="400" mass="150" radius="150" index="1"/>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <level>
+	<cat x="50" y="100"/>
+	<goal value="5"/>
 	<balls>
 		<ball x="100.f" y="100.f" mass="50.f" radius="100.f"/>
 		<ball x="100.f" y="400.f" mass="150.f" radius="150.f"/>

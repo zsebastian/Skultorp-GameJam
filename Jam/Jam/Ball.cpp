@@ -102,7 +102,10 @@ float Ball::getRadius() const
 
 sf::FloatRect Ball::getGlobalBounds() const
 {
-	return mSprite.getGlobalBounds();
+	sf::FloatRect bounds = mSprite.getGlobalBounds();
+	bounds.width /= 1.5f;
+	bounds.height /= 1.5f;
+	return bounds;
 }
 
 void Ball::resetMass()

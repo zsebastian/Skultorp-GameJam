@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <level>
-    <cat x="234.521" y="703.697"/>
-	<goal value="5"/> <!-- Number of balls -->
+    <cat x="83.4175" y="-39.0145"/>
+    <goal value="6"/>
     <balls>
-        <ball x="100" y="100" mass="1.2" radius="100" index="0">
+        <ball x="100" y="100" mass="1.0024" radius="100" index="0">
             <looseEnd angle="0"/>
         </ball>
         <ball x="-103.707" y="472.483" mass="150" radius="150" index="1">

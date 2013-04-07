@@ -176,7 +176,6 @@ void Cat::render(Display& display)
 	sf::Vector2f camPos = mPosition - display.getCamera().getPosition();
 	display.getCamera().move(sf::Vector2f(camPos.x*0.05, camPos.y*0.05));
 	
-	mYarn.render(display);
 
 	//Set camera rotation
 	float camRot = mSprite.getRotation() - display.getCamera().getRotation();
@@ -188,6 +187,8 @@ void Cat::render(Display& display)
 		display.getCamera().rotate(camRot*0.03);
 
 	display.render(mSprite);
+	mYarn.render(display);
+
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)

@@ -4,7 +4,7 @@
 #include <math.h>
 
 Yarn::Yarn()
-	:mThreadingLength(3.f)
+	:mThreadingLength(10.f)
 	,mTotalLength(0.f)
 	,mLatestThreadLength(0.f)
 	,mGraceThreads(15)
@@ -40,16 +40,15 @@ void Yarn::render(Display& display)
 {
 	mRed = true;
 
-	sf::VertexArray vertices(sf::PrimitiveType::LinesStrip);
-	if (mThreads.empty())
+	if (mThreads.empty() || mCurrentTexture == nullptr)
 		return;
 
 	sf::Vector2f last = mThreads[currentBezierIndex];
 
 	//not really a loop but whatevs
-	for (currentBezierIndex; currentBezierIndex < static_cast<int>(mThreads.size()) - 4; currentBezierIndex += 3)
-	{
 
+	if (currentBezierIndex < static_cast<int>(mThreads.size()) - 4)
+	{
 		int i = currentBezierIndex;
 		sf::VertexArray bezier = makeBezier(last, mThreads[i + 1], mThreads[i + 2], mThreads[i + 3]);
 
@@ -72,7 +71,14 @@ void Yarn::render(Display& display)
 			mBeziers.back().vertices.append(sf::Vertex(p2, sf::Vector2f(0.f, getTextureY())));
 
 		}
-		mBeziers.push_back(Bezier(bezier, bezier.getBounds(), mCurrentTexture));
+
+		for (size_t i = 0; i < bezier.getVertexCount(); ++i)
+		{
+			mBeziers.back().vertices.append(bezier[i]);
+		}
+		mBeziers.back().rect = mBeziers.back().vertices.getBounds();
+	
+		currentBezierIndex += 3;
 	}
 
 
@@ -104,8 +110,8 @@ void Yarn::render(Display& display)
 		if (mCurrentTexture != nullptr)
 			textSize = static_cast<sf::Vector2f>(mCurrentTexture->getSize());
 
-		float y1 = std::fmod(mTotalLength, static_cast<sf::Vector2f>(mCurrentTexture->getSize()).y);
-		float y0 = std::fmod(mTotalLength + len, static_cast<sf::Vector2f>(mCurrentTexture->getSize()).y);
+		float y1 = std::fmod(mTotalLength, textSize.y);
+		float y0 = std::fmod(mTotalLength + len, textSize.y);
 
 		ret.append(sf::Vertex(p0, sf::Vector2f(0.f, y0)));
 		ret.append(sf::Vertex(p1, sf::Vector2f(textSize.x, y0)));
@@ -288,4 +294,5 @@ bool Yarn::intersectLineCircle(sf::Vector2f linePoint0, sf::Vector2f linePoint1,
 void Yarn::setTexture(sf::Texture* texture)
 {
 	mCurrentTexture = texture;
+	mBeziers.push_back(Bezier(sf::VertexArray(sf::PrimitiveType::Quads), sf::FloatRect(), mCurrentTexture));
 }

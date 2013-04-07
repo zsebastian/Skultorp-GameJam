@@ -8,7 +8,7 @@
 
 class Display;
 class Entity;
-class EntityManager : public std::enable_shared_from_this<EntityManager>
+class EntityManager
 {
 public:
 	typedef std::vector<std::shared_ptr<Entity> > EntityVec;
@@ -24,8 +24,6 @@ public:
 	void clear();
 	void loadLevel(const std::string& filename);
 private:
-	std::shared_ptr<EntityManager> getptr(){return shared_from_this();}
-
 	EntityVec mEntities;
 	GravityField mGravityField;
 	Editor mEditor;

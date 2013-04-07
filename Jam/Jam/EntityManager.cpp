@@ -5,6 +5,8 @@
 #include "Ball.h"
 #include "tinyxml2.h"
 #include "Cat.h"
+#include "LooseEnd.h"
+#include <iostream>
 
 EntityManager::EntityManager()
 	:mEditor(this),
@@ -43,6 +45,8 @@ void EntityManager::update()
 	}
 
 	Util::eraseIf(mEntities, [](std::shared_ptr<Entity> entity) {return entity->isDead();});
+
+	checkLevelCleard();
 
 	//Update editor
 	mEditor.update();
@@ -89,15 +93,16 @@ void EntityManager::clear()
 
 void EntityManager::loadLevel()
 {
+	clear();
+
 	tinyxml2::XMLDocument doc;
 	doc.LoadFile(mLevelList.top().c_str());
-
-	mLevelList.pop();
 
 	tinyxml2::XMLElement* level = doc.FirstChildElement("level");
 	tinyxml2::XMLElement* balls = level->FirstChildElement("balls");
 
-
+	tinyxml2::XMLElement* goal = level->FirstChildElement("goal");
+	mNumberOfYarn = Util::fromString<int>(goal->Attribute("value"));
 
 	for(tinyxml2::XMLElement* ball = balls->FirstChildElement("ball"); ball; ball = ball->NextSiblingElement())
 	{
@@ -108,11 +113,24 @@ void EntityManager::loadLevel()
 		float radius = Util::fromString<float>(ball->Attribute("radius"));
 		int index = Util::fromString<int>(ball->Attribute("index"));
 
-		pushEntity(std::make_shared<Ball>(position, mass, radius, index));
+		auto ballEntity = std::make_shared<Ball>(position, mass, radius, index);
+
+		//Add ball
+		pushEntity(ballEntity);
+
+		tinyxml2::XMLElement* looseEnd = ball->FirstChildElement("looseEnd");
+		float angle = Util::fromString<float>(looseEnd->Attribute("angle"));
+
+		//Add loose end
+		pushEntity(std::make_shared<LooseEnd>(ballEntity, angle));
 	}
 
 	//Add cat
-	pushEntity(std::make_shared<Cat>(sf::Vector2f(0.f, 0.f), 10.f));
+	tinyxml2::XMLElement* cat = level->FirstChildElement("cat");
+	sf::Vector2f position;
+	position.x = Util::fromString<float>(cat->Attribute("x"));
+	position.y = Util::fromString<float>(cat->Attribute("y"));
+	pushEntity(std::make_shared<Cat>(position, 10.f));
 }
 
 void EntityManager::loadLevelList()
@@ -134,9 +152,17 @@ void EntityManager::checkLevelCleard()
 {
 	if(mCat != NULL)
 	{
-		if(mCat->getNextYarn())
+		if(mCat->getNextYarn() == mNumberOfYarn)
 		{
-			//win
+			mLevelList.pop();
+			if(!mLevelList.empty())
+				loadLevel();
+			else
+			{
+				//Win!
+				std::cout << "Win!";
+				mNumberOfYarn = 0;
+			}
 		}
 	}
 }

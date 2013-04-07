@@ -198,10 +198,10 @@ void Cat::render(Display& display)
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)
 {
-	std::shared_ptr<Ball> ball = std::dynamic_pointer_cast<Ball>(entity);
+	std::shared_ptr<Ball> ball;
 	std::shared_ptr<LooseEnd> loose = std::dynamic_pointer_cast<LooseEnd>(entity);
 
-	if (ball)
+	if (Util::dynamicCast<Ball>(entity, ball))
 	{
 		mStandsOn.push_back(ball);
 

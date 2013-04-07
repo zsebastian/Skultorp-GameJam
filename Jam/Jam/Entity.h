@@ -9,6 +9,7 @@ class Display;
 class Entity
 {
 public:
+	Entity() :mIsDead(false){};
 	virtual ~Entity(){}
 
 	virtual void setPosition(const sf::Vector2f& position) = 0;
@@ -22,6 +23,12 @@ public:
 	virtual float getMass() const = 0;
 	virtual float getRadius() const = 0;
 	virtual sf::FloatRect getGlobalBounds() const = 0;
+
+	bool isDead() {return mIsDead;};
+protected:
+	void kill() {mIsDead = true;};
+private:
+	bool mIsDead;
 };
 
 #endif

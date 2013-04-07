@@ -1,19 +1,19 @@
-#ifndef BALL_H
-#define BALL_H
+#ifndef LOOSEEND_H
+#define LOOSEEND_H
 
 #include "Entity.h"
+#include <SFML\System\Vector2.hpp>
+#include <SFML\Graphics\Sprite.hpp>
+#include <SFML\Graphics\Texture.hpp>
 
-#include <SFML/Graphics/Texture.hpp>
-#include <SFML/Graphics/Sprite.hpp>
+class Ball;
 
-class Ball : public Entity
+class LooseEnd : public Entity
 {
 public:
-	Ball(const sf::Vector2f& position = sf::Vector2f(), float mass = 10.f, float radius = 50.f, size_t indexValue = 0);
+	LooseEnd(std::shared_ptr<Ball> belongsTo, float positionAngle);
 
-	virtual ~Ball();
-
-	virtual void setPosition(const sf::Vector2f& position);
+	virtual void setPosition(const sf::Vector2f& position) ;
 	virtual void setMass(float mass);
 	virtual void setRadius(float radius);
 	virtual void update();
@@ -24,20 +24,22 @@ public:
 	virtual float getMass() const;
 	virtual float getRadius() const;
 	virtual sf::FloatRect getGlobalBounds() const;
-	void resetMass();
 
 	size_t getIndexValue() const;
-	void setIndexValue(size_t indexValue);
 private:
 	sf::Vector2f mPosition;
+
 	float mMass;
 	float mRadius;
-	float mActualMass;
+	float mPositionAngle;
 
-	sf::Texture mTexture;
+	std::weak_ptr<Ball> mBelongsTo; 
+
 	sf::Sprite mSprite;
+	sf::Texture mTexture;
 
 	size_t mIndexValue;
+
 };
 
 #endif

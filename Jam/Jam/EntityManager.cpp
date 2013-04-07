@@ -37,6 +37,8 @@ void EntityManager::update()
 		}
 	}
 
+	Util::eraseIf(mEntities, [](std::shared_ptr<Entity> entity) {return entity->isDead();});
+
 	//Update editor
 	mEditor.update();
 }

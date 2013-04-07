@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "Cat.h"
 #include "Ball.h"
+#include "LooseEnd.h"
 #include "tinyxml2.h"
 #include "Utility.h"
 
@@ -8,13 +9,19 @@ Game::Game()
 {
 	entities.pushEntity(std::make_shared<Cat>(sf::Vector2f(50.f, 50.f), 10.f));
 
-	/*entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(200.f, 200.f), 200.f, 100.f));
-	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(100.f, 100.f), 100.f, 50.f));
-	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(700.f, 100.f), 100.f, 50.f));
-	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(100.f, 500.f), 100.f, 50.f));
-	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(700.f, 500.f), 100.f, 50.f));*/
+	std::shared_ptr<Ball> ball = std::make_shared<Ball>(sf::Vector2f(200.f, 200.f), 200.f, 100.f, 0);
+	entities.pushEntity(ball);
+	entities.pushEntity(std::make_shared<LooseEnd>(ball, 180));
 
-	loadLevel("data/levels/some_level.xml");
+	ball = std::make_shared<Ball>(sf::Vector2f(300.f, 200.f), 200.f, 100.f, 1);
+	entities.pushEntity(ball);
+	entities.pushEntity(std::make_shared<LooseEnd>(ball, 45));
+
+	ball = std::make_shared<Ball>(sf::Vector2f(250.f, 300.f), 200.f, 100.f, 2);
+	entities.pushEntity(ball);
+	entities.pushEntity(std::make_shared<LooseEnd>(ball, 90));
+
+	//loadLevel("data/levels/some_level.xml");
 }
 
 void Game::render(Display& display)

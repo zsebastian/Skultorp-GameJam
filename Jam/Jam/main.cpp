@@ -6,9 +6,6 @@
 
 int main()
 {
-	int i = Util::fromString<int>("1");
-	std::string str = Util::toString(12);
-
 	Display display(sf::VideoMode(1280, 720), "YarnCat");
 	StateManager stateManager;
 

@@ -10,10 +10,13 @@ struct Bezier
 {
 	sf::VertexArray vertices;
 	sf::FloatRect rect;
+	sf::Texture* texture;
 
-	Bezier(sf::VertexArray vertices, sf::FloatRect rect)
+	Bezier(sf::VertexArray vertices, sf::FloatRect rect, sf::Texture* texture)
 		:vertices(vertices)
-		,rect(rect) {};
+		,rect(rect)
+		,texture(texture)
+	{};
 
 };
 
@@ -27,6 +30,8 @@ public:
 
 	bool intersect(sf::Vector2f position, float radius);
 
+	void setTexture(sf::Texture* texture);
+
 private:
 	void addThread();
 	bool intersectLineCircle(sf::Vector2f linePoint0, sf::Vector2f linePoint1, sf::Vector2f circlePosition, float radius);
@@ -36,7 +41,7 @@ private:
 	sf::Vector2f mPosition;
 	std::vector<sf::Vector2f> mThreads;
 	int mFrameCounter;
-	const int mThreadingDelay;
+	
 
 	bool mRed;
 
@@ -45,7 +50,13 @@ private:
 
 	sf::Texture mTexture;
 
+	sf::Texture* mCurrentTexture;
+
 	float mTotalLength;
+	float mLatestThreadLength;
+	const float mThreadingLength;
+	size_t mGraceThreads;
+
 	float getTextureY();
 
 };

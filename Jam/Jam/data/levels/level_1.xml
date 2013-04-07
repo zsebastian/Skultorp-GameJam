@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<level>
+    <cat x="234.521" y="703.697"/>
+	<goal value="5"/> <!-- Number of balls -->
+    <balls>
+        <ball x="100" y="100" mass="1.2" radius="100" index="0">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="-103.707" y="472.483" mass="150" radius="150" index="1">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="410.034" y="630.93" mass="1.3" radius="150" index="2">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="800" y="900" mass="150" radius="150" index="3">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="1000" y="1100" mass="150" radius="150" index="4">
+            <looseEnd angle="0"/>
+        </ball>
+    </balls>
+</level>

@@ -95,11 +95,9 @@ void AnimationManager::init()
 
 void AnimationManager::setRotation(float angle)
 {
+	//angle = Util::angleInRange(angle);
 	mSprite.rotate(angle);
-	if(mSprite.getRotation() >= 359)
-	{
-		mSprite.setRotation(0);
-	}
+	mSprite.setRotation(Util::angleInRange(mSprite.getRotation()));
 }
 
 std::string AnimationManager::getCurrentAnimation()const

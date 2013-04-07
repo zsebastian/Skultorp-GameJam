@@ -7,6 +7,7 @@ Display::Display(sf::VideoMode videoMode, const std::string& windowText)
 	,EventHandler(sf::Event::Closed, [&](sf::Event ev){mWindow.close();})
 {
 	mWindow.setFramerateLimit(60);
+	mWindow.setVerticalSyncEnabled(true);
 }
 
 void Display::render(const sf::Drawable& drawable)

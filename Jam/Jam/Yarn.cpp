@@ -4,12 +4,12 @@
 #include <math.h>
 
 Yarn::Yarn()
-	:mThreadingLength(30.f)
+	:mThreadingLength(3.f)
 	,mTotalLength(0.f)
 	,mLatestThreadLength(0.f)
 	,mGraceThreads(15)
-	,mQuadWidth(20.f)
-	,mCurveFreq(0.01f)
+	,mQuadWidth(5.f)
+	,mCurveFreq(0.1f)
 {
 	currentBezierIndex = 0;
 	

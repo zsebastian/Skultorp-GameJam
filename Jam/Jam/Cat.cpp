@@ -27,8 +27,8 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	
 	mThreadTextures.resize(3);
 	mThreadTextures[0].loadFromFile("data/thread0.png");
-	mThreadTextures[1].loadFromFile("data/thread0.png");
-	mThreadTextures[2].loadFromFile("data/thread0.png");
+	mThreadTextures[1].loadFromFile("data/thread1.png");
+	mThreadTextures[2].loadFromFile("data/thread2.png");
 
 }
 
@@ -58,7 +58,6 @@ void Cat::update()
 {
 	mMoveSpeed = sf::Vector2f();
 
-	rotate();
 	jump();
 	jumping();
 	walk();
@@ -79,7 +78,8 @@ void Cat::update()
 
 void Cat::move()
 {
-	mPosition += mGravityVector + mMoveSpeed;
+	mGravityAcc += mGravityVector;
+	mPosition += mGravityAcc + mMoveSpeed;
 }
 
 void Cat::walk()
@@ -147,30 +147,22 @@ void Cat::jumping()
 void Cat::rotate()
 {
 	mTargetAngle = Util::angle(mGravityVector) - 90;
-	float spriteRotation = mSprite.getRotation();
+	float spriteRotation = Util::angleInRange(mSprite.getRotation());
 
-	float shortestDist = mTargetAngle - spriteRotation;
-	while(shortestDist < -180)
-	{
-		shortestDist += 360;
-	}
-	while(shortestDist > 180)
-	{
-		shortestDist -= 360;
-	}
+	float shortestDist = Util::shortestAngleDistance(mTargetAngle, spriteRotation);
 
 	float rotateSpeed = 0.5f;
 
 	if(!mCanJump)
 	{
-		rotateSpeed = 0.1;
+		rotateSpeed = 0.1f;
 	}
 	mAnimations.setRotation(shortestDist * rotateSpeed);
-
 }
 
 void Cat::render(Display& display)
 {
+	rotate();
 	mSprite = mAnimations.getSprite(mPosition);
 
 	if(mLeftDir)
@@ -212,7 +204,8 @@ void Cat::onCollision(std::shared_ptr<Entity> entity)
 		float distance = ball->getRadius() + mRadius;
 		dVec = dVec * distance;
 		mPosition = ball->getPosition() + dVec;
-		
+		mGravityAcc = sf::Vector2f(0, 0);
+
 		if(mCanJump && mAnimations.getCurrentAnimation() == "inair")
 		{
 			mAnimations.setCurrentAnimation("land");	

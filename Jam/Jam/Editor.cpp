@@ -79,7 +79,7 @@ void Editor::onButtonDown(sf::Event& e)
 		{
 			//Add new ball
 			float radius = mPotentialEntity.getRadius();
-			std::shared_ptr<Ball> ball = std::make_shared<Ball>(mMousePosition, radius*radius, radius, mCurrentIndex);
+			std::shared_ptr<Ball> ball = std::make_shared<Ball>(mMousePosition, radius * 1.5f, radius, mCurrentIndex);
 			mEntityManager->pushEntity(ball);
 			mEntityManager->pushEntity(std::make_shared<LooseEnd>(ball, 45));
 			mCurrentIndex++;

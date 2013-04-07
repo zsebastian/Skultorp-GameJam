@@ -48,7 +48,8 @@ void LooseEnd::setRadius(float radius)
 
 void LooseEnd::update()
 {
-	
+	if (mBelongsTo.expired())
+		kill();
 }
 
 void LooseEnd::render(Display& display)

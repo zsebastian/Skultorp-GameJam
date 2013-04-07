@@ -214,8 +214,14 @@ void Cat::onCollision(std::shared_ptr<Entity> entity)
 		}
 	}
 
-	//std::shared_ptr<Yarn> yarn = std::dynamic_pointer_cast<Ball>(entity);
-
+	std::shared_ptr<LooseEnd> looseEnd = std::dynamic_pointer_cast<LooseEnd>(entity);
+	if(looseEnd)
+	{
+		if(mNextYarn == looseEnd->getIndexValue())
+		{
+			mNextYarn++;
+		}
+	}
 }
 
 void Cat::setGravityVector(const sf::Vector2f& gravityVector)

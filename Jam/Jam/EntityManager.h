@@ -6,6 +6,7 @@
 #include "GravityField.h"
 #include "Editor.h"
 
+class Cat;
 class Display;
 class Entity;
 class EntityManager : public std::enable_shared_from_this<EntityManager>
@@ -27,6 +28,11 @@ private:
 	EntityVec mEntities;
 	GravityField mGravityField;
 	Editor mEditor;
+
+	void checkLevelCleard();
+
+	std::shared_ptr<Cat> mCat;
+	int mNumberOfYarn;
 };
 
 #endif

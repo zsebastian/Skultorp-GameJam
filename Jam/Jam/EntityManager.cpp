@@ -9,9 +9,10 @@
 #include <iostream>
 
 EntityManager::EntityManager()
-	:mEditor(this),
-	mCat(NULL),
-	mNumberOfYarn(0)
+	:mEditor(this)
+	,mCat(NULL)
+	,mNumberOfYarn(0)
+	,mCamera(NULL)
 {
 
 }
@@ -58,6 +59,8 @@ void EntityManager::update()
 
 void EntityManager::render(Display& display)
 {
+	mCamera = &display.getCamera();
+
 	//Render entities
 	for(auto iter = mEntities.begin(); iter != mEntities.end(); ++iter)
 		(*iter)->render(display);
@@ -100,17 +103,13 @@ void EntityManager::loadLevel()
 	clear();
 
 	if (mLevelList.empty())
-		//if no next level don't load it!
-		return;
+		return; //if no next level don't load it!
 
 	tinyxml2::XMLDocument doc;
 	doc.LoadFile(mLevelList.front().c_str());
 
 	tinyxml2::XMLElement* level = doc.FirstChildElement("level");
 	tinyxml2::XMLElement* balls = level->FirstChildElement("balls");
-
-	tinyxml2::XMLElement* goal = level->FirstChildElement("goal");
-	mNumberOfYarn = Util::fromString<int>(goal->Attribute("value"));
 
 	for(tinyxml2::XMLElement* ball = balls->FirstChildElement("ball"); ball; ball = ball->NextSiblingElement())
 	{
@@ -139,6 +138,13 @@ void EntityManager::loadLevel()
 	position.x = Util::fromString<float>(cat->Attribute("x"));
 	position.y = Util::fromString<float>(cat->Attribute("y"));
 	pushEntity(std::make_shared<Cat>(position, 10.f));
+
+	//Set camera to Cat's position
+	if(mCamera)
+	{
+		mCamera->setPosition(position);
+		mCamera->setRotation(0.f);
+	}
 }
 
 void EntityManager::loadLevelList()
@@ -160,7 +166,7 @@ void EntityManager::checkLevelCleared()
 {
 	if(mCat != NULL)
 	{
-		if(mCat->getNextYarn() == mNumberOfYarn)
+		if(mCat->getNextYarn() == 5)
 		{
 			mLevelList.pop();
 			if(!mLevelList.empty())
@@ -169,7 +175,6 @@ void EntityManager::checkLevelCleared()
 			{
 				//Win!
 				std::cout << "Win!";
-				mNumberOfYarn = 0;
 			}
 		}
 	}

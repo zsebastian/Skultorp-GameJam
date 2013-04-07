@@ -20,10 +20,15 @@ private:
 	GUIBox::Ptr mGuiBox;
 
 	void startGame(GUIButton::Ptr button);
+	void startOptions(GUIButton::Ptr button);
+	void exitGame(GUIButton::Ptr button);
+
 	void handleEvents(sf::Event& ev);
 	EventHandler eventHandler;
 
 	sf::Texture mButtonTexture;
+
+	bool mIsAlive;
 };
 
 #endif

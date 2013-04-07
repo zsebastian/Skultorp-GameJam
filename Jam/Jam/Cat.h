@@ -38,6 +38,7 @@ private:
 	sf::Vector2f mRightVector;
 	sf::Vector2f mMoveSpeed;
 	sf::Vector2f mJumpDirection;
+	sf::Vector2f mSpriteDown;
 
 	float mWalkSpeed;
 
@@ -46,6 +47,7 @@ private:
 
 	void move();
 	void walk();
+	void rotate();
 	
 	//jumping
 	void jump();
@@ -57,6 +59,9 @@ private:
 	float mCurrentJumpPower;
 	float mJumpDecelaration;
 
+	// walk
+	bool mWalking;
+
 	sf::CircleShape mTempShape;
 
 	std::shared_ptr<Ball> mStandingOn;
@@ -67,6 +72,8 @@ private:
 	// animtion
 	AnimationManager mAnimations;
 	bool mLeftDir;
+	sf::Sprite mSprite;
+	float mTargetAngle;
 
 	Yarn mYarn;
 

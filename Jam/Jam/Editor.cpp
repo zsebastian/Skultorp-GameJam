@@ -4,6 +4,7 @@
 #include "Ball.h"
 #include "EntityManager.h"
 #include "Utility.h"
+#include "tinyxml2.h"
 
 Editor::Editor(EntityManager* entityManager)
 	:mCurrentIndex(0)
@@ -150,6 +151,7 @@ void Editor::saveLevel(const std::string& filename)
 		ball->SetAttribute("mass", b->getMass());
 		ball->SetAttribute("radius", b->getRadius());
 		ball->SetAttribute("index", b->getIndex());
+
 		balls->InsertEndChild(ball);
 	}
 

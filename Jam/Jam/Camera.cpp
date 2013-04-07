@@ -13,6 +13,11 @@ void Camera::setPosition(const sf::Vector2f& position)
 	mView.setCenter(position);
 }
 
+void Camera::move(const sf::Vector2f& delta)
+{
+	setPosition(getPosition() + delta);
+}
+
 void Camera::setRotation(float rotation)
 {
 	mView.setRotation(rotation);

@@ -10,6 +10,7 @@ public:
 	Camera(const sf::Vector2f& size, const sf::Vector2f& position, float scale = 1.f);
 
 	void setPosition(const sf::Vector2f& position);
+	void move(const sf::Vector2f& delta);
 	void setRotation(float rotation);
 	void rotate(float delta);
 	void setScale(float scale);

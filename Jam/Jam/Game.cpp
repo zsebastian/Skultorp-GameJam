@@ -14,11 +14,17 @@ Game::Game()
 	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(100.f, 500.f), 100.f, 50.f));
 	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(700.f, 500.f), 100.f, 50.f));*/
 
-	loadLevel("data/levels/some_level.xml");
+	loadLevel("data/levels/test.xml");
+
+	mBackgroundTexture.loadFromFile("data/background.png");
+	mBackgroundSprite.setTexture(mBackgroundTexture);
+	mBackgroundSprite.setPosition(-1000.f, -1000.f);
+	mBackgroundSprite.setScale(2.f, 2.f);
 }
 
 void Game::render(Display& display)
 {
+	display.render(mBackgroundSprite);
 	entities.render(display);
 }
 

@@ -6,7 +6,7 @@ AnimationManager::AnimationManager(std::string texture):
 	mSize(256),
 	mCurrentAnimation("idle"),
 	mElapsed(0.f),
-	mUpdateRate(100.f),
+	mUpdateRate(150.f),
 	mCurrentFrame(0)
 {
 	mTextureBox = sf::IntRect(0, 0, mSize, mSize),
@@ -28,8 +28,12 @@ AnimationManager::~AnimationManager()
 
 void AnimationManager::setCurrentAnimation(std::string animation)
 {
-	mCurrentAnimation = animation;
-	mCurrentFrame = 0;
+	if(animation != mCurrentAnimation)
+	{
+		mCurrentFrame = 0;
+		mCurrentAnimation = animation;
+		mUpdateRate = mAnimations[mCurrentAnimation].mUpdateRate;
+	}
 }
 
 sf::Sprite AnimationManager::getSprite(sf::Vector2f& position)
@@ -70,14 +74,29 @@ void AnimationManager::init()
 
 	while(root)
 	{
-		std::string name = root->Attribute("name");
-		int rowOfSprite = Util::fromString<int>(root->Attribute("rowOfSprite"));
-		int numberOfFrames = Util::fromString<int>(root->Attribute("numberOfFrames"));
-		bool looping = Util::fromString<bool>(root->Attribute("looping"));
-		std::string next = root->Attribute("next");
+		std::string name		= root->Attribute("name");
+		int rowOfSprite			= Util::fromString<int>(root->Attribute("rowOfSprite"));
+		int numberOfFrames		= Util::fromString<int>(root->Attribute("numberOfFrames"));
+		bool looping			= Util::fromString<bool>(root->Attribute("looping"));
+		std::string next		= root->Attribute("next");
+		float updateRate		= Util::fromString<float>(root->Attribute("updateRate"));
 
-		mAnimations.insert(std::make_pair(name, Animation(rowOfSprite, numberOfFrames, looping, next)));
+		mAnimations.insert(std::make_pair(name, Animation(rowOfSprite, numberOfFrames, looping, next, updateRate)));
 
 		root = root->NextSiblingElement();
 	}
+}
+
+void AnimationManager::setRotation(float angle)
+{
+	mSprite.rotate(angle);
+	if(mSprite.getRotation() >= 359)
+	{
+		mSprite.setRotation(0);
+	}
+}
+
+std::string AnimationManager::getCurrentAnimation()const
+{
+	return mCurrentAnimation;
 }

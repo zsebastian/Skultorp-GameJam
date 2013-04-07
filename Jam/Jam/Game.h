@@ -3,6 +3,8 @@
 
 #include "State.h"
 #include "EntityManager.h"
+#include <SFML/Graphics/Texture.hpp>
+#include <SFML/Graphics/Sprite.hpp>
 
 class Game : public State
 {
@@ -13,6 +15,9 @@ public:
 	virtual bool isAlive();
 private:
 	EntityManager entities;
+
+	sf::Texture mBackgroundTexture;
+	sf::Sprite mBackgroundSprite;
 
 	void loadLevel(const std::string& filename);
 };

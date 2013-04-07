@@ -28,11 +28,14 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	setPosition(position);
 	
 	mThreadTextures.resize(10);
-	mThreadTextures[0].loadFromFile("data/Red Yarn.png");
-	mThreadTextures[1].loadFromFile("data/Blue Yarn.png");
+
+	mThreadTextures[0].loadFromFile("data/Blue Yarn.png");
+	mThreadTextures[1].loadFromFile("data/Red Yarn.png");
 	mThreadTextures[2].loadFromFile("data/Yello Yarn.png");
 	mThreadTextures[3].loadFromFile("data/Green Yarn.png");
-
+	
+	mScarfTexture.loadFromFile("data/Interface skarf.png");
+	mScarfSprite.setTexture(mScarfTexture);
 }
 
 Cat::~Cat()
@@ -184,6 +187,15 @@ void Cat::render(Display& display)
 	else
 		display.getCamera().rotate(camRot*0.01);
 
+	Camera oldCam = display.getCamera();
+	display.setToDefaultView();
+
+	mScarfSprite.setTextureRect(sf::IntRect(512 * mNextYarn, 0, 512, 256));
+	mScarfSprite.setScale(0.25f, 0.25f);
+	display.render(mScarfSprite);
+
+	display.getCamera() = oldCam;
+	
 	mYarn.render(display);
 	display.render(mSprite);
 

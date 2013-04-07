@@ -6,7 +6,8 @@
 #include <memory>
 #include "AnimationManager.h"
 #include "Yarn.h"
-
+#include <SFML\Graphics\Sprite.hpp>
+#include <SFML\Graphics\Texture.hpp>
 
 class Ball;
 
@@ -43,6 +44,9 @@ private:
 	sf::Vector2f mJumpDirection;
 	sf::Vector2f mSpriteDown;
 	sf::Vector2f mGravityAcc;
+
+	sf::Sprite mScarfSprite;
+	sf::Texture mScarfTexture;
 
 	float mWalkSpeed;
 

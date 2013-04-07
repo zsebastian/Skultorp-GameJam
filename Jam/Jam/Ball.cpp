@@ -17,11 +17,11 @@ Ball::Ball(const sf::Vector2f& position, float mass, float radius, size_t indexV
 	switch(indexValue)
 	{
 	case 0:
-		textureFilename = "data/yarn_ball_red.png";
+		textureFilename = "data/yarn_ball_blue.png";
 		mScaleModifier = 2.2f;
 		break;
 	case 1:
-		textureFilename = "data/yarn_ball_blue.png";
+		textureFilename = "data/yarn_ball_red.png";
 		mScaleModifier = 2.2f;
 		break;
 	case 2:

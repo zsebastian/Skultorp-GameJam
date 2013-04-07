@@ -160,7 +160,7 @@ void EntityManager::checkLevelCleared()
 {
 	if(mCat != NULL)
 	{
-		if(mCat->getNextYarn() == mNumberOfYarn)
+		if(mCat->getNextYarn() == 5)
 		{
 			mLevelList.pop();
 			if(!mLevelList.empty())

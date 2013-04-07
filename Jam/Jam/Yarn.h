@@ -35,6 +35,9 @@ public:
 private:
 	void addThread();
 	bool intersectLineCircle(sf::Vector2f linePoint0, sf::Vector2f linePoint1, sf::Vector2f circlePosition, float radius);
+	void bezierStrategy(Display& display);
+
+	void addQuad(sf::Vector2f, sf::Vector2f);
 
 	sf::VertexArray makeBezier(sf::Vector2f from, sf::Vector2f to, sf::Vector2f controlA, sf::Vector2f controlB);
 
@@ -62,6 +65,11 @@ private:
 
 	float getTextureY();
 
+	long long mFrameCount;
+	const long long mFramesPerQuad;
+	sf::Vector2f mPrevQuadPos;
+
+	const bool mUseBezierCurves;
 };
 
 #endif

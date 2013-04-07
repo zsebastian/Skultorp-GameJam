@@ -28,9 +28,10 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	setPosition(position);
 	
 	mThreadTextures.resize(10);
-	mThreadTextures[0].loadFromFile("data/thread0.png");
-	mThreadTextures[1].loadFromFile("data/thread1.png");
-	mThreadTextures[2].loadFromFile("data/thread2.png");
+	mThreadTextures[0].loadFromFile("data/Red Yarn.png");
+	mThreadTextures[1].loadFromFile("data/Blue Yarn.png");
+	mThreadTextures[2].loadFromFile("data/Yello Yarn.png");
+	mThreadTextures[3].loadFromFile("data/Green Yarn.png");
 
 }
 
@@ -183,8 +184,9 @@ void Cat::render(Display& display)
 	else
 		display.getCamera().rotate(camRot*0.01);
 
-	display.render(mSprite);
 	mYarn.render(display);
+	display.render(mSprite);
+
 
 }
 

@@ -34,6 +34,7 @@ public:
 	virtual sf::FloatRect getGlobalBounds() const;
 
 	int getNextYarn()const;
+	bool isAlive() const;
 private:
 	sf::Vector2f mPosition;
 	sf::Vector2f mGravityVector;
@@ -79,10 +80,9 @@ private:
 	float mTargetAngle;
 
 	Yarn mYarn;
-
-	float mTargetCameraRotation;
-
 	int mNextYarn;
+
+	bool mAlive;
 };
 
 #endif

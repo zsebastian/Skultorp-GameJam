@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <level>
-	<cat x="50" y="100"/>
-	<goal value="2"/>
+	<cat x="0" y="0"/> <!-- Cat position --> 
+	<goal value="2"/> <!-- Number of balls -->
     <balls>
         <ball x="100" y="100" mass="100" radius="100" index="0">
             <looseEnd angle="0"/>

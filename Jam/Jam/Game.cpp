@@ -2,18 +2,28 @@
 #include "Cat.h"
 #include "Ball.h"
 #include "LooseEnd.h"
-#include "tinyxml2.h"
 #include "Utility.h"
+#include "TextureManager.h"
 
 Game::Game(StateManager& stateManager)
 	:State(stateManager)
 {
-	entities.pushEntity(std::make_shared<Cat>(sf::Vector2f(50.f, 50.f), 10.f));
+	//Load textures
+	TextureManager::loadTexture("data/yarn_ball.png");
+	TextureManager::loadTexture("data/yarn_ball_large.png");
+	TextureManager::loadTexture("data/yarn_ball_small.png");
+	TextureManager::loadTexture("cat.png");
+	TextureManager::loadTexture("data/looseend.png");
 
 	mBackgroundTexture.loadFromFile("data/background.png");
+	mBackgroundTexture.setSmooth(true);
 	mBackgroundSprite.setTexture(mBackgroundTexture);
-	mBackgroundSprite.setPosition(-1000.f, -1000.f);
+	sf::FloatRect bounds = mBackgroundSprite.getLocalBounds();
+	mBackgroundSprite.setOrigin(bounds.width/2.f, bounds.height/2.f);
 	mBackgroundSprite.setScale(1.f, 1.f);
+
+	entities.loadLevelList();
+	entities.loadLevel();
 }
 
 void Game::render(Display& display)

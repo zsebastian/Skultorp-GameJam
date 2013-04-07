@@ -3,7 +3,7 @@
 #include "Ball.h"
 #include "Utility.h"
 #include <string>
-#include "LooseEnd.h"
+
 
 Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	:mMass(mass)
@@ -19,16 +19,11 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	,mAnimations("cat.png")
 	,mLeftDir(false)
 	,mSpriteDown(0.f, 1.f)
+	,mNextYarn(0)
 {
 	setRadius(40.f);
 
 	setPosition(position);
-	
-	mThreadTextures.resize(3);
-	mThreadTextures[0].loadFromFile("data/thread0.png");
-	mThreadTextures[1].loadFromFile("data/thread1.png");
-	mThreadTextures[2].loadFromFile("data/thread2.png");
-
 }
 
 Cat::~Cat()
@@ -49,8 +44,6 @@ void Cat::setMass(float mass)
 void Cat::setRadius(float radius)
 {
 	mRadius = radius;
-	mTempShape.setRadius(radius);
-	mTempShape.setOrigin(sf::Vector2f(radius, radius));
 }
 
 void Cat::update()
@@ -191,7 +184,7 @@ void Cat::render(Display& display)
 	while(camRot < -180) camRot += 360;
 	while(camRot > 180) camRot -= 360;
 
-	//if(mCanJump)
+	if(mCanJump)
 		display.getCamera().rotate(camRot*0.03);
 
 	display.render(mSprite);
@@ -200,7 +193,6 @@ void Cat::render(Display& display)
 void Cat::onCollision(std::shared_ptr<Entity> entity)
 {
 	std::shared_ptr<Ball> ball = std::dynamic_pointer_cast<Ball>(entity);
-	std::shared_ptr<LooseEnd> loose = std::dynamic_pointer_cast<LooseEnd>(entity);
 
 	if (ball)
 	{
@@ -221,13 +213,8 @@ void Cat::onCollision(std::shared_ptr<Entity> entity)
 			mCanJump = true;
 		}
 	}
-	if (loose)
-	{
-		if (loose->getIndexValue() >= mThreadTextures.size())
-			mYarn.setTexture(&mThreadTextures.back());
-		else
-			mYarn.setTexture(&mThreadTextures[loose->getIndexValue()]);
-	}
+
+	//std::shared_ptr<Yarn> yarn = std::dynamic_pointer_cast<Ball>(entity);
 
 }
 
@@ -270,4 +257,9 @@ void Cat::resetStandsOn()
 sf::FloatRect Cat::getGlobalBounds() const
 {
 	return sf::FloatRect(mPosition.x - mRadius, mPosition.y - mRadius, mPosition.x + mRadius, mPosition.y + mRadius);
+}
+
+int Cat::getNextYarn()const
+{
+	return mNextYarn;
 }

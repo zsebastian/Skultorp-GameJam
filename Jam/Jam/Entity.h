@@ -25,7 +25,7 @@ public:
 	virtual sf::FloatRect getGlobalBounds() const = 0;
 
 	bool isDead() {return mIsDead;};
-protected:
+
 	void kill() {mIsDead = true;};
 private:
 	bool mIsDead;

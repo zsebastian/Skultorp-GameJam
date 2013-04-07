@@ -17,6 +17,7 @@ public:
 
 	void addObject(std::shared_ptr<Entity>);
 	void removeObject(std::shared_ptr<Entity>);
+	void clear();
 
 	void update();
 

@@ -19,6 +19,7 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	,mAnimations("cat.png")
 	,mLeftDir(false)
 	,mSpriteDown(0.f, 1.f)
+	,mNextYarn(0)
 {
 	setRadius(40.f);
 
@@ -180,7 +181,8 @@ void Cat::render(Display& display)
 	mSprite.scale(0.4f, 0.4f);
 
 	//Set camera position
-	display.getCamera().setPosition(mPosition);
+	sf::Vector2f camPos = mPosition - display.getCamera().getPosition();
+	display.getCamera().move(sf::Vector2f(camPos.x*0.05, camPos.y*0.05));
 	
 	mYarn.render(display);
 
@@ -222,11 +224,20 @@ void Cat::onCollision(std::shared_ptr<Entity> entity)
 	}
 	if (loose)
 	{
-		if (loose->getIndexValue() >= mThreadTextures.size())
-			mYarn.setTexture(&mThreadTextures.back());
-		else
-			mYarn.setTexture(&mThreadTextures[loose->getIndexValue()]);
+		if(mNextYarn == loose->getIndexValue())
+		{
+			if (loose->getIndexValue() >= mThreadTextures.size())
+				mYarn.setTexture(&mThreadTextures.back());
+			else
+				mYarn.setTexture(&mThreadTextures[loose->getIndexValue()]);
+
+			loose->kill();
+
+			mNextYarn++;
+		}
+
 	}
+
 
 }
 
@@ -269,4 +280,9 @@ void Cat::resetStandsOn()
 sf::FloatRect Cat::getGlobalBounds() const
 {
 	return sf::FloatRect(mPosition.x - mRadius, mPosition.y - mRadius, mPosition.x + mRadius, mPosition.y + mRadius);
+}
+
+int Cat::getNextYarn()const
+{
+	return mNextYarn;
 }

@@ -21,11 +21,15 @@ Game::Game()
 	entities.pushEntity(ball);
 	entities.pushEntity(std::make_shared<LooseEnd>(ball, 90));
 
-	//loadLevel("data/levels/some_level.xml");
+	mBackgroundTexture.loadFromFile("data/background.png");
+	mBackgroundSprite.setTexture(mBackgroundTexture);
+	mBackgroundSprite.setPosition(-1000.f, -1000.f);
+	mBackgroundSprite.setScale(2.f, 2.f);
 }
 
 void Game::render(Display& display)
 {
+	display.render(mBackgroundSprite);
 	entities.render(display);
 }
 
@@ -37,24 +41,4 @@ void Game::update()
 bool Game::isAlive()
 {
 	return true;
-}
-
-void Game::loadLevel(const std::string& filename)
-{
-	tinyxml2::XMLDocument doc;
-	doc.LoadFile(filename.c_str());
-
-	tinyxml2::XMLElement* level = doc.FirstChildElement("level");
-	tinyxml2::XMLElement* balls = level->FirstChildElement("balls");
-
-	for(tinyxml2::XMLElement* ball = balls->FirstChildElement("ball"); ball; ball = ball->NextSiblingElement())
-	{
-		sf::Vector2f position;
-		position.x = Util::fromString<float>(ball->Attribute("x"));
-		position.y = Util::fromString<float>(ball->Attribute("y"));
-		float mass = Util::fromString<float>(ball->Attribute("mass"));
-		float radius = Util::fromString<float>(ball->Attribute("radius"));
-
-		entities.pushEntity(std::make_shared<Ball>(position, mass, radius));
-	}
 }

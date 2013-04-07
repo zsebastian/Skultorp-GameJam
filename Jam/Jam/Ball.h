@@ -10,7 +10,6 @@ class Ball : public Entity
 {
 public:
 	Ball(const sf::Vector2f& position = sf::Vector2f(), float mass = 10.f, float radius = 50.f, size_t indexValue = 0);
-
 	virtual ~Ball();
 
 	virtual void setPosition(const sf::Vector2f& position);
@@ -24,6 +23,7 @@ public:
 	virtual float getMass() const;
 	virtual float getRadius() const;
 	virtual sf::FloatRect getGlobalBounds() const;
+	int getIndex() const;
 	void resetMass();
 
 	size_t getIndexValue() const;
@@ -33,6 +33,7 @@ private:
 	float mMass;
 	float mRadius;
 	float mActualMass;
+	int mIndex;
 
 	sf::Texture mTexture;
 	sf::Sprite mSprite;

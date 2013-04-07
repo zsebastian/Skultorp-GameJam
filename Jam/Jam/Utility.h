@@ -12,6 +12,10 @@
 namespace Util
 {
 	#define PI 3.14159265359f
+	
+	int random(int min, int max);
+	float angleInRange(float angle);
+	float shortestAngleDistance(float targetAngle, float currentAngle);
 
 	template <class T, typename predT>
 	inline void eraseIf(T& cont, predT& pred)
@@ -84,10 +88,7 @@ namespace Util
 	float angle(sf::Vector2<T> v)
 	{
 		float angle = std::atan2(v.y, v.x) * 180 / 3.14f;
-		if(angle >= 359)
-		{
-			angle = 0;
-		}
+		angle = angleInRange(angle);
 		return angle; 
 	};
 
@@ -127,7 +128,6 @@ namespace Util
 		return std::dynamic_pointer_cast<T>(testObject);
 	}
 
-	int random(int min, int max);
 };
 
 

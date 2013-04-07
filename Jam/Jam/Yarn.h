@@ -55,6 +55,9 @@ private:
 	float mTotalLength;
 	float mLatestThreadLength;
 	const float mThreadingLength;
+	const float mQuadWidth;
+	const float mCurveFreq;
+
 	size_t mGraceThreads;
 
 	float getTextureY();

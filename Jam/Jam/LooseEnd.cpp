@@ -36,6 +36,8 @@ void LooseEnd::setPosition(const sf::Vector2f& position)
 	sf::Vector2f placeVec(Util::normalize(distVec) * distance);
 
 	mPosition = placeVec + ballPos;
+
+	mSprite.setRotation(Util::angle(mPosition - ballPos) +90);
 }
 
 void LooseEnd::setMass(float mass)
@@ -50,7 +52,8 @@ void LooseEnd::setRadius(float radius)
 
 void LooseEnd::update()
 {
-	
+	if (mBelongsTo.expired())
+		kill();
 }
 
 void LooseEnd::render(Display& display)

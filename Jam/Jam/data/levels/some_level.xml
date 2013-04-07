@@ -3,6 +3,7 @@
 	<cat x="50" y="100"/>
 	<goal value="2"/>
 	<balls>
+<<<<<<< HEAD
         <ball x="0" y="100" mass="1.0022" radius="100" index="0">
             <looseEnd angle="0"/>
         </ball>
@@ -14,3 +15,10 @@
         </ball>
     </balls>
 </level>
+=======
+		<ball x="100.f" y="100.f" mass="100.f" radius="100.f"/>
+		<ball x="100.f" y="400.f" mass="300.f" radius="150.f"/>
+		<ball x="300.f" y="300.f" mass="600.f" radius="300.f"/>
+	</balls>
+</level>
+>>>>>>> d33782ad167fc6a523bcf0325ba302fd82bb9af7

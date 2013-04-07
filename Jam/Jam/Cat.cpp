@@ -58,7 +58,6 @@ void Cat::update()
 {
 	mMoveSpeed = sf::Vector2f();
 
-	rotate();
 	jump();
 	jumping();
 	walk();
@@ -79,7 +78,8 @@ void Cat::update()
 
 void Cat::move()
 {
-	mPosition += mGravityVector + mMoveSpeed;
+	mGravityAcc += mGravityVector;
+	mPosition += mGravityAcc + mMoveSpeed;
 }
 
 void Cat::walk()
@@ -147,30 +147,22 @@ void Cat::jumping()
 void Cat::rotate()
 {
 	mTargetAngle = Util::angle(mGravityVector) - 90;
-	float spriteRotation = mSprite.getRotation();
+	float spriteRotation = Util::angleInRange(mSprite.getRotation());
 
-	float shortestDist = mTargetAngle - spriteRotation;
-	while(shortestDist < -180)
-	{
-		shortestDist += 360;
-	}
-	while(shortestDist > 180)
-	{
-		shortestDist -= 360;
-	}
+	float shortestDist = Util::shortestAngleDistance(mTargetAngle, spriteRotation);
 
 	float rotateSpeed = 0.5f;
 
 	if(!mCanJump)
 	{
-		rotateSpeed = 0.1;
+		rotateSpeed = 0.1f;
 	}
 	mAnimations.setRotation(shortestDist * rotateSpeed);
-
 }
 
 void Cat::render(Display& display)
 {
+	rotate();
 	mSprite = mAnimations.getSprite(mPosition);
 
 	if(mLeftDir)
@@ -184,7 +176,6 @@ void Cat::render(Display& display)
 	sf::Vector2f camPos = mPosition - display.getCamera().getPosition();
 	display.getCamera().move(sf::Vector2f(camPos.x*0.05, camPos.y*0.05));
 	
-	mYarn.render(display);
 
 	//Set camera rotation
 	float camRot = mSprite.getRotation() - display.getCamera().getRotation();
@@ -198,6 +189,8 @@ void Cat::render(Display& display)
 		display.getCamera().rotate(camRot*0.03);
 
 	display.render(mSprite);
+	mYarn.render(display);
+
 }
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)
@@ -214,7 +207,8 @@ void Cat::onCollision(std::shared_ptr<Entity> entity)
 		float distance = ball->getRadius() + mRadius;
 		dVec = dVec * distance;
 		mPosition = ball->getPosition() + dVec;
-		
+		mGravityAcc = sf::Vector2f(0, 0);
+
 		if(mCanJump && mAnimations.getCurrentAnimation() == "inair")
 		{
 			mAnimations.setCurrentAnimation("land");	

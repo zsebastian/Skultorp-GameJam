@@ -41,6 +41,7 @@ private:
 	sf::Vector2f mMoveSpeed;
 	sf::Vector2f mJumpDirection;
 	sf::Vector2f mSpriteDown;
+	sf::Vector2f mGravityAcc;
 
 	float mWalkSpeed;
 

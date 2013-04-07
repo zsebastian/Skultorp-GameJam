@@ -4,10 +4,12 @@
 #include <math.h>
 
 Yarn::Yarn()
-	:mThreadingLength(30.f)
+	:mThreadingLength(10.f)
 	,mTotalLength(0.f)
 	,mLatestThreadLength(0.f)
 	,mGraceThreads(15)
+	,mQuadWidth(5.f)
+	,mCurveFreq(0.1f)
 {
 	currentBezierIndex = 0;
 	
@@ -38,16 +40,15 @@ void Yarn::render(Display& display)
 {
 	mRed = true;
 
-	sf::VertexArray vertices(sf::PrimitiveType::LinesStrip);
-	if (mThreads.empty())
+	if (mThreads.empty() || mCurrentTexture == nullptr)
 		return;
 
 	sf::Vector2f last = mThreads[currentBezierIndex];
 
 	//not really a loop but whatevs
-	for (currentBezierIndex; currentBezierIndex < static_cast<int>(mThreads.size()) - 4; currentBezierIndex += 3)
-	{
 
+	if (currentBezierIndex < static_cast<int>(mThreads.size()) - 4)
+	{
 		int i = currentBezierIndex;
 		sf::VertexArray bezier = makeBezier(last, mThreads[i + 1], mThreads[i + 2], mThreads[i + 3]);
 
@@ -70,7 +71,14 @@ void Yarn::render(Display& display)
 			mBeziers.back().vertices.append(sf::Vertex(p2, sf::Vector2f(0.f, getTextureY())));
 
 		}
-		mBeziers.push_back(Bezier(bezier, bezier.getBounds(), mCurrentTexture));
+
+		for (size_t i = 0; i < bezier.getVertexCount(); ++i)
+		{
+			mBeziers.back().vertices.append(bezier[i]);
+		}
+		mBeziers.back().rect = mBeziers.back().vertices.getBounds();
+	
+		currentBezierIndex += 3;
 	}
 
 
@@ -91,20 +99,24 @@ void Yarn::render(Display& display)
 		sf::Vector2f normal = Util::normalize(Util::getNormal(dir));
 		sf::VertexArray& lastBez = mBeziers.back().vertices;
 
-		sf::Vector2f p0 = mPosition - normal * 5.f;
-		sf::Vector2f p1 = mPosition + normal * 5.f;
+		sf::Vector2f p0 = mPosition - normal * mQuadWidth;
+		sf::Vector2f p1 = mPosition + normal * mQuadWidth;
 		sf::Vector2f p2 = lastBez[lastBez.getVertexCount() - 2].position;
 		sf::Vector2f p3 = lastBez[lastBez.getVertexCount() - 1].position;
 		
+		float len = Util::length(p0 - p2);
 		sf::Vector2f textSize;
 
 		if (mCurrentTexture != nullptr)
 			textSize = static_cast<sf::Vector2f>(mCurrentTexture->getSize());
 
-		ret.append(sf::Vertex(p0, sf::Vector2f(0.f, 0.f)));
-		ret.append(sf::Vertex(p1, sf::Vector2f(textSize.x, 0.f)));
-		ret.append(sf::Vertex(p3, sf::Vector2f(textSize.x, textSize.y)));
-		ret.append(sf::Vertex(p2, sf::Vector2f(0.f, textSize.y)));
+		float y1 = std::fmod(mTotalLength, textSize.y);
+		float y0 = std::fmod(mTotalLength + len, textSize.y);
+
+		ret.append(sf::Vertex(p0, sf::Vector2f(0.f, y0)));
+		ret.append(sf::Vertex(p1, sf::Vector2f(textSize.x, y0)));
+		ret.append(sf::Vertex(p3, sf::Vector2f(textSize.x, y1)));
+		ret.append(sf::Vertex(p2, sf::Vector2f(0.f, y1)));
 
 		sf::RenderStates rend(mBeziers.back().texture);
 		display.render(ret, rend);
@@ -126,8 +138,7 @@ sf::VertexArray Yarn::makeBezier(sf::Vector2f p0, sf::Vector2f p1, sf::Vector2f 
 
 	std::vector<sf::Vector2f> plots;
 
-	const float quadWidth = 5.f;
-	const float curveFreq = 0.2f;
+
 	float qx, qy;
     float q1, q2, q3, q4;
     float t = 0.0;
@@ -152,23 +163,23 @@ sf::VertexArray Yarn::makeBezier(sf::Vector2f p0, sf::Vector2f p1, sf::Vector2f 
 
 		plots.push_back(sf::Vector2f(qx, qy));
 
-        t = t + curveFreq;
+        t = t + mCurveFreq;
     }
 
 	sf::Vector2f prevp0;
 	sf::Vector2f prevp1;
 	sf::Vector2f dir = plots[0] - plots[1];
 	sf::Vector2f normal = Util::normalize(Util::getNormal(dir));
-	prevp0 = plots[0] + normal * quadWidth;
-	prevp1 = plots[0] - normal * quadWidth;
+	prevp0 = plots[0] + normal * mQuadWidth;
+	prevp1 = plots[0] - normal * mQuadWidth;
 	
 	for (size_t i = 1; i < plots.size(); ++i)
 	{
 		sf::Vector2f dir = plots[i - 1] - plots[i];
 		sf::Vector2f normal = Util::normalize(Util::getNormal(dir));
 		
-		sf::Vector2f p0 = plots[i] + normal * quadWidth;
-		sf::Vector2f p1 = plots[i] - normal * quadWidth;
+		sf::Vector2f p0 = plots[i] + normal * mQuadWidth;
+		sf::Vector2f p1 = plots[i] - normal * mQuadWidth;
 
 		float distance = Util::length(dir);
 
@@ -195,7 +206,7 @@ float Yarn::getTextureY()
 	if (mCurrentTexture == nullptr)
 		return 0.f;
 
-	return std::fmod(mTotalLength, static_cast<sf::Vector2f>(mCurrentTexture->getSize()).x);
+	return std::fmod(mTotalLength, static_cast<sf::Vector2f>(mCurrentTexture->getSize()).y);
 }
 
 bool Yarn::intersect(sf::Vector2f position, float radius)
@@ -283,4 +294,5 @@ bool Yarn::intersectLineCircle(sf::Vector2f linePoint0, sf::Vector2f linePoint1,
 void Yarn::setTexture(sf::Texture* texture)
 {
 	mCurrentTexture = texture;
+	mBeziers.push_back(Bezier(sf::VertexArray(sf::PrimitiveType::Quads), sf::FloatRect(), mCurrentTexture));
 }

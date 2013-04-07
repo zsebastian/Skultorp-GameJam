@@ -32,6 +32,8 @@ public:
 	virtual float getMass() const;
 	virtual float getRadius() const;
 	virtual sf::FloatRect getGlobalBounds() const;
+
+	int getNextYarn()const;
 private:
 	sf::Vector2f mPosition;
 	sf::Vector2f mGravityVector;
@@ -67,7 +69,7 @@ private:
 	std::shared_ptr<Ball> mStandingOn;
 
 	std::vector<std::shared_ptr<Ball>> mStandsOn;
-	std::vector<sf::Texture> mThreadTextures;
+
 
 	// animtion
 	AnimationManager mAnimations;
@@ -79,6 +81,7 @@ private:
 
 	float mTargetCameraRotation;
 
+	int mNextYarn;
 };
 
 #endif

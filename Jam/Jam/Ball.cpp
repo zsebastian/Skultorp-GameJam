@@ -33,11 +33,14 @@ Ball::Ball(const sf::Vector2f& position, float mass, float radius, size_t indexV
 		break;
 	case 3:
 		textureFilename = "data/yarn_ball_green.png";
-		mScaleModifier = 2.2f;
+		mScaleModifier = 2.4f;
 		break;
 	case 4:
 		textureFilename = "data/yarn_ball_goal.png";
-		mScaleModifier = 2.2f;
+		mScaleModifier = 7.f;
+		originAdjustX = -27.f;
+		originAdjustY = 27.f;
+
 		break;
 	default:
 		textureFilename = "data/yarn_ball_red.png";

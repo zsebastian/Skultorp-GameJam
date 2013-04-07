@@ -4,12 +4,15 @@
 #include <math.h>
 
 Yarn::Yarn()
-	:mThreadingLength(10.f)
+	:mThreadingLength(5.f)
 	,mTotalLength(0.f)
 	,mLatestThreadLength(0.f)
 	,mGraceThreads(15)
 	,mQuadWidth(5.f)
 	,mCurveFreq(0.1f)
+	,mFrameCount(0)
+	,mFramesPerQuad(10)
+	,mUseBezierCurves(true)
 {
 	currentBezierIndex = 0;
 	
@@ -18,6 +21,15 @@ Yarn::Yarn()
 
 void Yarn::updatePosition(sf::Vector2f position, bool add)
 {
+	if (!mUseBezierCurves)
+	{
+		++mFrameCount;
+		if (mFrameCount % mFramesPerQuad == 0)
+		{
+			addQuad(mPrevQuadPos, position);
+			mPrevQuadPos = position;
+		}
+	}
 	if (mCurrentTexture == nullptr)
 	{
 		mLatestThreadLength = 0.f;
@@ -43,6 +55,23 @@ void Yarn::render(Display& display)
 	if (mThreads.empty() || mCurrentTexture == nullptr)
 		return;
 
+	if (mUseBezierCurves)
+		bezierStrategy(display);
+
+	for (auto iter = mBeziers.begin(); iter != mBeziers.end(); ++iter)
+	{
+		sf::RenderStates rend(iter->texture);
+
+		display.render(iter->vertices, rend);
+	}
+
+	
+}
+
+
+//Not used, just saved. Badly
+void Yarn::bezierStrategy(Display& display)
+{
 	sf::Vector2f last = mThreads[currentBezierIndex].first;
 
 	//not really a loop but whatevs
@@ -62,13 +91,18 @@ void Yarn::render(Display& display)
 			sf::Vector2f p1(last[last.getVertexCount() - 2].position);
 			sf::Vector2f p2(bezier[0].position);
 			sf::Vector2f p3(bezier[1].position);
+			float ty0 = last[last.getVertexCount() - 1].texCoords.y;
+			float ty1 = last[last.getVertexCount() - 2].texCoords.y;
 
-			mBeziers.back().vertices.append(sf::Vertex(p0, sf::Vector2f(0.f, getTextureY())));
-			mBeziers.back().vertices.append(sf::Vertex(p1, sf::Vector2f(textSize.x, getTextureY())));
+			float ty2 = bezier[0].texCoords.y;
+			float ty3 = bezier[1].texCoords.y;
+
+			mBeziers.back().vertices.append(sf::Vertex(p0, sf::Vector2f(0.f, ty0)));
+			mBeziers.back().vertices.append(sf::Vertex(p1, sf::Vector2f(textSize.x, ty1)));
 
 
-			mBeziers.back().vertices.append(sf::Vertex(p3, sf::Vector2f(textSize.x, getTextureY())));
-			mBeziers.back().vertices.append(sf::Vertex(p2, sf::Vector2f(0.f, getTextureY())));
+			mBeziers.back().vertices.append(sf::Vertex(p3, sf::Vector2f(textSize.x, ty1 + 1)));
+			mBeziers.back().vertices.append(sf::Vertex(p2, sf::Vector2f(0.f, ty0 + 1)));
 
 		}
 
@@ -81,13 +115,6 @@ void Yarn::render(Display& display)
 		currentBezierIndex += 3;
 	}
 
-
-	for (auto iter = mBeziers.begin(); iter != mBeziers.end(); ++iter)
-	{
-		sf::RenderStates rend(iter->texture);
-
-		display.render(iter->vertices, rend);
-	}
 
 	if (mThreads.size() > 3 && currentBezierIndex > 0 && mBeziers.back().vertices.getVertexCount() > 2)
 	{
@@ -121,7 +148,6 @@ void Yarn::render(Display& display)
 		sf::RenderStates rend(mBeziers.back().texture);
 		display.render(ret, rend);
 	}
-	
 }
 
 void Yarn::addThread()
@@ -298,4 +324,50 @@ void Yarn::setTexture(sf::Texture* texture)
 {
 	mCurrentTexture = texture;
 	mBeziers.push_back(Bezier(sf::VertexArray(sf::PrimitiveType::Quads), sf::FloatRect(), mCurrentTexture));
+}
+
+void Yarn::addQuad(sf::Vector2f v0, sf::Vector2f v1)
+{
+	if (mCurrentTexture == nullptr)
+		return ;
+
+	sf::Vector2f textSize = static_cast<sf::Vector2f>(mCurrentTexture->getSize());	
+
+	sf::Vector2f dir = v1 - v0;
+	sf::Vector2f normal = Util::normalize(Util::getNormal(dir));
+		
+	sf::Vector2f p0 = v0 + normal * mQuadWidth;
+	sf::Vector2f p1 = v0 - normal * mQuadWidth;
+	
+	sf::VertexArray& lastBez = mBeziers.back().vertices;
+
+	sf::Vector2f p2;
+	sf::Vector2f p3;
+
+	if (lastBez.getVertexCount() < 2)
+	{
+		p2 = v1 + normal * mQuadWidth;
+		p3 = v1 - normal * mQuadWidth;
+	}
+	else
+	{
+		p2 = lastBez[lastBez.getVertexCount() - 1].position;
+		p3 = lastBez[lastBez.getVertexCount() - 2].position;
+	}
+
+	float distance = Util::length(dir);
+	if (distance > 30)
+		distance = distance;
+
+	if (Util::floatCompare(distance, 0.f))
+		return;
+
+	mBeziers.back().vertices.append(sf::Vertex(p2, sf::Vector2f(0.f, getTextureY())));
+	mBeziers.back().vertices.append(sf::Vertex(p3, sf::Vector2f(textSize.x, getTextureY())));
+	mTotalLength += distance;
+
+	mBeziers.back().vertices.append(sf::Vertex(p1, sf::Vector2f(textSize.x, getTextureY())));
+	mBeziers.back().vertices.append(sf::Vertex(p0, sf::Vector2f(0.f, getTextureY())));
+
+	mBeziers.back().rect = mBeziers.back().vertices.getBounds();
 }

@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <level>
-    <cat x="-34.7194" y="-1626.75"/>
+    <cat x="355.264" y="-240.725"/>
     <balls>
         <ball x="279.999" y="-1624.38" mass="104" radius="104" index="1">
             <looseEnd angle="0"/>
         </ball>
-        <ball x="-170.135" y="-1354.58" mass="1.00306" radius="264" index="0">
+        <ball x="-103.707" y="472.483" mass="150" radius="150" index="1">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="410.034" y="630.93" mass="1.3" radius="150" index="2">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="800" y="900" mass="150" radius="150" index="3">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="1000" y="1100" mass="150" radius="150" index="4">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="271.219" y="-252.017" mass="1.112" radius="44.8" index="2">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="-115.743" y="-283.26" mass="86.7279" radius="150.4" index="2">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="-478.071" y="120.3" mass="292" radius="233.6" index="2">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="527.928" y="118.601" mass="52" radius="52" index="4">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="253.639" y="341.363" mass="52" radius="52" index="4">
             <looseEnd angle="0"/>
         </ball>
     </balls>

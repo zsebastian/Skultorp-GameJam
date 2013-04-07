@@ -21,6 +21,7 @@ public:
 private:
 
 	void init();
+	std::string regexReplace(const std::string& str);
 
 	// textures
 	sf::Texture mTexture;
@@ -52,6 +53,8 @@ private:
 			mNext = next;
 			mUpdateRate = updateRate;
 		}
+
+
 
 		int mRowOfSprite;
 		int mNumberOfFrames;

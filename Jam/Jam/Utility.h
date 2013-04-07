@@ -6,9 +6,12 @@
 #include <sstream>
 #include <cmath>
 #include <limits>
+#include <math.h>
 
 namespace Util
 {
+	#define PI 3.14159265359f
+
 	template <class T, typename predT>
 	inline void eraseIf(T& cont, predT& pred)
 	{
@@ -99,6 +102,17 @@ namespace Util
 		return v0.x * v1.x + v0.y * v1.y;
 	};
 
+	template <typename T>
+	sf::Vector2<T> getVectorFromAngle(float angle)
+	{
+		float radians = angle * PI / 180; 
+		sf::Vector2<T> ret;
+		ret.x = std::cos(radians);
+		ret.y = std::sin(radians);
+		return ret;
+	}
+
+	int random(int min, int max);
 };
 
 

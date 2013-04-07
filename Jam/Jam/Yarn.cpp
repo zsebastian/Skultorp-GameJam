@@ -4,22 +4,33 @@
 #include <math.h>
 
 Yarn::Yarn()
-	:mThreadingDelay(5)
+	:mThreadingLength(30.f)
 	,mTotalLength(0.f)
+	,mLatestThreadLength(0.f)
+	,mGraceThreads(15)
 {
-	mFrameCounter = mThreadingDelay;
 	currentBezierIndex = 0;
-	mTexture.loadFromFile("data/thread.png");
+	
+	mCurrentTexture = nullptr;
 }
 
 void Yarn::updatePosition(sf::Vector2f position, bool add)
 {
-	++mFrameCounter;
-	mPosition = position;
-	if (mFrameCounter > mThreadingDelay)
+	if (mCurrentTexture == nullptr)
 	{
-		mFrameCounter = 0;
-		addThread();
+		mLatestThreadLength = 0.f;
+	}
+	else
+	{
+		mLatestThreadLength += Util::length(mPosition - position);
+
+		mPosition = position;
+		if (mLatestThreadLength > mThreadingLength)
+		{
+			mLatestThreadLength = 0.f;
+			mFrameCounter = 0;
+			addThread();
+		}
 	}
 }
 
@@ -59,13 +70,14 @@ void Yarn::render(Display& display)
 			mBeziers.back().vertices.append(sf::Vertex(p2, sf::Vector2f(0.f, getTextureY())));
 
 		}
-		mBeziers.push_back(Bezier(bezier, bezier.getBounds()));
+		mBeziers.push_back(Bezier(bezier, bezier.getBounds(), mCurrentTexture));
 	}
 
-	sf::RenderStates rend(&mTexture);
 
 	for (auto iter = mBeziers.begin(); iter != mBeziers.end(); ++iter)
 	{
+		sf::RenderStates rend(iter->texture);
+
 		display.render(iter->vertices, rend);
 	}
 
@@ -84,13 +96,17 @@ void Yarn::render(Display& display)
 		sf::Vector2f p2 = lastBez[lastBez.getVertexCount() - 2].position;
 		sf::Vector2f p3 = lastBez[lastBez.getVertexCount() - 1].position;
 		
-		sf::Vector2f textSize = static_cast<sf::Vector2f>(mTexture.getSize());
+		sf::Vector2f textSize;
+
+		if (mCurrentTexture != nullptr)
+			textSize = static_cast<sf::Vector2f>(mCurrentTexture->getSize());
 
 		ret.append(sf::Vertex(p0, sf::Vector2f(0.f, 0.f)));
 		ret.append(sf::Vertex(p1, sf::Vector2f(textSize.x, 0.f)));
 		ret.append(sf::Vertex(p3, sf::Vector2f(textSize.x, textSize.y)));
 		ret.append(sf::Vertex(p2, sf::Vector2f(0.f, textSize.y)));
 
+		sf::RenderStates rend(mBeziers.back().texture);
 		display.render(ret, rend);
 	}
 	
@@ -104,11 +120,14 @@ void Yarn::addThread()
 sf::VertexArray Yarn::makeBezier(sf::Vector2f p0, sf::Vector2f p1, sf::Vector2f p2, sf::Vector2f p3)
 {
 	sf::VertexArray ret(sf::PrimitiveType::Quads);
-	sf::Vector2f textSize = static_cast<sf::Vector2f>(mTexture.getSize());	
+	sf::Vector2f textSize;
+	if (mCurrentTexture != nullptr)
+		textSize = static_cast<sf::Vector2f>(mCurrentTexture->getSize());	
+
 	std::vector<sf::Vector2f> plots;
 
 	const float quadWidth = 5.f;
-	const float curveFreq = 0.1f;
+	const float curveFreq = 0.2f;
 	float qx, qy;
     float q1, q2, q3, q4;
     float t = 0.0;
@@ -173,14 +192,17 @@ sf::VertexArray Yarn::makeBezier(sf::Vector2f p0, sf::Vector2f p1, sf::Vector2f 
 
 float Yarn::getTextureY()
 {
-	return std::fmod(mTotalLength, static_cast<sf::Vector2f>(mTexture.getSize()).x);
+	if (mCurrentTexture == nullptr)
+		return 0.f;
+
+	return std::fmod(mTotalLength, static_cast<sf::Vector2f>(mCurrentTexture->getSize()).x);
 }
 
 bool Yarn::intersect(sf::Vector2f position, float radius)
 {
-	if (mThreads.size() > 1)
+	if (mThreads.size() > 1 && mThreads.size() > mGraceThreads)
 	{
-		for (size_t i = 1; i < mThreads.size(); ++i)
+		for (size_t i = 1; i < mThreads.size() - mGraceThreads; ++i)
 		{
 			sf::Vector2f v0 = mThreads[i - 1];
 			sf::Vector2f v1 = mThreads[i];
@@ -256,4 +278,9 @@ bool Yarn::intersectLineCircle(sf::Vector2f linePoint0, sf::Vector2f linePoint1,
 		// no intn: FallShort, Past, CompletelyInside
 		return false ;
 	}
+}
+
+void Yarn::setTexture(sf::Texture* texture)
+{
+	mCurrentTexture = texture;
 }

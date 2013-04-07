@@ -2,13 +2,13 @@
 #include "Display.h"
 #include "Utility.h"
 
-Ball::Ball(const sf::Vector2f& position, float mass, float radius, int index)
+Ball::Ball(const sf::Vector2f& position, float mass, float radius, size_t indexValue)
 	:mMass(mass)
 	,mActualMass(mass)
 	,mPosition(position)
-	,mIndex(index)
+	,mIndexValue(indexValue)
 {
-	switch(index)
+	switch(indexValue)
 	{
 	case 0:
 		mTexture.loadFromFile("data/yarn_ball.png");
@@ -28,6 +28,8 @@ Ball::Ball(const sf::Vector2f& position, float mass, float radius, int index)
 	case 5:
 		mTexture.loadFromFile("data/yarn_ball_small.png");
 		break;
+	default:
+		mTexture.loadFromFile("data/yarn_ball.png");
 	}
 
 	mSprite.setTexture(mTexture);
@@ -109,4 +111,14 @@ int Ball::getIndex() const
 void Ball::resetMass()
 {
 	mActualMass = 1.f;
+}
+
+size_t Ball::getIndexValue() const
+{
+	return mIndexValue;
+}
+
+void Ball::setIndexValue(size_t indexValue)
+{
+	mIndexValue = indexValue;
 }

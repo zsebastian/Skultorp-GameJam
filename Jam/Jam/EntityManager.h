@@ -22,6 +22,7 @@ public:
 	void pushEntity(std::shared_ptr<Entity>);
 	void popEntity(std::shared_ptr<Entity> entity);
 	void clear();
+	void loadLevel(const std::string& filename);
 private:
 	std::shared_ptr<EntityManager> getptr(){return shared_from_this();}
 

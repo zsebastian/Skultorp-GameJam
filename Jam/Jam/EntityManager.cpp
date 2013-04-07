@@ -2,6 +2,8 @@
 #include "Display.h"
 #include "Entity.h"
 #include "Utility.h"
+#include "Ball.h"
+#include "tinyxml2.h"
 
 EntityManager::EntityManager()
 	:mEditor(this)
@@ -36,6 +38,8 @@ void EntityManager::update()
 			}
 		}
 	}
+
+	Util::eraseIf(mEntities, [](std::shared_ptr<Entity> entity) {return entity->isDead();});
 
 	//Update editor
 	mEditor.update();
@@ -72,4 +76,27 @@ void EntityManager::clear()
 	mEntities.clear();
 	mGravityField.clear();
 	mEditor.clear();
+}
+
+void EntityManager::loadLevel(const std::string& filename)
+{
+	tinyxml2::XMLDocument doc;
+	doc.LoadFile(filename.c_str());
+
+	tinyxml2::XMLElement* level = doc.FirstChildElement("level");
+	tinyxml2::XMLElement* balls = level->FirstChildElement("balls");
+
+
+
+	for(tinyxml2::XMLElement* ball = balls->FirstChildElement("ball"); ball; ball = ball->NextSiblingElement())
+	{
+		sf::Vector2f position;
+		position.x = Util::fromString<float>(ball->Attribute("x"));
+		position.y = Util::fromString<float>(ball->Attribute("y"));
+		float mass = Util::fromString<float>(ball->Attribute("mass"));
+		float radius = Util::fromString<float>(ball->Attribute("radius"));
+		int index = Util::fromString<int>(ball->Attribute("index"));
+
+		pushEntity(std::make_shared<Ball>(position, mass, radius, index));
+	}
 }

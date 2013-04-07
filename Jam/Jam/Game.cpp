@@ -1,20 +1,26 @@
 #include "Game.h"
 #include "Cat.h"
 #include "Ball.h"
-#include "tinyxml2.h"
+#include "LooseEnd.h"
 #include "Utility.h"
 
 Game::Game()
 {
 	entities.pushEntity(std::make_shared<Cat>(sf::Vector2f(50.f, 50.f), 10.f));
 
-	/*entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(200.f, 200.f), 200.f, 100.f));
-	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(100.f, 100.f), 100.f, 50.f));
-	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(700.f, 100.f), 100.f, 50.f));
-	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(100.f, 500.f), 100.f, 50.f));
-	entities.pushEntity(std::make_shared<Ball>(sf::Vector2f(700.f, 500.f), 100.f, 50.f));*/
+	std::shared_ptr<Ball> ball = std::make_shared<Ball>(sf::Vector2f(200.f, 200.f), 200.f, 100.f, 0);
+	entities.pushEntity(ball);
+	entities.pushEntity(std::make_shared<LooseEnd>(ball, 180));
 
-	loadLevel("data/levels/test.xml");
+	ball = std::make_shared<Ball>(sf::Vector2f(300.f, 200.f), 200.f, 100.f, 1);
+	entities.pushEntity(ball);
+	entities.pushEntity(std::make_shared<LooseEnd>(ball, 45));
+
+	ball = std::make_shared<Ball>(sf::Vector2f(250.f, 300.f), 200.f, 100.f, 2);
+	entities.pushEntity(ball);
+	entities.pushEntity(std::make_shared<LooseEnd>(ball, 90));
+
+	//loadLevel("data/levels/test.xml");
 
 	mBackgroundTexture.loadFromFile("data/background.png");
 	mBackgroundSprite.setTexture(mBackgroundTexture);
@@ -36,24 +42,4 @@ void Game::update()
 bool Game::isAlive()
 {
 	return true;
-}
-
-void Game::loadLevel(const std::string& filename)
-{
-	tinyxml2::XMLDocument doc;
-	doc.LoadFile(filename.c_str());
-
-	tinyxml2::XMLElement* level = doc.FirstChildElement("level");
-	tinyxml2::XMLElement* balls = level->FirstChildElement("balls");
-
-	for(tinyxml2::XMLElement* ball = balls->FirstChildElement("ball"); ball; ball = ball->NextSiblingElement())
-	{
-		sf::Vector2f position;
-		position.x = Util::fromString<float>(ball->Attribute("x"));
-		position.y = Util::fromString<float>(ball->Attribute("y"));
-		float mass = Util::fromString<float>(ball->Attribute("mass"));
-		float radius = Util::fromString<float>(ball->Attribute("radius"));
-
-		entities.pushEntity(std::make_shared<Ball>(position, mass, radius));
-	}
 }

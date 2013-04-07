@@ -2,16 +2,19 @@
 #include "Display.h"
 #include "Entity.h"
 #include "Ball.h"
+#include "LooseEnd.h"
 #include "EntityManager.h"
 #include "Utility.h"
 #include "tinyxml2.h"
 
 Editor::Editor(EntityManager* entityManager)
+	:mCurrentIndex(0)
 {
 	//Register events
 	mEventHandler.addEventListener(sf::Event::MouseButtonPressed, std::bind(&Editor::onButtonDown, this, std::placeholders::_1));
 	mEventHandler.addEventListener(sf::Event::MouseButtonReleased, std::bind(&Editor::onButtonUp, this, std::placeholders::_1));
 	mEventHandler.addEventListener(sf::Event::MouseMoved, std::bind(&Editor::onMouseMove, this, std::placeholders::_1));
+	mEventHandler.addEventListener(sf::Event::MouseWheelMoved, std::bind(&Editor::onMouseWheel, this, std::placeholders::_1));
 	mEventHandler.addEventListener(sf::Event::KeyPressed, std::bind(&Editor::onKeyDown, this, std::placeholders::_1));
 
 	mEntityManager = entityManager;
@@ -38,26 +41,18 @@ void Editor::popEntity(std::shared_ptr<Entity> entity)
 	Util::eraseIf(mEntities, pred);
 }
 
+void Editor::clear()
+{
+	mEntities.clear();
+}
+
 void Editor::update()
 {
-	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Add))
-	{
-		float radius = mPotentialEntity.getRadius();
-		mPotentialEntity.setRadius(radius + 1 );
-		mPotentialEntity.setOrigin(radius, radius);
-	}
-	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Subtract))
-	{
-		float radius = mPotentialEntity.getRadius();
-		mPotentialEntity.setRadius(radius - 1 );
-		mPotentialEntity.setOrigin(radius, radius);
-	}
+
 }
 
 void Editor::render(Display& display)
 {
-	//display.getCamera().setRotation(0.f);
-
 	//Get mouse position
 	mMousePosition = display.getWindow().convertCoords(sf::Mouse::getPosition(display.getWindow()), display.getCamera().getView());
 	mPotentialEntity.setPosition(mMousePosition);
@@ -84,7 +79,10 @@ void Editor::onButtonDown(sf::Event& e)
 		{
 			//Add new ball
 			float radius = mPotentialEntity.getRadius();
-			mEntityManager->pushEntity(std::make_shared<Ball>(mMousePosition, radius, radius));
+			std::shared_ptr<Ball> ball = std::make_shared<Ball>(mMousePosition, radius*radius, radius, mCurrentIndex);
+			mEntityManager->pushEntity(ball);
+			mEntityManager->pushEntity(std::make_shared<LooseEnd>(ball, 45));
+			mCurrentIndex++;
 		}
 	}
 }
@@ -113,6 +111,7 @@ void Editor::onKeyDown(sf::Event& e)
 		mEntityManager->popEntity(mCurrentEntity);
 		mCurrentEntity = nullptr;
 		mLockedOnEntity = false;
+		mCurrentIndex--;
 	}
 
 	//Save level
@@ -120,6 +119,13 @@ void Editor::onKeyDown(sf::Event& e)
 	{
 		saveLevel("data/levels/test.xml");
 	}
+}
+
+void Editor::onMouseWheel(sf::Event& e)
+{
+	float radius = mPotentialEntity.getRadius() + e.mouseWheel.delta*4;
+	mPotentialEntity.setRadius(radius);
+	mPotentialEntity.setOrigin(radius, radius);
 }
 
 void Editor::saveLevel(const std::string& filename)
@@ -143,6 +149,8 @@ void Editor::saveLevel(const std::string& filename)
 		ball->SetAttribute("y", position.y);
 		ball->SetAttribute("mass", b->getMass());
 		ball->SetAttribute("radius", b->getRadius());
+		ball->SetAttribute("index", b->getIndex());
+
 		balls->InsertEndChild(ball);
 	}
 

@@ -6,9 +6,10 @@
 #include "GravityField.h"
 #include "Editor.h"
 
+class Cat;
 class Display;
 class Entity;
-class EntityManager : public std::enable_shared_from_this<EntityManager>
+class EntityManager
 {
 public:
 	typedef std::vector<std::shared_ptr<Entity> > EntityVec;
@@ -21,12 +22,17 @@ public:
 
 	void pushEntity(std::shared_ptr<Entity>);
 	void popEntity(std::shared_ptr<Entity> entity);
+	void clear();
+	void loadLevel(const std::string& filename);
 private:
-	std::shared_ptr<EntityManager> getptr(){return shared_from_this();}
-
 	EntityVec mEntities;
 	GravityField mGravityField;
 	Editor mEditor;
+
+	void checkLevelCleard();
+
+	std::shared_ptr<Cat> mCat;
+	int mNumberOfYarn;
 };
 
 #endif

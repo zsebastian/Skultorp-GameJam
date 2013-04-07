@@ -3,6 +3,7 @@
 #include "Ball.h"
 #include "Utility.h"
 #include <string>
+#include "LooseEnd.h"
 
 Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	:mMass(mass)
@@ -18,6 +19,7 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	,mAnimations("cat.png")
 	,mLeftDir(false)
 	,mSpriteDown(0.f, 1.f)
+	,mNextYarn(0)
 {
 	setRadius(40.f);
 
@@ -182,7 +184,7 @@ void Cat::render(Display& display)
 	while(camRot < -180) camRot += 360;
 	while(camRot > 180) camRot -= 360;
 
-	//if(mCanJump)
+	if(mCanJump)
 		display.getCamera().rotate(camRot*0.03);
 
 	display.render(mSprite);
@@ -190,9 +192,10 @@ void Cat::render(Display& display)
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)
 {
-	std::shared_ptr<Ball> ball = std::dynamic_pointer_cast<Ball>(entity);
+	std::shared_ptr<Ball> ball;
+	std::shared_ptr<LooseEnd> loose = std::dynamic_pointer_cast<LooseEnd>(entity);
 
-	if (ball)
+	if (Util::dynamicCast<Ball>(entity, ball))
 	{
 		mStandsOn.push_back(ball);
 
@@ -209,6 +212,15 @@ void Cat::onCollision(std::shared_ptr<Entity> entity)
 		if(mAnimations.getCurrentAnimation() != "jump")
 		{
 			mCanJump = true;
+		}
+	}
+
+	std::shared_ptr<LooseEnd> looseEnd = std::dynamic_pointer_cast<LooseEnd>(entity);
+	if(looseEnd)
+	{
+		if(mNextYarn == looseEnd->getIndexValue())
+		{
+			mNextYarn++;
 		}
 	}
 }
@@ -252,4 +264,9 @@ void Cat::resetStandsOn()
 sf::FloatRect Cat::getGlobalBounds() const
 {
 	return sf::FloatRect(mPosition.x - mRadius, mPosition.y - mRadius, mPosition.x + mRadius, mPosition.y + mRadius);
+}
+
+int Cat::getNextYarn()const
+{
+	return mNextYarn;
 }

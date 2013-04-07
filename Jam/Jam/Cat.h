@@ -32,6 +32,8 @@ public:
 	virtual float getMass() const;
 	virtual float getRadius() const;
 	virtual sf::FloatRect getGlobalBounds() const;
+
+	int getNextYarn()const;
 private:
 	sf::Vector2f mPosition;
 	sf::Vector2f mGravityVector;
@@ -78,6 +80,8 @@ private:
 	Yarn mYarn;
 
 	float mTargetCameraRotation;
+
+	int mNextYarn;
 };
 
 #endif

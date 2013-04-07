@@ -2,10 +2,7 @@
 #include "Cat.h"
 #include "Ball.h"
 #include "LooseEnd.h"
-<<<<<<< HEAD
-=======
 #include "tinyxml2.h"
->>>>>>> b8856455bf94a626e80dacae1daf6ebeb073c95f
 #include "Utility.h"
 
 Game::Game()

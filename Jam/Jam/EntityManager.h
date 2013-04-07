@@ -9,6 +9,7 @@
 class Cat;
 class Display;
 class Entity;
+
 class EntityManager
 {
 public:

@@ -85,17 +85,19 @@ void EntityManager::clear()
 	mEntities.clear();
 	mGravityField.clear();
 	mEditor.clear();
+
+	mCat = NULL;
 }
 
 void EntityManager::loadLevel(const std::string& filename)
 {
+	clear();
+
 	tinyxml2::XMLDocument doc;
 	doc.LoadFile(filename.c_str());
 
 	tinyxml2::XMLElement* level = doc.FirstChildElement("level");
 	tinyxml2::XMLElement* balls = level->FirstChildElement("balls");
-
-
 
 	for(tinyxml2::XMLElement* ball = balls->FirstChildElement("ball"); ball; ball = ball->NextSiblingElement())
 	{

@@ -20,8 +20,6 @@ Game::Game()
 	entities.pushEntity(ball);
 	entities.pushEntity(std::make_shared<LooseEnd>(ball, 90));
 
-	//loadLevel("data/levels/test.xml");
-
 	mBackgroundTexture.loadFromFile("data/background.png");
 	mBackgroundSprite.setTexture(mBackgroundTexture);
 	mBackgroundSprite.setPosition(-1000.f, -1000.f);

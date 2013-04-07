@@ -63,7 +63,6 @@ void LooseEnd::onCollision(std::shared_ptr<Entity> entity)
 	if (cat)
 	{
 
-		kill();
 	}
 }
 

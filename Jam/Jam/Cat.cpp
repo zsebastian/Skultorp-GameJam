@@ -24,6 +24,12 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	setRadius(40.f);
 
 	setPosition(position);
+	
+	mThreadTextures.resize(3);
+	mThreadTextures[0].loadFromFile("data/thread0.png");
+	mThreadTextures[1].loadFromFile("data/thread1.png");
+	mThreadTextures[2].loadFromFile("data/thread2.png");
+
 }
 
 Cat::~Cat()
@@ -44,6 +50,8 @@ void Cat::setMass(float mass)
 void Cat::setRadius(float radius)
 {
 	mRadius = radius;
+	mTempShape.setRadius(radius);
+	mTempShape.setOrigin(sf::Vector2f(radius, radius));
 }
 
 void Cat::update()
@@ -192,10 +200,10 @@ void Cat::render(Display& display)
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)
 {
-	std::shared_ptr<Ball> ball;
+	std::shared_ptr<Ball> ball = std::dynamic_pointer_cast<Ball>(entity);
 	std::shared_ptr<LooseEnd> loose = std::dynamic_pointer_cast<LooseEnd>(entity);
 
-	if (Util::dynamicCast<Ball>(entity, ball))
+	if (ball)
 	{
 		mStandsOn.push_back(ball);
 
@@ -214,15 +222,23 @@ void Cat::onCollision(std::shared_ptr<Entity> entity)
 			mCanJump = true;
 		}
 	}
-
-	std::shared_ptr<LooseEnd> looseEnd = std::dynamic_pointer_cast<LooseEnd>(entity);
-	if(looseEnd)
+	if (loose)
 	{
-		if(mNextYarn == looseEnd->getIndexValue())
+		if(mNextYarn == loose->getIndexValue())
 		{
+			if (loose->getIndexValue() >= mThreadTextures.size())
+				mYarn.setTexture(&mThreadTextures.back());
+			else
+				mYarn.setTexture(&mThreadTextures[loose->getIndexValue()]);
+
+			loose->kill();
+
 			mNextYarn++;
 		}
+
 	}
+
+
 }
 
 void Cat::setGravityVector(const sf::Vector2f& gravityVector)

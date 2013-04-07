@@ -46,7 +46,7 @@ void LooseEnd::setRadius(float radius)
 
 void LooseEnd::update()
 {
-	setPosition(sf::Vector2f(Util::random(0, 400), Util::random(0, 400)));
+	
 }
 
 void LooseEnd::render(Display& display)

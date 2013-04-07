@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <level>
-    <cat x="355.264" y="-240.725"/>
+    <cat x="614.1" y="-82.8239"/>
+    <goal value="5"/>
     <balls>
-
+        <ball x="524.441" y="-238.905" mass="150" radius="140" index="0">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="284.236" y="-592.51" mass="150" radius="104" index="1">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="0.946943" y="-824.291" mass="150" radius="89.6" index="2">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="-382.82" y="-826.346" mass="150" radius="120" index="3">
+            <looseEnd angle="0"/>
+        </ball>
+        <ball x="-772.999" y="-994.397" mass="150" radius="64" index="4">
+            <looseEnd angle="0"/>
+        </ball>
     </balls>
 </level>

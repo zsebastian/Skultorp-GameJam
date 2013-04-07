@@ -164,6 +164,9 @@ std::string EntityManager::getLevelFilename()
 
 void EntityManager::checkLevelCleared()
 {
+	if(mLevelList.empty())
+		return;
+
 	if(mCat != NULL)
 	{
 		if(mCat->getNextYarn() == 5)

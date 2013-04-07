@@ -27,11 +27,11 @@ Editor::Editor(EntityManager* entityManager)
 	mPotentialEntity.setOrigin(radius, radius);
 	mPotentialEntity.setFillColor(sf::Color(0, 255, 0, 100));
 
-	mYarnTypes.push_back(YarnType(0, 1.f, 1.f));
-	mYarnTypes.push_back(YarnType(1, 1.f, 1.f));
-	mYarnTypes.push_back(YarnType(2, 0.8f, 1.f));
-	mYarnTypes.push_back(YarnType(3, 1.f, 1.f));
-	mYarnTypes.push_back(YarnType(4, 1.f, 1.f));
+	mYarnTypes.push_back(YarnType(0, 1.0f, 1.5f));
+	mYarnTypes.push_back(YarnType(1, 1.0f, 1.5f));
+	mYarnTypes.push_back(YarnType(2, 1.0f, 1.5f));
+	mYarnTypes.push_back(YarnType(3, 1.0f, 1.5f));
+	mYarnTypes.push_back(YarnType(4, 1.0f, 1.5f));
 
 
 }

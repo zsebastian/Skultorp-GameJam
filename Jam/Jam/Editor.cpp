@@ -29,7 +29,7 @@ Editor::Editor(EntityManager* entityManager)
 
 	mYarnTypes.push_back(YarnType(0, 1.f, 1.f));
 	mYarnTypes.push_back(YarnType(1, 1.f, 1.f));
-	mYarnTypes.push_back(YarnType(2, 1.f, 1.f));
+	mYarnTypes.push_back(YarnType(2, 0.8f, 1.f));
 	mYarnTypes.push_back(YarnType(3, 1.f, 1.f));
 	mYarnTypes.push_back(YarnType(4, 1.f, 1.f));
 
@@ -91,7 +91,7 @@ void Editor::onButtonDown(sf::Event& e)
 		{
 			//Add new ball
 			float radius = mPotentialEntity.getRadius();
-			std::shared_ptr<Ball> ball = std::make_shared<Ball>(mMousePosition, radius * mSelectedYarn.massModifier, radius * mSelectedYarn.radiusModifer, mCurrentIndex * mSelectedYarn.index);
+			std::shared_ptr<Ball> ball = std::make_shared<Ball>(mMousePosition, radius * mSelectedYarn.massModifier, radius * mSelectedYarn.radiusModifer, mSelectedYarn.index);
 			mEntityManager->pushEntity(ball);
 			mEntityManager->pushEntity(std::make_shared<LooseEnd>(ball, 45));
 			mCurrentIndex++;

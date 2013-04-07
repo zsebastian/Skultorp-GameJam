@@ -9,31 +9,44 @@ Ball::Ball(const sf::Vector2f& position, float mass, float radius, size_t indexV
 	,mPosition(position)
 	,mIndexValue(indexValue)
 {
+	float originAdjustX = 0.f;
+	float originAdjustY = 0.f;
+
 	std::string textureFilename;
 	switch(indexValue)
 	{
 	case 0:
-		textureFilename = "data/yarn_ball_blue.png";
+		textureFilename = "data/yarn_ball_red.png";
+		mScaleModifier = 2.2f;
 		break;
 	case 1:
-		textureFilename = "data/yarn_ball_red.png";
+		textureFilename = "data/yarn_ball_blue.png";
+		mScaleModifier = 2.2f;
 		break;
 	case 2:
 		textureFilename = "data/yarn_ball_yellow.png";
+		originAdjustX = -16.0f;
+		originAdjustY = -16.0f;
+		mScaleModifier = 3.05f;
+
 		break;
 	case 3:
 		textureFilename = "data/yarn_ball_green.png";
+		mScaleModifier = 2.2f;
 		break;
 	case 4:
 		textureFilename = "data/yarn_ball_goal.png";
+		mScaleModifier = 2.2f;
 		break;
 	default:
 		textureFilename = "data/yarn_ball_red.png";
+		mScaleModifier = 2.2f;
 	}
 	mSprite.setTexture(TextureManager::getTexture(textureFilename));
+	float scale = (radius * mScaleModifier)/mSprite.getLocalBounds().width;
 
 	sf::FloatRect localBounds = mSprite.getLocalBounds();
-	mSprite.setOrigin(localBounds.width/2.f, localBounds.height/2.f);
+	mSprite.setOrigin(localBounds.width/2.f + originAdjustX * scale, localBounds.height/2.f + originAdjustY * scale);
 
 	setRadius(radius);
 }
@@ -56,7 +69,7 @@ void Ball::setMass(float mass)
 void Ball::setRadius(float radius)
 {
 	mRadius = radius;
-	float scale = (radius*2.2f)/mSprite.getLocalBounds().width;
+	float scale = (radius * mScaleModifier)/mSprite.getLocalBounds().width;
 	mSprite.setScale(scale, scale);
 }
 

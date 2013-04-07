@@ -33,8 +33,10 @@ private:
 	float mRadius;
 	float mActualMass;
 	int mIndex;
+	float mScaleModifier;
 
 	sf::Sprite mSprite;
+
 
 	size_t mIndexValue;
 };

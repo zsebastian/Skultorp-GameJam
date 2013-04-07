@@ -99,6 +99,10 @@ void EntityManager::loadLevel()
 {
 	clear();
 
+	if (mLevelList.empty())
+		//if no next level don't load it!
+		return;
+
 	tinyxml2::XMLDocument doc;
 	doc.LoadFile(mLevelList.front().c_str());
 

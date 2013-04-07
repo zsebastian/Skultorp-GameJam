@@ -24,6 +24,18 @@ public:
 	void update();
 	void render(Display& display);
 private:
+	struct YarnType
+	{
+		YarnType(int index = 0, float radiusModifer = 1.f, float massModifier = 1.f) 
+			:index(index),radiusModifer(radiusModifer),massModifier(massModifier) {};
+		int index;
+		float radiusModifer;
+		float massModifier;
+	};
+
+	std::vector<YarnType> mYarnTypes;
+	YarnType mSelectedYarn;
+
 	EntityVec mEntities;
 	std::shared_ptr<Entity> mCurrentEntity;
 	bool mLockedOnEntity;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <level>
     <cat x="83.4175" y="-39.0145"/>
-    <goal value="6"/>
+    <goal value="5"/>
     <balls>
         <ball x="100" y="100" mass="1.0024" radius="100" index="0">
             <looseEnd angle="0"/>

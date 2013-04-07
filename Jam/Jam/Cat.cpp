@@ -27,7 +27,7 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 
 	setPosition(position);
 	
-	mThreadTextures.resize(3);
+	mThreadTextures.resize(10);
 	mThreadTextures[0].loadFromFile("data/thread0.png");
 	mThreadTextures[1].loadFromFile("data/thread1.png");
 	mThreadTextures[2].loadFromFile("data/thread2.png");

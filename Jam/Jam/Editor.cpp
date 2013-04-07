@@ -11,6 +11,7 @@
 Editor::Editor(EntityManager* entityManager)
 	:mCurrentIndex(0)
 	,mLockedOnEntity(false)
+	
 {
 	//Register events
 	mEventHandler.addEventListener(sf::Event::MouseButtonPressed, std::bind(&Editor::onButtonDown, this, std::placeholders::_1));
@@ -25,6 +26,14 @@ Editor::Editor(EntityManager* entityManager)
 	mPotentialEntity.setRadius(radius);
 	mPotentialEntity.setOrigin(radius, radius);
 	mPotentialEntity.setFillColor(sf::Color(0, 255, 0, 100));
+
+	mYarnTypes.push_back(YarnType(0, 1.f, 1.f));
+	mYarnTypes.push_back(YarnType(1, 1.f, 1.f));
+	mYarnTypes.push_back(YarnType(2, 1.f, 1.f));
+	mYarnTypes.push_back(YarnType(3, 1.f, 1.f));
+	mYarnTypes.push_back(YarnType(4, 1.f, 1.f));
+
+
 }
 
 Editor::~Editor()
@@ -82,7 +91,7 @@ void Editor::onButtonDown(sf::Event& e)
 		{
 			//Add new ball
 			float radius = mPotentialEntity.getRadius();
-			std::shared_ptr<Ball> ball = std::make_shared<Ball>(mMousePosition, radius * 1.5f, radius, mCurrentIndex);
+			std::shared_ptr<Ball> ball = std::make_shared<Ball>(mMousePosition, radius * mSelectedYarn.massModifier, radius * mSelectedYarn.radiusModifer, mCurrentIndex * mSelectedYarn.index);
 			mEntityManager->pushEntity(ball);
 			mEntityManager->pushEntity(std::make_shared<LooseEnd>(ball, 45));
 			mCurrentIndex++;
@@ -121,6 +130,25 @@ void Editor::onKeyDown(sf::Event& e)
 	if(e.key.code == sf::Keyboard::F1)
 	{
 		saveLevel(mEntityManager->getLevelFilename());
+	}
+
+	switch (e.key.code)
+	{
+	case sf::Keyboard::Num1:
+		mSelectedYarn = mYarnTypes[0];
+		break;
+	case sf::Keyboard::Num2:
+		mSelectedYarn = mYarnTypes[1];
+		break;
+	case sf::Keyboard::Num3:
+		mSelectedYarn = mYarnTypes[2];
+		break;
+	case sf::Keyboard::Num4:
+		mSelectedYarn = mYarnTypes[3];
+		break;
+	case sf::Keyboard::Num5:
+		mSelectedYarn = mYarnTypes[4];
+		break;
 	}
 }
 

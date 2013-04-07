@@ -27,6 +27,8 @@ public:
 
 	size_t getIndexValue() const;
 private:
+	void updatePosition();
+
 	sf::Vector2f mPosition;
 
 	float mMass;

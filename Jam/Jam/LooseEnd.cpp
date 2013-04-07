@@ -53,6 +53,8 @@ void LooseEnd::update()
 {
 	if (mBelongsTo.expired())
 		kill();
+
+	updatePosition();
 }
 
 void LooseEnd::render(Display& display)
@@ -95,4 +97,13 @@ sf::FloatRect LooseEnd::getGlobalBounds() const
 size_t LooseEnd::getIndexValue() const
 {
 	return mIndexValue;
+}
+
+void LooseEnd::updatePosition()
+{
+	sf::Vector2f ballPos = mBelongsTo.lock()->getPosition();
+	float distance =  mBelongsTo.lock()->getRadius();;
+	sf::Vector2f placeVec(Util::getVectorFromAngle<float>(mPositionAngle) * distance);
+	mPosition = ballPos + placeVec;
+
 }

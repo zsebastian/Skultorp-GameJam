@@ -43,14 +43,14 @@ void Yarn::render(Display& display)
 	if (mThreads.empty() || mCurrentTexture == nullptr)
 		return;
 
-	sf::Vector2f last = mThreads[currentBezierIndex];
+	sf::Vector2f last = mThreads[currentBezierIndex].first;
 
 	//not really a loop but whatevs
 
 	if (currentBezierIndex < static_cast<int>(mThreads.size()) - 4)
 	{
 		int i = currentBezierIndex;
-		sf::VertexArray bezier = makeBezier(last, mThreads[i + 1], mThreads[i + 2], mThreads[i + 3]);
+		sf::VertexArray bezier = makeBezier(last, mThreads[i + 1].first, mThreads[i + 2].first, mThreads[i + 3].first);
 
 		//glue
 		if (currentBezierIndex > 0 && bezier.getVertexCount() >= 2 && mBeziers.back().vertices.getVertexCount() > 2)
@@ -126,7 +126,7 @@ void Yarn::render(Display& display)
 
 void Yarn::addThread()
 {
-	mThreads.push_back(mPosition);
+	mThreads.push_back(std::make_pair(mPosition, mCurrentTexture));
 }
 
 sf::VertexArray Yarn::makeBezier(sf::Vector2f p0, sf::Vector2f p1, sf::Vector2f p2, sf::Vector2f p3)
@@ -215,8 +215,11 @@ bool Yarn::intersect(sf::Vector2f position, float radius)
 	{
 		for (size_t i = 1; i < mThreads.size() - mGraceThreads; ++i)
 		{
-			sf::Vector2f v0 = mThreads[i - 1];
-			sf::Vector2f v1 = mThreads[i];
+			if (mThreads[i].second == mCurrentTexture && mThreads[i-1].second == mCurrentTexture )
+				continue;
+
+			sf::Vector2f v0 = mThreads[i - 1].first;
+			sf::Vector2f v1 = mThreads[i].first;
 
 			if (intersectLineCircle(v0, v1, position, radius))
 				return true;

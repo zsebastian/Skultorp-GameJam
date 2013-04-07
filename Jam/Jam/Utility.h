@@ -121,6 +121,12 @@ namespace Util
 		return result;
 	}
 
+	template <typename T, typename U>
+	bool dynamicCast(std::shared_ptr<U> testObject)
+	{
+		return std::dynamic_pointer_cast<T>(testObject);
+	}
+
 	int random(int min, int max);
 };
 

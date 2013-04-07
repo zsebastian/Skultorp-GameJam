@@ -23,8 +23,7 @@ private:
 	void init();
 	std::string regexReplace(const std::string& str);
 
-	// textures
-	sf::Texture mTexture;
+	//Sprite
 	sf::Sprite mSprite;
 
 	// Animation

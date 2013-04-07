@@ -36,7 +36,6 @@ private:
 	std::weak_ptr<Ball> mBelongsTo; 
 
 	sf::Sprite mSprite;
-	sf::Texture mTexture;
 
 	size_t mIndexValue;
 

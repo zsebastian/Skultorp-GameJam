@@ -3,28 +3,26 @@
 #include "Ball.h"
 #include "LooseEnd.h"
 #include "Utility.h"
+#include "TextureManager.h"
 
 Game::Game()
 {
-	entities.loadLevelList();
-	entities.loadLevel();
-
-	/*std::shared_ptr<Ball> ball = std::make_shared<Ball>(sf::Vector2f(200.f, 200.f), 200.f, 100.f, 0);
-	entities.pushEntity(ball);
-	entities.pushEntity(std::make_shared<LooseEnd>(ball, 180));
-
-	ball = std::make_shared<Ball>(sf::Vector2f(300.f, 200.f), 200.f, 100.f, 1);
-	entities.pushEntity(ball);
-	entities.pushEntity(std::make_shared<LooseEnd>(ball, 45));
-
-	ball = std::make_shared<Ball>(sf::Vector2f(250.f, 300.f), 200.f, 100.f, 2);
-	entities.pushEntity(ball);
-	entities.pushEntity(std::make_shared<LooseEnd>(ball, 90));*/
+	//Load textures
+	TextureManager::loadTexture("data/yarn_ball.png");
+	TextureManager::loadTexture("data/yarn_ball_large.png");
+	TextureManager::loadTexture("data/yarn_ball_small.png");
+	TextureManager::loadTexture("cat.png");
+	TextureManager::loadTexture("data/looseend.png");
 
 	mBackgroundTexture.loadFromFile("data/background.png");
+	mBackgroundTexture.setSmooth(true);
 	mBackgroundSprite.setTexture(mBackgroundTexture);
-	mBackgroundSprite.setPosition(-1000.f, -1000.f);
+	sf::FloatRect bounds = mBackgroundSprite.getLocalBounds();
+	mBackgroundSprite.setOrigin(bounds.width/2.f, bounds.height/2.f);
 	mBackgroundSprite.setScale(2.f, 2.f);
+
+	entities.loadLevelList();
+	entities.loadLevel();
 }
 
 void Game::render(Display& display)

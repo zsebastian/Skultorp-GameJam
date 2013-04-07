@@ -46,10 +46,14 @@ void EntityManager::update()
 
 	Util::eraseIf(mEntities, [](std::shared_ptr<Entity> entity) {return entity->isDead();});
 
-	checkLevelCleard();
+	checkLevelCleared();
 
 	//Update editor
 	mEditor.update();
+
+	//Restart level if cat is 'dead'
+	if(!mCat->isAlive())
+		loadLevel();
 }
 
 void EntityManager::render(Display& display)
@@ -96,7 +100,7 @@ void EntityManager::loadLevel()
 	clear();
 
 	tinyxml2::XMLDocument doc;
-	doc.LoadFile(mLevelList.top().c_str());
+	doc.LoadFile(mLevelList.front().c_str());
 
 	tinyxml2::XMLElement* level = doc.FirstChildElement("level");
 	tinyxml2::XMLElement* balls = level->FirstChildElement("balls");
@@ -145,10 +149,10 @@ void EntityManager::loadLevelList()
 
 std::string EntityManager::getLevelFilename()
 {
-	return mLevelList.top();
+	return mLevelList.front();
 }
 
-void EntityManager::checkLevelCleard()
+void EntityManager::checkLevelCleared()
 {
 	if(mCat != NULL)
 	{

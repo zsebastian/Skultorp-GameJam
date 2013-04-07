@@ -23,7 +23,6 @@ public:
 	virtual float getMass() const;
 	virtual float getRadius() const;
 	virtual sf::FloatRect getGlobalBounds() const;
-	int getIndex() const;
 	void resetMass();
 
 	size_t getIndexValue() const;
@@ -35,7 +34,6 @@ private:
 	float mActualMass;
 	int mIndex;
 
-	sf::Texture mTexture;
 	sf::Sprite mSprite;
 
 	size_t mIndexValue;

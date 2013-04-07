@@ -2,7 +2,7 @@
 #define ENTITYMANAGER_H
 
 #include <vector>
-#include <stack>
+#include <queue>
 #include <memory>
 #include "GravityField.h"
 #include "Editor.h"
@@ -14,7 +14,7 @@ class EntityManager
 {
 public:
 	typedef std::vector<std::shared_ptr<Entity> > EntityVec;
-	typedef std::stack<std::string> StrStack;
+	typedef std::queue<std::string> StrQueue;
 
 	EntityManager();
 	~EntityManager();
@@ -30,11 +30,11 @@ public:
 	std::string getLevelFilename();
 private:
 	EntityVec mEntities;
-	StrStack mLevelList;
+	StrQueue mLevelList;
 	GravityField mGravityField;
 	Editor mEditor;
 
-	void checkLevelCleard();
+	void checkLevelCleared();
 
 	std::shared_ptr<Cat> mCat;
 	int mNumberOfYarn;

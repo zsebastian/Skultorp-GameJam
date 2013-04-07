@@ -10,6 +10,7 @@
 
 Editor::Editor(EntityManager* entityManager)
 	:mCurrentIndex(0)
+	,mLockedOnEntity(false)
 {
 	//Register events
 	mEventHandler.addEventListener(sf::Event::MouseButtonPressed, std::bind(&Editor::onButtonDown, this, std::placeholders::_1));
@@ -73,10 +74,11 @@ void Editor::onButtonDown(sf::Event& e)
 				{
 					mCurrentEntity = *i;
 					mLockedOnEntity = true;
+					break;
 				}
 			}
 		}
-		else if(e.mouseButton.button == sf::Mouse::Middle)
+		else if(e.mouseButton.button == sf::Mouse::Right)
 		{
 			//Add new ball
 			float radius = mPotentialEntity.getRadius();
@@ -137,6 +139,8 @@ void Editor::saveLevel(const std::string& filename)
 	tinyxml2::XMLElement* balls = doc.NewElement("balls");
 
 	//Append all the balls
+	int ballCount = 0;
+
 	for(auto i = mEntities.begin(); i != mEntities.end(); ++i)
 	{
 		std::shared_ptr<Ball> b = std::dynamic_pointer_cast<Ball>(*i);
@@ -161,7 +165,7 @@ void Editor::saveLevel(const std::string& filename)
 		ball->SetAttribute("y", position.y);
 		ball->SetAttribute("mass", b->getMass());
 		ball->SetAttribute("radius", b->getRadius());
-		ball->SetAttribute("index", b->getIndex());
+		ball->SetAttribute("index", b->getIndexValue());
 
 		//Add loose end
 		tinyxml2::XMLElement* looseEnd = doc.NewElement("looseEnd");
@@ -169,7 +173,13 @@ void Editor::saveLevel(const std::string& filename)
 		ball->InsertEndChild(looseEnd);
 
 		balls->InsertEndChild(ball);
+		ballCount++;
 	}
+
+	//Add goal
+	tinyxml2::XMLElement* goal = doc.NewElement("goal");
+	goal->SetAttribute("value", ballCount+1);
+	level->InsertEndChild(goal);
 
 	//Append to level
 	level->InsertEndChild(balls);

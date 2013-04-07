@@ -2,10 +2,11 @@
 #include "Display.h"
 #include "Utility.h"
 
-Ball::Ball(const sf::Vector2f& position, float mass, float radius)
+Ball::Ball(const sf::Vector2f& position, float mass, float radius, size_t indexValue)
 	:mMass(mass)
 	,mActualMass(mass)
 	,mPosition(position)
+	,mIndexValue(indexValue)
 {
 	mTexture.loadFromFile("data/yarn_ball.png");
 	mSprite.setTexture(mTexture);
@@ -82,4 +83,14 @@ sf::FloatRect Ball::getGlobalBounds() const
 void Ball::resetMass()
 {
 	mActualMass = 1.f;
+}
+
+size_t Ball::getIndexValue() const
+{
+	return mIndexValue;
+}
+
+void Ball::setIndexValue(size_t indexValue)
+{
+	mIndexValue = indexValue;
 }

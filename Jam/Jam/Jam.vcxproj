@@ -92,6 +92,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="StateManager.cpp" />
     <ClCompile Include="tinyxml2.cpp" />
+    <ClCompile Include="Utility.cpp" />
     <ClCompile Include="Yarn.cpp" />
   </ItemGroup>
   <ItemGroup>

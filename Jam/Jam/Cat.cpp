@@ -2,6 +2,7 @@
 #include "Display.h"
 #include "Ball.h"
 #include "Utility.h"
+#include "LooseEnd.h"
 
 Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	:mMass(mass)
@@ -20,6 +21,12 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	setRadius(20.f);
 
 	setPosition(position);
+	
+	mThreadTextures.resize(3);
+	mThreadTextures[0].loadFromFile("data/thread0.png");
+	mThreadTextures[1].loadFromFile("data/thread1.png");
+	mThreadTextures[2].loadFromFile("data/thread2.png");
+
 }
 
 Cat::~Cat()
@@ -153,6 +160,7 @@ void Cat::render(Display& display)
 void Cat::onCollision(std::shared_ptr<Entity> entity)
 {
 	std::shared_ptr<Ball> ball = std::dynamic_pointer_cast<Ball>(entity);
+	std::shared_ptr<LooseEnd> loose = std::dynamic_pointer_cast<LooseEnd>(entity);
 
 	if (ball)
 	{
@@ -165,6 +173,14 @@ void Cat::onCollision(std::shared_ptr<Entity> entity)
 		mPosition = ball->getPosition() + dVec;
 		mCanJump = true;
 	}
+	if (loose)
+	{
+		if (loose->getIndexValue() >= mThreadTextures.size())
+			mYarn.setTexture(&mThreadTextures.back());
+		else
+			mYarn.setTexture(&mThreadTextures[loose->getIndexValue()]);
+	}
+
 }
 
 void Cat::setGravityVector(const sf::Vector2f& gravityVector)

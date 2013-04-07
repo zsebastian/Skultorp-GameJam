@@ -6,7 +6,7 @@
 #include <sstream>
 #include <cmath>
 #include <limits>
-
+#include <math.h>
 
 namespace Util
 {
@@ -106,6 +106,8 @@ namespace Util
 		ret.y = std::sin(radians);
 		return ret;
 	}
+
+	int random(int min, int max);
 };
 
 

@@ -10,10 +10,13 @@ struct Bezier
 {
 	sf::VertexArray vertices;
 	sf::FloatRect rect;
+	sf::Texture* texture;
 
-	Bezier(sf::VertexArray vertices, sf::FloatRect rect)
+	Bezier(sf::VertexArray vertices, sf::FloatRect rect, sf::Texture* texture)
 		:vertices(vertices)
-		,rect(rect) {};
+		,rect(rect)
+		,texture(texture)
+	{};
 
 };
 
@@ -26,6 +29,8 @@ public:
 	void render(Display& display);
 
 	bool intersect(sf::Vector2f position, float radius);
+
+	void setTexture(sf::Texture* texture);
 
 private:
 	void addThread();
@@ -44,6 +49,8 @@ private:
 	int currentBezierIndex;
 
 	sf::Texture mTexture;
+
+	sf::Texture* mCurrentTexture;
 
 	float mTotalLength;
 	float mLatestThreadLength;

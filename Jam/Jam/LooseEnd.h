@@ -25,6 +25,7 @@ public:
 	virtual float getRadius() const;
 	virtual sf::FloatRect getGlobalBounds() const;
 
+	size_t getIndexValue() const;
 private:
 	sf::Vector2f mPosition;
 
@@ -36,6 +37,8 @@ private:
 
 	sf::Sprite mSprite;
 	sf::Texture mTexture;
+
+	size_t mIndexValue;
 
 };
 

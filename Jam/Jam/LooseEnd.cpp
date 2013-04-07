@@ -7,8 +7,10 @@
 LooseEnd::LooseEnd(std::shared_ptr<Ball> belongsTo, float positionAngle)
 	:mBelongsTo(belongsTo)
 	,mPositionAngle(positionAngle)
+	,mIndexValue(belongsTo->getIndexValue())
 {
 	mTexture.loadFromFile("data/looseend.png");
+
 	mSprite.setTexture(mTexture);
 
 	sf::Vector2f ballPos = mBelongsTo.lock()->getPosition();
@@ -55,6 +57,7 @@ void LooseEnd::onCollision(std::shared_ptr<Entity> entity)
 
 	if (cat)
 	{
+
 		kill();
 	}
 }
@@ -77,4 +80,9 @@ float LooseEnd::getRadius() const
 sf::FloatRect LooseEnd::getGlobalBounds() const
 {
 	return mSprite.getGlobalBounds();
+}
+
+size_t LooseEnd::getIndexValue() const
+{
+	return mIndexValue;
 }

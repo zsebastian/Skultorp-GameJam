@@ -11,11 +11,6 @@ AnimationManager::AnimationManager(std::string texture):
 	mUpdateRate(150.f),
 	mCurrentFrame(0)
 {
-	std::string t0 = regexReplace("$rand(1,2) och $rand(1,3)");
-	std::string t1 = regexReplace("$rand(4,6) och $rand(2,6)");
-	std::string t2 = regexReplace("test$rand(2,6)");
-	std::string t3 = regexReplace("anim$rand(1,20)+$rand(-10,20)");
-
 	mTextureBox = sf::IntRect(0, 0, mSize, mSize),
 
 	mFrameClock.restart();
@@ -39,7 +34,6 @@ void AnimationManager::setCurrentAnimation(std::string animation)
 	{
 		mCurrentAnimation = regexReplace(animation);
 		mCurrentFrame = 0;
-		mCurrentAnimation = animation;
 		mUpdateRate = mAnimations[mCurrentAnimation].mUpdateRate;
 	}
 

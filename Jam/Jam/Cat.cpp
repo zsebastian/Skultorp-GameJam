@@ -3,7 +3,7 @@
 #include "Ball.h"
 #include "Utility.h"
 #include <string>
-
+#include "LooseEnd.h"
 
 Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	:mMass(mass)
@@ -192,9 +192,10 @@ void Cat::render(Display& display)
 
 void Cat::onCollision(std::shared_ptr<Entity> entity)
 {
-	std::shared_ptr<Ball> ball = std::dynamic_pointer_cast<Ball>(entity);
+	std::shared_ptr<Ball> ball;
+	std::shared_ptr<LooseEnd> loose = std::dynamic_pointer_cast<LooseEnd>(entity);
 
-	if (ball)
+	if (Util::dynamicCast<Ball>(entity, ball))
 	{
 		mStandsOn.push_back(ball);
 
@@ -214,8 +215,14 @@ void Cat::onCollision(std::shared_ptr<Entity> entity)
 		}
 	}
 
-	//std::shared_ptr<Yarn> yarn = std::dynamic_pointer_cast<Ball>(entity);
-
+	std::shared_ptr<LooseEnd> looseEnd = std::dynamic_pointer_cast<LooseEnd>(entity);
+	if(looseEnd)
+	{
+		if(mNextYarn == looseEnd->getIndexValue())
+		{
+			mNextYarn++;
+		}
+	}
 }
 
 void Cat::setGravityVector(const sf::Vector2f& gravityVector)

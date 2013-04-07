@@ -7,6 +7,7 @@
 #include <cmath>
 #include <limits>
 #include <math.h>
+#include <memory>
 
 namespace Util
 {
@@ -110,6 +111,20 @@ namespace Util
 		ret.x = std::cos(radians);
 		ret.y = std::sin(radians);
 		return ret;
+	}
+
+	template <typename T, typename U>
+	bool dynamicCast(std::shared_ptr<U> testObject, std::shared_ptr<T>& result)
+	{
+		std::shared_ptr<T> test = std::dynamic_pointer_cast<T>(testObject);
+		result = test;
+		return result;
+	}
+
+	template <typename T, typename U>
+	bool dynamicCast(std::shared_ptr<U> testObject)
+	{
+		return std::dynamic_pointer_cast<T>(testObject);
 	}
 
 	int random(int min, int max);

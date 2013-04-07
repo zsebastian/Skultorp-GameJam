@@ -4,9 +4,12 @@
 #include "Utility.h"
 #include "Ball.h"
 #include "tinyxml2.h"
+#include "Cat.h"
 
 EntityManager::EntityManager()
-	:mEditor(this)
+	:mEditor(this),
+	mCat(NULL),
+	mNumberOfYarn(0)
 {
 
 }
@@ -57,6 +60,12 @@ void EntityManager::render(Display& display)
 
 void EntityManager::pushEntity(std::shared_ptr<Entity> entity)
 {
+	std::shared_ptr<Cat> cat = std::dynamic_pointer_cast<Cat>(entity); 
+	if(cat)
+	{
+		mCat = cat;
+	}
+
 	mEntities.push_back(entity);
 	mGravityField.addObject(entity);
 	mEditor.pushEntity(entity);
@@ -98,5 +107,16 @@ void EntityManager::loadLevel(const std::string& filename)
 		int index = Util::fromString<int>(ball->Attribute("index"));
 
 		pushEntity(std::make_shared<Ball>(position, mass, radius, index));
+	}
+}
+
+void EntityManager::checkLevelCleard()
+{
+	if(mCat != NULL)
+	{
+		if(mCat->getNextYarn())
+		{
+			//win
+		}
 	}
 }

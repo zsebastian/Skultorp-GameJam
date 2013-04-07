@@ -25,8 +25,13 @@ LooseEnd::LooseEnd(std::shared_ptr<Ball> belongsTo, float positionAngle)
 
 void LooseEnd::setPosition(const sf::Vector2f& position)
 {
-	mPosition = position;
+	sf::Vector2f ballPos = mBelongsTo.lock()->getPosition();
+	sf::Vector2f distVec =  position - ballPos;
 
+	float distance = mBelongsTo.lock()->getRadius();
+	sf::Vector2f placeVec(Util::normalize(distVec) * distance);
+
+	mPosition = placeVec + ballPos;
 }
 
 void LooseEnd::setMass(float mass)
@@ -41,7 +46,7 @@ void LooseEnd::setRadius(float radius)
 
 void LooseEnd::update()
 {
-
+	
 }
 
 void LooseEnd::render(Display& display)

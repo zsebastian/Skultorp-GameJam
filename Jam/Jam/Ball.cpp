@@ -2,6 +2,7 @@
 #include "Display.h"
 #include "Utility.h"
 #include "TextureManager.h"
+#include <algorithm>
 
 Ball::Ball(const sf::Vector2f& position, float mass, float radius, size_t indexValue)
 	:mMass(mass)
@@ -25,8 +26,8 @@ Ball::Ball(const sf::Vector2f& position, float mass, float radius, size_t indexV
 		break;
 	case 2:
 		textureFilename = "data/yarn_ball_yellow.png";
-		originAdjustX = -16.0f;
-		originAdjustY = -16.0f;
+		originAdjustX = -16.5f;
+		originAdjustY = -16.5f;
 		mScaleModifier = 3.05f;
 
 		break;

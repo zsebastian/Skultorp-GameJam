@@ -69,7 +69,7 @@ private:
 	std::shared_ptr<Ball> mStandingOn;
 
 	std::vector<std::shared_ptr<Ball>> mStandsOn;
-
+	std::vector<sf::Texture> mThreadTextures;
 
 	// animtion
 	AnimationManager mAnimations;

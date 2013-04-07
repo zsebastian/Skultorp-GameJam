@@ -120,6 +120,9 @@ void Editor::onKeyDown(sf::Event& e)
 	//Remove entity
 	if(mLockedOnEntity && e.key.code == sf::Keyboard::Delete)
 	{
+		if(std::dynamic_pointer_cast<Cat>(mCurrentEntity))
+			return;
+
 		mEntityManager->popEntity(mCurrentEntity);
 		mCurrentEntity = nullptr;
 		mLockedOnEntity = false;

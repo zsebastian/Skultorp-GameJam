@@ -10,6 +10,7 @@
 class Cat;
 class Display;
 class Entity;
+class Camera;
 class EntityManager
 {
 public:
@@ -38,6 +39,8 @@ private:
 
 	std::shared_ptr<Cat> mCat;
 	int mNumberOfYarn;
+
+	Camera* mCamera;
 };
 
 #endif

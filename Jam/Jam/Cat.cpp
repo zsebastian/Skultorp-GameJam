@@ -4,6 +4,7 @@
 #include "Utility.h"
 #include <string>
 #include "LooseEnd.h"
+#include <iostream>
 
 Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	:mMass(mass)
@@ -20,6 +21,7 @@ Cat::Cat(const sf::Vector2f& position, float mass, float radius)
 	,mLeftDir(false)
 	,mSpriteDown(0.f, 1.f)
 	,mNextYarn(0)
+	,mAlive(true)
 {
 	setRadius(40.f);
 
@@ -67,13 +69,7 @@ void Cat::update()
 	mYarn.updatePosition(mPosition, !mCanJump);
 
 	if (mYarn.intersect(mPosition, mRadius))
-	{
-		mTempShape.setFillColor(sf::Color::Blue);
-	}
-	else
-	{
-		mTempShape.setFillColor(sf::Color::Red);
-	}
+		mAlive = false;
 }
 
 void Cat::move()
@@ -175,7 +171,6 @@ void Cat::render(Display& display)
 	//Set camera position
 	sf::Vector2f camPos = mPosition - display.getCamera().getPosition();
 	display.getCamera().move(sf::Vector2f(camPos.x*0.05, camPos.y*0.05));
-	
 
 	//Set camera rotation
 	float camRot = mSprite.getRotation() - display.getCamera().getRotation();
@@ -281,4 +276,9 @@ sf::FloatRect Cat::getGlobalBounds() const
 int Cat::getNextYarn()const
 {
 	return mNextYarn;
+}
+
+bool Cat::isAlive() const
+{
+	return mAlive;
 }

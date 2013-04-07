@@ -3,6 +3,7 @@
 #include "Utility.h"
 #include <regex>
 #include <utility>
+#include "TextureManager.h"
 
 AnimationManager::AnimationManager(std::string texture):
 	mSize(256),
@@ -15,8 +16,7 @@ AnimationManager::AnimationManager(std::string texture):
 
 	mFrameClock.restart();
 
-	mTexture.loadFromFile(texture);
-	mSprite.setTexture(mTexture);
+	mSprite.setTexture(TextureManager::getTexture(texture));
 	mSprite.setTextureRect(mTextureBox);
 	mSprite.setOrigin(mSprite.getLocalBounds().width / 2, mSprite.getLocalBounds().height / 2);
 	

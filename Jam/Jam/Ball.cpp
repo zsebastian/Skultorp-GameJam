@@ -1,6 +1,7 @@
 #include "Ball.h"
 #include "Display.h"
 #include "Utility.h"
+#include "TextureManager.h"
 
 Ball::Ball(const sf::Vector2f& position, float mass, float radius, size_t indexValue)
 	:mMass(mass)
@@ -8,31 +9,32 @@ Ball::Ball(const sf::Vector2f& position, float mass, float radius, size_t indexV
 	,mPosition(position)
 	,mIndexValue(indexValue)
 {
+	std::string textureFilename;
 	switch(indexValue)
 	{
 	case 0:
-		mTexture.loadFromFile("data/yarn_ball.png");
+		textureFilename = "data/yarn_ball.png";
 		break;
 	case 1:
-		mTexture.loadFromFile("data/yarn_ball_large.png");
+		textureFilename = "data/yarn_ball_large.png";
 		break;
 	case 2:
-		mTexture.loadFromFile("data/yarn_ball_small.png");
+		textureFilename = "data/yarn_ball_small.png";
 		break;
 	case 3:
-		mTexture.loadFromFile("data/yarn_ball_large.png");
+		textureFilename = "data/yarn_ball_large.png";
 		break;
 	case 4:
-		mTexture.loadFromFile("data/yarn_ball.png");
+		textureFilename = "data/yarn_ball.png";
 		break;
 	case 5:
-		mTexture.loadFromFile("data/yarn_ball_small.png");
+		textureFilename = "data/yarn_ball_small.png";
 		break;
 	default:
-		mTexture.loadFromFile("data/yarn_ball.png");
+		textureFilename = "data/yarn_ball.png";
 	}
 
-	mSprite.setTexture(mTexture);
+	mSprite.setTexture(TextureManager::getTexture(textureFilename));
 
 	sf::FloatRect localBounds = mSprite.getLocalBounds();
 	mSprite.setOrigin(localBounds.width/2.f, localBounds.height/2.f);
@@ -100,12 +102,10 @@ float Ball::getRadius() const
 
 sf::FloatRect Ball::getGlobalBounds() const
 {
-	return mSprite.getGlobalBounds();
-}
-
-int Ball::getIndex() const
-{
-	return mIndex;
+	sf::FloatRect bounds = mSprite.getGlobalBounds();
+	bounds.width /= 1.5f;
+	bounds.height /= 1.5f;
+	return bounds;
 }
 
 void Ball::resetMass()

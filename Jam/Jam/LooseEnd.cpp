@@ -3,15 +3,14 @@
 #include "Cat.h"
 #include "Ball.h"
 #include "Utility.h"
+#include "TextureManager.h"
 
 LooseEnd::LooseEnd(std::shared_ptr<Ball> belongsTo, float positionAngle)
 	:mBelongsTo(belongsTo)
 	,mPositionAngle(positionAngle)
 	,mIndexValue(belongsTo->getIndexValue())
 {
-	mTexture.loadFromFile("data/looseend.png");
-
-	mSprite.setTexture(mTexture);
+	mSprite.setTexture(TextureManager::getTexture("data/looseend.png"));
 
 	sf::Vector2f ballPos = mBelongsTo.lock()->getPosition();
 	float distance =  mBelongsTo.lock()->getRadius();;
@@ -31,7 +30,9 @@ void LooseEnd::setPosition(const sf::Vector2f& position)
 	sf::Vector2f ballPos = mBelongsTo.lock()->getPosition();
 	sf::Vector2f distVec =  position - ballPos;
 
-	float distance = mBelongsTo.lock()->getRadius();
+	//if(!mBelongsTo.expired())
+		float distance = mBelongsTo.lock()->getRadius();
+	
 	sf::Vector2f placeVec(Util::normalize(distVec) * distance);
 
 	mPosition = placeVec + ballPos;

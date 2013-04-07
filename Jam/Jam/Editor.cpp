@@ -3,12 +3,14 @@
 #include "Entity.h"
 #include "Ball.h"
 #include "LooseEnd.h"
+#include "Cat.h"
 #include "EntityManager.h"
 #include "Utility.h"
 #include "tinyxml2.h"
 
 Editor::Editor(EntityManager* entityManager)
 	:mCurrentIndex(0)
+	,mLockedOnEntity(false)
 {
 	//Register events
 	mEventHandler.addEventListener(sf::Event::MouseButtonPressed, std::bind(&Editor::onButtonDown, this, std::placeholders::_1));
@@ -72,10 +74,11 @@ void Editor::onButtonDown(sf::Event& e)
 				{
 					mCurrentEntity = *i;
 					mLockedOnEntity = true;
+					break;
 				}
 			}
 		}
-		else if(e.mouseButton.button == sf::Mouse::Middle)
+		else if(e.mouseButton.button == sf::Mouse::Right)
 		{
 			//Add new ball
 			float radius = mPotentialEntity.getRadius();
@@ -115,9 +118,9 @@ void Editor::onKeyDown(sf::Event& e)
 	}
 
 	//Save level
-	if(e.key.code == sf::Keyboard::F12)
+	if(e.key.code == sf::Keyboard::F1)
 	{
-		saveLevel("data/levels/test.xml");
+		saveLevel(mEntityManager->getLevelFilename());
 	}
 }
 
@@ -136,10 +139,23 @@ void Editor::saveLevel(const std::string& filename)
 	tinyxml2::XMLElement* balls = doc.NewElement("balls");
 
 	//Append all the balls
+	int ballCount = 0;
+
 	for(auto i = mEntities.begin(); i != mEntities.end(); ++i)
 	{
 		std::shared_ptr<Ball> b = std::dynamic_pointer_cast<Ball>(*i);
-		
+		std::shared_ptr<Cat> c = std::dynamic_pointer_cast<Cat>(*i);
+
+		if(c)
+		{
+			tinyxml2::XMLElement* cat = doc.NewElement("cat");
+			sf::Vector2f position = c->getPosition();
+			cat->SetAttribute("x", position.x);
+			cat->SetAttribute("y", position.y);
+			level->InsertEndChild(cat);
+			continue;
+		}
+
 		if(b == nullptr)
 			continue;
 
@@ -149,10 +165,21 @@ void Editor::saveLevel(const std::string& filename)
 		ball->SetAttribute("y", position.y);
 		ball->SetAttribute("mass", b->getMass());
 		ball->SetAttribute("radius", b->getRadius());
-		ball->SetAttribute("index", b->getIndex());
+		ball->SetAttribute("index", b->getIndexValue());
+
+		//Add loose end
+		tinyxml2::XMLElement* looseEnd = doc.NewElement("looseEnd");
+		looseEnd->SetAttribute("angle", 0);
+		ball->InsertEndChild(looseEnd);
 
 		balls->InsertEndChild(ball);
+		ballCount++;
 	}
+
+	//Add goal
+	tinyxml2::XMLElement* goal = doc.NewElement("goal");
+	goal->SetAttribute("value", ballCount+1);
+	level->InsertEndChild(goal);
 
 	//Append to level
 	level->InsertEndChild(balls);

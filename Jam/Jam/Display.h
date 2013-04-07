@@ -21,6 +21,7 @@ public:
 	bool isOpen() const;
 	sf::RenderWindow& getWindow();
 	Camera& getCamera();
+	void setToDefaultView();
 private:
 	sf::RenderWindow mWindow;
 	Camera mCamera;

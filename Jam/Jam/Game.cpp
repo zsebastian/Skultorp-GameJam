@@ -5,7 +5,8 @@
 #include "Utility.h"
 #include "TextureManager.h"
 
-Game::Game()
+Game::Game(StateManager& stateManager)
+	:State(stateManager)
 {
 	//Load textures
 	TextureManager::loadTexture("data/yarn_ball.png");
@@ -19,7 +20,7 @@ Game::Game()
 	mBackgroundSprite.setTexture(mBackgroundTexture);
 	sf::FloatRect bounds = mBackgroundSprite.getLocalBounds();
 	mBackgroundSprite.setOrigin(bounds.width/2.f, bounds.height/2.f);
-	mBackgroundSprite.setScale(2.f, 2.f);
+	mBackgroundSprite.setScale(1.f, 1.f);
 
 	entities.loadLevelList();
 	entities.loadLevel();
@@ -27,7 +28,14 @@ Game::Game()
 
 void Game::render(Display& display)
 {
+	Camera cam = display.getCamera();
+
+	display.setToDefaultView();
+
 	display.render(mBackgroundSprite);
+
+	display.getCamera() = cam;
+
 	entities.render(display);
 }
 

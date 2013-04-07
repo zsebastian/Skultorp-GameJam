@@ -47,7 +47,8 @@ void Game::loadLevel(const std::string& filename)
 		position.y = Util::fromString<float>(ball->Attribute("y"));
 		float mass = Util::fromString<float>(ball->Attribute("mass"));
 		float radius = Util::fromString<float>(ball->Attribute("radius"));
+		int index = Util::fromString<int>(ball->Attribute("index"));
 
-		entities.pushEntity(std::make_shared<Ball>(position, mass, radius));
+		entities.pushEntity(std::make_shared<Ball>(position, mass, radius, index));
 	}
 }

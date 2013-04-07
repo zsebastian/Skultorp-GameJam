@@ -42,6 +42,12 @@ void GravityField::removeObject(std::shared_ptr<Entity> entity)
 	
 }
 
+void GravityField::clear()
+{
+	mBalls.clear();
+	mCats.clear();
+}
+
 void GravityField::update()
 {
 	for (auto cat = mCats.begin(); cat != mCats.end(); ++cat)

@@ -21,6 +21,7 @@ public:
 
 	void pushEntity(std::shared_ptr<Entity>);
 	void popEntity(std::shared_ptr<Entity> entity);
+	void clear();
 private:
 	std::shared_ptr<EntityManager> getptr(){return shared_from_this();}
 

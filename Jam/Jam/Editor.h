@@ -19,6 +19,7 @@ public:
 
 	void pushEntity(std::shared_ptr<Entity> entity);
 	void popEntity(std::shared_ptr<Entity> entity);
+	void clear();
 
 	void update();
 	void render(Display& display);
@@ -26,6 +27,7 @@ private:
 	EntityVec mEntities;
 	std::shared_ptr<Entity> mCurrentEntity;
 	bool mLockedOnEntity;
+	int mCurrentIndex;
 
 	EntityManager* mEntityManager;
 

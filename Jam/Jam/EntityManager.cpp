@@ -66,3 +66,10 @@ void EntityManager::popEntity(std::shared_ptr<Entity> entity)
 	mGravityField.removeObject(entity);
 	mEditor.popEntity(entity);
 }
+
+void EntityManager::clear()
+{
+	mEntities.clear();
+	mGravityField.clear();
+	mEditor.clear();
+}

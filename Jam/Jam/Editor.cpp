@@ -6,6 +6,7 @@
 #include "Utility.h"
 
 Editor::Editor(EntityManager* entityManager)
+	:mCurrentIndex(0)
 {
 	//Register events
 	mEventHandler.addEventListener(sf::Event::MouseButtonPressed, std::bind(&Editor::onButtonDown, this, std::placeholders::_1));
@@ -35,6 +36,11 @@ void Editor::popEntity(std::shared_ptr<Entity> entity)
 {
 	auto pred = [&entity](std::shared_ptr<Entity> someEntity) {return someEntity.get() == entity.get();};
 	Util::eraseIf(mEntities, pred);
+}
+
+void Editor::clear()
+{
+	mEntities.clear();
 }
 
 void Editor::update()
@@ -83,7 +89,8 @@ void Editor::onButtonDown(sf::Event& e)
 		{
 			//Add new ball
 			float radius = mPotentialEntity.getRadius();
-			mEntityManager->pushEntity(std::make_shared<Ball>(mMousePosition, radius, radius));
+			mEntityManager->pushEntity(std::make_shared<Ball>(mMousePosition, radius, radius, mCurrentIndex));
+			mCurrentIndex++;
 		}
 	}
 }
@@ -113,4 +120,45 @@ void Editor::onKeyDown(sf::Event& e)
 		mCurrentEntity = nullptr;
 		mLockedOnEntity = false;
 	}
+
+	//Save level
+	if(e.key.code == sf::Keyboard::F12)
+	{
+		saveLevel("data/levels/test.xml");
+	}
+}
+
+void Editor::saveLevel(const std::string& filename)
+{
+	tinyxml2::XMLDocument doc;
+
+	tinyxml2::XMLElement* level = doc.NewElement("level");
+	tinyxml2::XMLElement* balls = doc.NewElement("balls");
+
+	//Append all the balls
+	for(auto i = mEntities.begin(); i != mEntities.end(); ++i)
+	{
+		std::shared_ptr<Ball> b = std::dynamic_pointer_cast<Ball>(*i);
+		
+		if(b == nullptr)
+			continue;
+
+		tinyxml2::XMLElement* ball = doc.NewElement("ball");
+		sf::Vector2f position = b->getPosition();
+		ball->SetAttribute("x", position.x);
+		ball->SetAttribute("y", position.y);
+		ball->SetAttribute("mass", b->getMass());
+		ball->SetAttribute("radius", b->getRadius());
+		ball->SetAttribute("index", b->getIndex());
+		balls->InsertEndChild(ball);
+	}
+
+	//Append to level
+	level->InsertEndChild(balls);
+
+	//Append declaration and level to document
+	doc.InsertEndChild(doc.NewDeclaration());
+	doc.InsertEndChild(level);
+
+	doc.SaveFile(filename.c_str());
 }

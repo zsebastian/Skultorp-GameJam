@@ -13,27 +13,23 @@ Ball::Ball(const sf::Vector2f& position, float mass, float radius, size_t indexV
 	switch(indexValue)
 	{
 	case 0:
-		textureFilename = "data/yarn_ball.png";
+		textureFilename = "data/yarn_ball_blue.png";
 		break;
 	case 1:
-		textureFilename = "data/yarn_ball_large.png";
+		textureFilename = "data/yarn_ball_red.png";
 		break;
 	case 2:
-		textureFilename = "data/yarn_ball_small.png";
+		textureFilename = "data/yarn_ball_yellow.png";
 		break;
 	case 3:
-		textureFilename = "data/yarn_ball_large.png";
+		textureFilename = "data/yarn_ball_green.png";
 		break;
 	case 4:
-		textureFilename = "data/yarn_ball.png";
-		break;
-	case 5:
-		textureFilename = "data/yarn_ball_small.png";
+		textureFilename = "data/yarn_ball_goal.png";
 		break;
 	default:
-		textureFilename = "data/yarn_ball.png";
+		textureFilename = "data/yarn_ball_red.png";
 	}
-
 	mSprite.setTexture(TextureManager::getTexture(textureFilename));
 
 	sf::FloatRect localBounds = mSprite.getLocalBounds();

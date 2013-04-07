@@ -9,9 +9,11 @@ Game::Game(StateManager& stateManager)
 	:State(stateManager)
 {
 	//Load textures
-	TextureManager::loadTexture("data/yarn_ball.png");
-	TextureManager::loadTexture("data/yarn_ball_large.png");
-	TextureManager::loadTexture("data/yarn_ball_small.png");
+	TextureManager::loadTexture("data/yarn_ball_blue.png");
+	TextureManager::loadTexture("data/yarn_ball_red.png");
+	TextureManager::loadTexture("data/yarn_ball_yellow.png");
+	TextureManager::loadTexture("data/yarn_ball_green.png");
+	TextureManager::loadTexture("data/yarn_ball_goal.png");
 	TextureManager::loadTexture("cat.png");
 	TextureManager::loadTexture("data/looseend.png");
 

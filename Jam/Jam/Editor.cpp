@@ -178,7 +178,7 @@ void Editor::saveLevel(const std::string& filename)
 
 	//Add goal
 	tinyxml2::XMLElement* goal = doc.NewElement("goal");
-	goal->SetAttribute("value", ballCount+1);
+	goal->SetAttribute("value", ballCount);
 	level->InsertEndChild(goal);
 
 	//Append to level
